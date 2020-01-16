@@ -1,0 +1,44 @@
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  line-height: 1.7em;
+  color: #345;
+}
+h1 {
+  font-family: 'TransatBold';
+}
+.container {
+  padding: 15px 0;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.container-fluid {
+  padding: 15px 0;
+}
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.row:after {
+  content:'';
+  display: table;
+  width: 100%;
+  clear: both;
+}
+.hidden {
+  display: none;
+}
+@media (max-width: 767px) {
+  .hidden-mobile {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .hidden-desktop {
+    display: none;
+  }
+}
+.text-center {
+  text-align: center;
+}
