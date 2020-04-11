@@ -4,28 +4,34 @@
   <link rel='icon' href='favicon.ico' type='image/x-icon'/ >
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <meta name="author" content="Restorpros" />
-  <meta name="description" content="Restoration Pros - description">
-  <meta name="keywords" content="Restoration Pros, Restoration, Pro">
-  <title>Restoration Pros</title>
+  <meta name="author" content="Priority Titans" />
+  <meta name="description" content="Priority Titans - description">
+  <meta name="keywords" content="Priority Titans, Restoration">
+  <title>Priority Titans</title>
   <!-- Stylesheets -->
-  <!-- sitedesign by Viacheslav Rybak -->
   <link href="css/main.css" rel="stylesheet">
 <body>
-  <section class="hero" id='hero'>
-    <header class="header">
-      <a href="tel:888-888-8888" class="header__top-line">
-        <div class="container">
-          Cleaning &amp; Disinfection Service. Call us: <strong>888-888-8888</strong>
-        </div>
-      </a>
+  <header class="header">
+    <a href="tel:888-888-8888" class="header__top-line">
       <div class="container">
-        <a class="header__logo" href="#">
-          <img class="header__logo-image" src="./images/logo.svg" alt="Restoration Pros Logo">
-        </a>
-        <a class="header__btn" href="#">
-          Schedule
-        </a>
+        Cleaning &amp; Disinfection Service. Call us: <strong>888-888-8888</strong>
+      </div>
+    </a>
+    <div class="container">
+      <a class="header__logo" href="#">
+        <img class="header__logo-image" src="./images/logo.svg" alt="Priority Titans Logo">
+      </a>
+
+
+      <div class="header__right">
+        <div class="header__actions">
+          <a class="header__link" href="#">Franchise Opportunities</a>
+          <a class="header__link" href="#">Find a Location</a>
+          <a class="header__btn" href="#">Schedule</a>
+          <a class="header__phone" href="#">Contact Us: <span class="header__phone-number">888-888-8888</span></a>
+
+        </div>
+
         <!-- mobile navbar toggle -->
         <div class="menu-btn">
            <div class="menu-btn__line menu-btn__line--1"></div>
@@ -34,26 +40,91 @@
         </div>
 
         <ul class="menu">
-          <li class="menu__item"><a class="menu__link anchor" data-target="anchor" href="#hero">Home</a></li>
-          <li class="menu__item"><a class="menu__link anchor" data-target="anchor" href="#about">About</a></li>
-          <li class="menu__item"><a class="menu__link anchor" data-target="anchor" href="#services">Services</a></li>
-          <li class="menu__item"><a class="menu__link anchor" data-target="anchor" href="#reviews">Reviews</a></li>
-          <li class="menu__item"><a class="menu__link anchor" data-target="anchor" href="#partners">Partners</a></li>
-          <li class="menu__item"><a class="menu__link anchor" data-target="anchor" href="#contact">Contact</a></li>
+          <li class="menu__item menu__item--dropdown">
+            <a class="menu__link anchor" data-target="anchor" href="#hero">Home</a>
+            <div class="menu__dropdown-menu">
+              <div class="container">
+                <div class="row">
+                  <div class="menu__dropdown-header">Home</div>
+                </div>
+                <div class="row">
+                  <div class="menu__dropdown-column">
+                    <a class="menu__dropdown-link" href="#">Mold Removal</a>
+                    <a class="menu__dropdown-link" href="#">Mold Remediation</a>
+                    <a class="menu__dropdown-link" href="#">Mold Testing</a>
+                  </div>
+                  <div class="menu__dropdown-column">
+                    <a class="menu__dropdown-link" href="#">Crawl Space Encapsulation</a>
+                    <a class="menu__dropdown-link" href="#">Mold FAQs</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="menu__item menu__item--dropdown">
+            <a class="menu__link anchor" data-target="anchor" href="#about">About</a>
+            <div class="menu__dropdown-menu">
+              <div class="container">
+                <div class="row">
+                  <div class="menu__dropdown-header">About</div>
+                </div>
+                <div class="row">
+                  <div class="menu__dropdown-column">
+                    <a class="menu__dropdown-link" href="#">About Removal</a>
+                    <a class="menu__dropdown-link" href="#">About Remediation</a>
+                    <a class="menu__dropdown-link" href="#">About Testing</a>
+                  </div>
+                  <div class="menu__dropdown-column">
+                    <a class="menu__dropdown-link" href="#">About Space Encapsulation</a>
+                    <a class="menu__dropdown-link" href="#">About FAQs</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link anchor" data-target="anchor" href="#services">Services</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link anchor" data-target="anchor" href="#reviews">Reviews</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link anchor" data-target="anchor" href="#partners">Partners</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link anchor" data-target="anchor" href="#contact">Contact</a>
+          </li>
         </ul>
       </div>
-    </header>
+
+    </div>
+  </header>
+  <section class="hero" id='hero'>
     <div class="container">
       <div class="row">
         <div class="hero__text">
-          <div class="hero__pre-title">Restoration Pros</div>
+          <div class="hero__pre-title">Peace of Mind</div>
           <h1 class="hero__title">
-            Cleaning &amp; Disinfection for Your Home or Business
+            Is Only a Phone Call Away
           </h1>
           <p class="hero__description">
-            During these crazy times, let us bring some sanity to your life. From sanitizing your home to emergency services and mold removal, our experts can come to the rescue anytime, any day.
+            During these crazy times, let us bring some sanity to your life.
+            From sanitizing your home to emergency services and mold removal,
+            our experts can come to the rescue anytime, any day.
           </p>
-          <a href="#" class="hero__btn">Call to action</a>
+          <form class="hero-form">
+            <select class="hero-form__select" required="required" name="service">
+							<option value="">Select Your Service</option>
+							<option value="Mold Removal">Mold Removal</option>
+							<option value="Water Damage Restoration">Water Damage Restoration</option>
+							<option value="Radon Testing or Mitigation">Radon Testing or Mitigation</option>
+							<option value="Air Duct Cleaning">Air Duct Cleaning</option>
+							<option value="Media Inquiry">Media Inquiry</option>
+							<option value="Other">Other</option>
+						</select>
+            <input class="hero-form__input" type="text" placeholder="Enter your ZIP code"/>
+            <button type="submit" class="hero-form__btn">Schedule Estimate</a>
+          </form>
         </div>
       </div>
     </div>
@@ -115,7 +186,7 @@
         <h1 class="about__title">FOR A HEALTHY HOME &amp; BUSINESS</h1>
         <h2 class="about__sub-title">Trust AdvantaClean to Get the Job Done!</h2>
         <p class="about__description">
-          Our company Restoration Pros was founded in 1994 in Winter Park, Florida as a contracting business
+          Our company Priority Titans was founded in 1994 in Winter Park, Florida as a contracting business
           specializing in emergency loss mitigation services and structural repairs to homes
           and buildings. The original partners created the company after gaining a wealth of
           knowledge and experience responding to Hurricane Andrew, which ravaged South Florida
@@ -142,79 +213,99 @@
     <div class="container">
       <h1 class="reviews__title">What Our Customers Are Saying</h1>
 
-      <div class="reviews__item">
-        <div class="row">
-          <h2 class="reviews__name">Amanda Johnson</h2>
-          <div class="rating">
-            <span class="rating__star"></span>
-            <span class="rating__star"></span>
-            <span class="rating__star"></span>
-            <span class="rating__star"></span>
-            <span class="rating__star rating__star-half"></span>
-          </div>
-        </div>
-        <div class="reviews__text">
-          Working with and for United Restoration of FL is truly our pleasure.
-          Every insured has been grateful for the work performed by United who immediatel.
-          Working with and for United Restoration of FL is truly our pleasure.
-          Every insured has been grateful for the work performed by United who immediatel.
-        </div>
-      </div>
 
-      <div class="reviews__item">
-        <div class="row">
-          <h2 class="reviews__name">Sam Smith</h2>
-          <div class="rating">
-            <span class="rating__star"></span>
-            <span class="rating__star"></span>
-            <span class="rating__star"></span>
-            <span class="rating__star"></span>
-            <span class="rating__star rating__star-empty"></span>
-          </div>
-        </div>
-        <div class="reviews__text">
-          Leigh and the team at United Restoration provided outstanding support during
-          a long and complicated process. Excellent customer service, very respons.
-          Leigh and the team at United Restoration provided outstanding support during
-          a long and complicated process. Excellent customer service, very respons.
-        </div>
-      </div>
 
-      <div class="reviews__item">
-        <div class="row">
-          <h2 class="reviews__name">James Winner</h2>
-          <div class="rating">
-            <span class="rating__star"></span>
-            <span class="rating__star"></span>
-            <span class="rating__star"></span>
-            <span class="rating__star"></span>
-            <span class="rating__star"></span>
-          </div>
-        </div>
-        <div class="reviews__text">
-          Hello everyone. My claim for my house had taken 10 months. I wish I would have
-          hired United sooner because after they came in to do their due diligenc.
-          Hello everyone. My claim for my house had taken 10 months. I wish I would have
-          hired United sooner because after they came in to do their due diligenc.
-        </div>
-      </div>
-      <div class="reviews__item">
-        <div class="row">
-          <h2 class="reviews__name">John Green</h2>
-          <div class="rating">
-            <span class="rating__star"></span>
-            <span class="rating__star"></span>
-            <span class="rating__star"></span>
-            <span class="rating__star"></span>
-            <span class="rating__star"></span>
-          </div>
-        </div>
-        <div class="reviews__text">
-          There is no better management team than Rafael and Lisa Cohen. The trust that they
-          have earned from law enforcement agencies, counties, hospitals, universities, and
-          Florida homeowners is a product of years of hard work and dedication in learning
-          how to best serve clients.
-        </div>
+      <div class="slider">
+        <ul class="slider__buttons">
+          <li>
+            <button class="slider__previous">&lt;</button>
+          </li>
+          <li>
+            <button class="slider__next">&gt;</button>
+          </li>
+        </ul>
+        <ul class="slider__slides">
+          <li class="slider__slide">
+            <div class="reviews__item">
+              <div class="row">
+                <h2 class="reviews__name">Amanda Johnson</h2>
+                <div class="rating">
+                  <span class="rating__star"></span>
+                  <span class="rating__star"></span>
+                  <span class="rating__star"></span>
+                  <span class="rating__star"></span>
+                  <span class="rating__star rating__star-half"></span>
+                </div>
+              </div>
+              <div class="reviews__text">
+                Working with and for United Restoration of FL is truly our pleasure.
+                Every insured has been grateful for the work performed by United who immediatel.
+                Working with and for United Restoration of FL is truly our pleasure.
+                Every insured has been grateful for the work performed by United who immediatel.
+              </div>
+            </div>
+          </li>
+          <li class="slider__slide">
+            <div class="reviews__item">
+              <div class="row">
+                <h2 class="reviews__name">Sam Smith</h2>
+                <div class="rating">
+                  <span class="rating__star"></span>
+                  <span class="rating__star"></span>
+                  <span class="rating__star"></span>
+                  <span class="rating__star"></span>
+                  <span class="rating__star rating__star-empty"></span>
+                </div>
+              </div>
+              <div class="reviews__text">
+                Leigh and the team at United Restoration provided outstanding support during
+                a long and complicated process. Excellent customer service, very respons.
+                Leigh and the team at United Restoration provided outstanding support during
+                a long and complicated process. Excellent customer service, very respons.
+              </div>
+            </div>
+          </li>
+          <li class="slider__slide">
+            <div class="reviews__item">
+              <div class="row">
+                <h2 class="reviews__name">James Winner</h2>
+                <div class="rating">
+                  <span class="rating__star"></span>
+                  <span class="rating__star"></span>
+                  <span class="rating__star"></span>
+                  <span class="rating__star"></span>
+                  <span class="rating__star"></span>
+                </div>
+              </div>
+              <div class="reviews__text">
+                Hello everyone. My claim for my house had taken 10 months. I wish I would have
+                hired United sooner because after they came in to do their due diligenc.
+                Hello everyone. My claim for my house had taken 10 months. I wish I would have
+                hired United sooner because after they came in to do their due diligenc.
+              </div>
+            </div>
+          </li>
+          <li class="slider__slide">
+            <div class="reviews__item">
+              <div class="row">
+                <h2 class="reviews__name">John Green</h2>
+                <div class="rating">
+                  <span class="rating__star"></span>
+                  <span class="rating__star"></span>
+                  <span class="rating__star"></span>
+                  <span class="rating__star"></span>
+                  <span class="rating__star"></span>
+                </div>
+              </div>
+              <div class="reviews__text">
+                There is no better management team than Rafael and Lisa Cohen. The trust that they
+                have earned from law enforcement agencies, counties, hospitals, universities, and
+                Florida homeowners is a product of years of hard work and dedication in learning
+                how to best serve clients.
+              </div>
+            </div>
+          </li>
+        </ul>
       </div>
 
     </div>
@@ -241,7 +332,7 @@
     <div class="row">
       <div class="footer__left">
         <a class="footer__logo" href="#hero" data-target="anchor">
-          <img class="footer__logo-image" src="./images/logo-inverse.svg" alt="Logo">
+          <img class="footer__logo-image" src="./images/logo-inverse.svg" alt="Logo Priority Titans">
         </a>
         <div class="footer__socials">
           <a class="footer__social-link" href="#" target="_blank">
@@ -259,7 +350,7 @@
 					</a>
         </div>
         <div class="copyright">
-            © Restoration Pros 2020 | All rights reserved
+            © Priority Titans 2020 | All rights reserved
         </div>
       </div>
       <div class="footer__right">
