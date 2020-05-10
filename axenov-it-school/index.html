@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Axenov IT School</title>
+  <link rel='icon' href='favicon.ico' type='image/x-icon'/ >
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="author" content="Axenov IT School" />
+  <meta name="description" content="Learn javascript, php, html and css">
+  <meta name="keywords" content="Axenov, IT, School, knoweledge, studying, learning, js, javascript, php, html, css">
+
+  <!-- OG image for nice social networks sharing -->
+  <meta property="og:title" content="Axenov IT School">
+  <meta property="og:description" content="Learn javascript, php, html and css">
+  <meta property="og:image" content=""> <!-- ВСТАВИТЬ ССЫЛКУ на картинку для соц сетей-->
+  <meta property="og:url" content=""> <!-- ВСТАВИТЬ ССЫЛКУ на сайт-->
+
+  <meta name="twitter:title" content="Axenov IT School">
+  <meta name="twitter:description" content="Learn javascript, php, html and css">
+  <meta name="twitter:image" content="https://"> <!-- ВСТАВИТЬ ССЫЛКУ  на картинку для соц сетей -->
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Stylesheets & Fonts -->
+  <link href="css/main.css" rel="stylesheet">
+
+</head>
+<body>
+  <section class="hero">
+    <header class="header">
+      <div class="header__container">
+        <a class="header__logo" href="#">
+          <img class="header__logo-image" src="./images/logo.svg" alt="Axenov IT School Logo">
+        </a>
+        <!-- mobile navbar toggle -->
+        <div class="menu-btn">
+           <div class="menu-btn__line menu-btn__line--1"></div>
+           <div class="menu-btn__line menu-btn__line--2"></div>
+           <div class="menu-btn__line menu-btn__line--3"></div>
+        </div>
+        <ul class="menu">
+          <li class="menu__item"><a class="menu__link" href="#">Главная</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Курсы</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Контакты</a></li>
+        </ul>
+      </div>
+    </header>
+    <div class="hero__container">
+      <div class="socials hero__socials">
+        <a class="socials__link" href="https://www.facebook.com/axenov.it.school/" target="_blank">
+          <img class="socials__icon" src="./images/icon-facebook.svg" alt="Facebook"/>
+        </a>
+        <a class="socials__link" href="https://www.youtube.com/channel/UCDBc7Izt3s_cfL41mAbQCqQ" target="_blank">
+          <img class="socials__icon" src="./images/icon-youtube.svg" alt="Youtube"/>
+        </a>
+        <a class="socials__link" href="https://www.instagram.com/axenov_it_school/" target="_blank">
+          <img class="socials__icon" src="./images/icon-instagram.svg" alt="Instagram"/>
+        </a>
+        <a class="socials__link" href="https://www.linkedin.com/in/axenov-it-school/" target="_blank">
+          <img class="socials__icon" src="./images/icon-linkedin.svg" alt="Linkedin"/>
+        </a>
+      </div>
+      <div class="hero__content">
+        <div class="hero__left">
+          <h1 class="hero__title">
+            Войди в IT вместе с <nobr>Axenov IT School</nobr>
+          </h1>
+          <div class="hero__description">
+             IT-профессия - это достойный заработок, интеллектуальное развитие и целый МИР возможностей.
+          </div>
+          <div class="hero__buttons">
+            <a class="btn modal-form-toggle" href="#">Начать обучение</a>
+            <a class="btn-secondary" href="#contacts">Узнать больше</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="numbers">
+    <div class="numbers__container">
+      <div class="numbers__item">
+        <img class="numbers__icon" src="./images/icon-study.svg" alt="icon">
+        <div class="numbers__header">514</div>
+        <div class="numbers__subheader">Аттестованных выпускников</div>
+      </div>
+      <div class="numbers__item">
+        <img class="numbers__icon" src="./images/icon-play.svg" alt="icon">
+        <div class="numbers__header">2</div>
+        <div class="numbers__subheader">Видео-курса онлайн</div>
+      </div>
+      <div class="numbers__item">
+        <img class="numbers__icon" src="./images/icon-case.svg" alt="icon">
+        <div class="numbers__header">52%</div>
+        <div class="numbers__subheader">Студентов трудоустроены</div>
+      </div>
+
+
+    </div>
+  </section>
+
+  <section class="video" id="video">
+    <div class="video__container">
+      <div class="video__item">
+        <h2 class="video__header">
+          Автор курса
+        </h2>
+        <a class="video__link" href="#" target="_blank">
+          <img class="video__preview" src="./images/video-1.jpg" alt="Автор курса">
+        </a>
+      </div>
+      <div class="video__item">
+        <h2 class="video__header">
+          Почему именно этот курс?
+        </h2>
+        <a class="video__link" href="#" target="_blank">
+          <img class="video__preview" src="./images/video-2.jpg" alt="Почему именно этот курс?">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="result">
+    <div class="result__container">
+      <h2 class="result__header">Что <span class="accent-color">Вы получите</span><br> после прохождения курса</h2>
+      <ul class="result__items">
+        <li class="result__item">
+          <span class="result__number">1</span>
+            Мини-курс по трудоустройству
+        </li>
+        <li class="result__item">
+          <span class="result__number">2</span>
+          Лучших студентов рекомендуем в компании, с которыми сотрудничаем
+        </li>
+        <li class="result__item">
+          <span class="result__number">3</span>
+          Все уроки в записи для личного пользования
+        </li>
+        <li class="result__item">
+          <span class="result__number">4</span>
+          Общий чат в Telegram со студентами
+        </li>
+        <li class="result__item">
+          <span class="result__number">5</span>
+          Готовое портфолио, разработанное на курсе
+        </li>
+        <li class="result__item">
+          <span class="result__number">6</span>
+          Поддержку ментора во время и после курса
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="career">
+    <div class="career__container">
+      <div class="career__column">
+        <h2 class="career__header">Карьерный рост <span class="accent-color">PHP</span> <nobr>back-end</nobr></h2>
+        <div class="career__set">
+          <div class="career__person">
+            <img src="./images/programmer-php.png" alt="Программист"/>
+          </div>
+          <div class="career__items">
+            <div class="career__item">
+              <div class="career__status">Junior</div>
+              <div class="career__income">$400-600</div>
+            </div>
+            <div class="career__item">
+              <div class="career__status">Middle</div>
+              <div class="career__income">$1000-2000</div>
+            </div>
+            <div class="career__item">
+              <div class="career__status">Senior</div>
+              <div class="career__income">$2000-4000</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="career__column">
+        <h2 class="career__header">Карьерный рост <span class="accent-color">JavaScript</span> <nobr>front-end</nobr></h2>
+        <div class="career__set">
+          <div class="career__person">
+            <img src="./images/programmer-js.png" alt="Программист"/>
+          </div>
+          <div class="career__items">
+            <div class="career__item">
+              <div class="career__status">Junior</div>
+              <div class="career__income">$400-600</div>
+            </div>
+            <div class="career__item">
+              <div class="career__status">Middle</div>
+              <div class="career__income">$1000-2000</div>
+            </div>
+            <div class="career__item">
+              <div class="career__status">Senior</div>
+              <div class="career__income">$2000-4000</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="structure">
+    <h2 class="structure__header"><span class="accent-color">Структура</span> on-line обучения</h2>
+    <div class="structure__container">
+      <div class="structure__image">
+      </div>
+      <div class="structure__text">
+        <ul class="structure__items">
+          <li class="structure__item">
+              Онлайн урок в режиме реального времени, с активным чатом для вопросов.
+          </li>
+          <li class="structure__item">
+            Уроки проходят 2 раза в неделю. Длительность урока - 2 часа.
+          </li>
+          <li class="structure__item">
+            Записи уроков доступны студентам в любое время.
+          </li>
+          <li class="structure__item">
+            Каждую неделю студенты получают домашнее задание на следующую неделю. Разбор задания доступен в видео уроке.
+          </li>
+          <li class="structure__item">
+            Домашние задания хранятся на GitHub, для формирования личного портфолио студента.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq" id="faq">
+    <div class="faq__container">
+      <h2 class="faq__header">Часто задаваемые <span class="accent-color">вопросы</span></h2>
+      <div class="faq__items">
+        <div class="faq__item">
+          <h3 class="faq__item-header accordion">Могу ли я пропустить несколько занятий?</h3>
+          <div class="panel">
+            <div class="faq__item-description">
+              Все онлайн занятия записываются и высылаются Вам на следующий день после урока. Вы их можете просмотреть и догнать программу <strong>в любое удобное время</strong>.
+            </div>
+          </div>
+        </div>
+        <div class="faq__item">
+          <h3 class="faq__item-header accordion">Как быстро я смогу найти работу после обучения?</h3>
+          <div class="panel">
+            <div class="faq__item-description">
+              Все зависит от Вашего стремления и желания. На курсе дается вся необходимая теория и практика, готовый проект, который Вы делаете в течении курсов будет служить частью <strong>портфолио</strong>. Лучших учеников мы советуем <strong>нашим партнерам</strong>.
+            </div>
+          </div>
+        </div>
+        <div class="faq__item">
+          <h3 class="faq__item-header accordion">Чем Вы лучше других?</h3>
+          <div class="panel">
+            <div class="faq__item-description">
+              Первые два занятия <strong>абсолютно бесплатные</strong> (Вы можете на них сначала записаться, без оплаты курса, а потом принять решение хотите учиться у нас или нет). Все on-line занятия проходят в режиме реального времени, через сутки после Вы получаете запись этого урока в личное пользование навсегда. В конце обучения у нас создан специальный Мини-курс по трудоустройству, в который входят: создание резюме, консультация как пройти собеседование с HR, прохождение технического собеседования с практикующим Ментором, знакомство с ресурсами для работы на фрилансе.
+            </div>
+          </div>
+        </div>
+        <div class="faq__item">
+          <h3 class="faq__item-header accordion">Нужен ли английский для начала обучения?</h3>
+          <div class="panel">
+            <div class="faq__item-description">
+              Не обязательно, технический английский будете подтягивать в процессе обучения, так как все языки программирования на английском. На старте <strong>можно пользоваться переводчиком</strong>.
+            </div>
+          </div>
+        </div>
+        <div class="faq__item">
+          <h3 class="faq__item-header accordion">С какого языка лучше начать?</h3>
+          <div class="panel">
+            <div class="faq__item-description">
+              Мы преподаем два самых нужных и популярных курса <strong>JavaScript и PHP</strong>. Для понимания, какой Вам будет интереснее, Вы получите два первых урока бесплатно, в которых я разъясню нюансы каждого языка и базово для чего каждый из них нужен.
+            </div>
+          </div>
+        </div>
+        <div class="faq__item">
+          <h3 class="faq__item-header accordion">Какие знания у меня должны быть для начала обучения программированию?</h3>
+          <div class="panel">
+            <div class="faq__item-description">
+              Для начала обучения у Вас должно быть <strong>желание и компьютер</strong>, всю необходимую информацию Вы получаете на занятиях. Если знаете таблицу умножения – ждем Вас)
+            </div>
+          </div>
+        </div>
+        <div class="faq__item">
+          <h3 class="faq__item-header accordion">Как я могу оплатить курс?</h3>
+          <div class="panel">
+            <div class="faq__item-description">
+              Есть несколько вариантов: помесячно, рассрочка от банка (Моно, Приват), либо сразу курс – <strong>самый выгодный</strong> вариант.
+            </div>
+          </div>
+        </div>
+        <div class="faq__item">
+          <h3 class="faq__item-header accordion">Могу ли я создать свой сайт после курса?</h3>
+          <div class="panel">
+            <div class="faq__item-description">
+              Конечно, в процессе обучения именно этому и будем учиться, созданию интересных, интерактивных и кликабельных сайтов.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="partners">
+    <h2 class="partners__header">Мы сотрудничаем с <span class="accent-color">компаниями</span></h2>
+    <div class="partners__items">
+      <a class="partners__item" href="#">
+        <img src="./images/brand-1.svg" alt="Название компании"/>
+      </a>
+      <a class="partners__item" href="#">
+        <img src="./images/brand-2.svg" alt="Название компании"/>
+      </a>
+      <a class="partners__item" href="#">
+        <img src="./images/brand-3.svg" alt="Название компании"/>
+      </a>
+      <a class="partners__item" href="#">
+        <img src="./images/brand-4.svg" alt="Название компании"/>
+      </a>
+      <a class="partners__item" href="#">
+        <img src="./images/brand-5.svg" alt="Название компании"/>
+      </a>
+    </div>
+  </section>
+
+  <section class="contacts">
+    <div class="contacts__container">
+      <h2 class="contacts__header">Подписывайся на рассылку
+      </h2>
+      <div class="contacts__description">
+        Не пропусти скидки, анонсы вебинаров, горячие вакансии и многое другое
+      </div>
+      <form class="contacts__form">
+        <input class="contacts__input" type="text" placeholder="Ваше Имя" required />
+        <input class="contacts__input" type="text" placeholder="Ваш Email" required />
+        <button class="contacts__btn" type="submit">
+          Подписаться
+        </button>
+      </form>
+    </div>
+  </section>
+
+<footer class="footer">
+  <div class="footer__container">
+    <div class="footer__column">
+      <a class="footer__logo-link" id="scrollTop" href="#">
+        <img class="footer__logo" src="./images/logo-footer.svg" alt="Axenov IT School">
+      </a>
+    </div>
+    <div class="footer__column">
+      <div class="footer__nav">
+        <a class="footer__link anchor" href="#video">Почему наша школа?</a>
+        <a class="footer__link anchor" href="#faq">FAQ</a>
+        <a class="footer__link" href="#">Оплата курса</a>
+      </div>
+    </div>
+
+    <div class="footer__column">
+      <div class="footer__nav">
+        <a class="footer__link" href="#">Курсы</a>
+        <a class="footer__link" href="#">Отзывы</a>
+        <a class="footer__link" href="#">Блог</a>
+      </div>
+    </div>
+
+    <div class="footer__column">
+      <div class="socials footer__socials">
+        <a class="socials__link" href="https://www.facebook.com/axenov.it.school/" target="_blank">
+          <img class="socials__icon" src="./images/icon-facebook.svg" alt="Facebook"/>
+        </a>
+        <a class="socials__link" href="https://www.youtube.com/channel/UCDBc7Izt3s_cfL41mAbQCqQ" target="_blank">
+          <img class="socials__icon" src="./images/icon-youtube.svg" alt="Youtube"/>
+        </a>
+        <a class="socials__link" href="https://www.instagram.com/axenov_it_school/" target="_blank">
+          <img class="socials__icon" src="./images/icon-instagram.svg" alt="Instagram"/>
+        </a>
+        <a class="socials__link" href="https://www.linkedin.com/in/axenov-it-school/" target="_blank">
+          <img class="socials__icon" src="./images/icon-linkedin.svg" alt="Linkedin"/>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="modal">
+  <div class="modal__overlay">
+    <div class="modal__wrapper">
+      <div class="modal__content">
+        <div class="modal__close modal-form-toggle">✕</div>
+        <h2 class="modal__header">
+          запишись на курс
+        </h2>
+        <form class="modal__form">
+          <input class="modal__input" type="text" placeholder="Ваше Имя" required />
+          <input class="modal__input" type="text" placeholder="Ваш Email" required />
+          <button class="modal__btn" type="submit">
+            Записаться на курс
+          </button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="floating-box hidden-mobile" id="floating_box">
+  <button class="floating-box__close" id="floating_box_close">&#10005;</button>
+  <h3 class="floating-box__header">Первые <span class="big">2</span> занятия БЕСПЛАТНО</h3>
+  <input class="floating-box__input" type="text" placeholder="Ваше Имя">
+  <input class="floating-box__input" type="text" placeholder="Ваш Email">
+  <a class="floating-box__link modal-form-toggle" href="#contacts">Записаться на курс</a>
+</div>
+
+<a class="floating-btn hidden-desktop modal-form-toggle" href="#">
+  Записаться на курс
+</a>
+
+<!-- SCRIPTS -->
+<script src="./js/jquery.min.js"></script>
+<script src="./js/script.js"></script>
+
+
+</body>
+</html>
