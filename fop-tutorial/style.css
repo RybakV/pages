@@ -103,11 +103,60 @@ body {
 }
 .change {
   color: #ff803c;
-  background-color: #ffece2;
+  background-color: #ff803c3b;
 }
 .small {
   font-size: 0.9em;
   opacity: 0.7;
-  background-color: #eee;
+  background-color: #3344542b;
   font-style: italic;
+}
+
+.accordion {
+  border: 1px solid #d6e0ec;
+  background-color: #f0f4f9;
+  margin: 32px 0;
+}
+.accordion-checkbox {
+  display: none;
+}
+.accordion-title {
+  padding: 10px 50px 10px 20px;
+  font-weight: bold;
+  display: block;
+  cursor: pointer;
+  position: relative;
+  transition: .2s;
+}
+.accordion-title:hover {
+  background-color: #d6e0ec99;
+}
+.accordion-title::before {
+  content: '';
+  display: block;
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  top: 15px;
+  right: 22px;
+  border-bottom: 2px solid #345;
+  border-right: 2px solid #345;
+  transform: rotate(45deg);
+  transition: .2s;
+}
+.accordion-checkbox:checked ~ .accordion-title::before {
+  transform: rotate(225deg);
+}
+.accordion-content {
+  padding: 0 20px;
+  border-top: 1px solid #ddd;
+  display: none;
+  opacity: 0;
+  transition: .2s;
+}
+.accordion-checkbox:checked ~ .accordion-content {
+  padding: 10px 20px;
+  display: block;
+  opacity: 1;
+  transition: .2s;
 }
