@@ -160,6 +160,44 @@ a:hover {
 .frame {
   border: 4px solid #14fdce;
 }
+.frame.scanline {
+  position: relative;
+}
+.frame.scanline::after {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 0;
+  height: 100%;
+  width: 1px;
+  animation: scanline 15s infinite;
+  }
+@keyframes scanline {
+  0% {
+    right: 100%;
+    background-color: #14fdce00;
+    box-shadow: 0 0 20px #14fdce00, 0 0 10px #14fdce00, 0 0 5px #14fdce00, 0 0 2px #14fdce00;
+    opacity: 1;
+  }
+  40% {
+    right: 0%;
+    background-color: #14fdceff;
+    box-shadow: 0 0 30px #14fdceff, 0 0 15px #14fdceff, 0 0 7px #14fdceff, 0 0 3px #14fdceff;
+    opacity: 0;
+  }
+  60% {
+    right: 0%;
+    background-color: #14fdceff;
+    box-shadow: 0 0 30px #14fdceff, 0 0 15px #14fdceff, 0 0 7px #14fdceff, 0 0 3px #14fdceff;
+    opacity: 0;
+  }
+  100% {
+    right: 100%;
+    background-color: #14fdceff;
+    box-shadow: 0 0 30px #14fdceff, 0 0 15px #14fdceff, 0 0 7px #14fdceff, 0 0 3px #14fdceff;
+    opacity: 1;
+  }
+}
 .title {
   font-size: 40px;
   font-weight: 400;
