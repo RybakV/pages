@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+body {
+  margin: 0;
+  background-color: #221d1d;
+  padding: 64px 40px;
+}
+img {
+  max-width: 100%;
+}
+.scene {
+  width: 408px;
+  height: 408px;
+  position: relative;
+  margin: 8px auto 8px;
+  border: 4px solid #2f2a2a;
+  box-shadow: inset 0 0 60px #0000009e;
+  }
+.scene-item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.nav {
+  text-align: center;
+
+}
+.nav>div {
+  display: inline-block;
+  vertical-align: middle;
+  width: 46px;
+  height: 46px;
+  background-color: #2b2727;
+  border: 3px solid #2f2a2a;
+  box-shadow: inset 0 0 16px #0009;
+  cursor: pointer;
+  transition: .2s;
+}
+.nav>div:hover {
+  background-color: #2f2c2c;
+}
+.nav>div[equiped] {
+  box-shadow: inset 0 0 16px #e4874599;
+  border: 3px solid #4c311f;
+}
+.nav>div[equiped] img {
+  opacity: 1;
+}
+.nav img {
+  display: block;
+  opacity: 0.6;
+  transition: .2s;
+}
+.nav>div:hover img {
+  opacity: 1;
+}
+/* images */
+.scene-item.bg#bg-sparks {
+  background-image: url('../img/bg-sparks.jpg');
+  z-index: 1;
+}
+.scene-item.bg#bg-forest {
+  background-image: url('../img/bg-forest.jpg');
+  z-index: 1;
+}
+.scene-item.base#man {
+  background-image: url('../img/man.png');
+  z-index: 10;
+}
+.scene-item.pants#leather-pants {
+  background-image: url('../img/leather-pants.png');
+  z-index: 11;
+}
+.scene-item.cape::before, .scene-item.cape::after {
+  content:'';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.scene-item.cape::before {
+  z-index: 9;
+}
+.scene-item.cape::after {
+  z-index: 12;
+}
+.scene-item.cape#red-cape::before {
+  background-image: url('../img/red-cape-back.png');
+}
+.scene-item.cape#red-cape::after {
+  background-image: url('../img/red-cape-front.png');
+}
+.scene-item.head#helm {
+  background-image: url('../img/helm.png');
+  z-index: 13;
+}
+.scene-item.right#spear {
+  background-image: url('../img/spear.png');
+  z-index: 20;
+}
+.scene-item.right#sword {
+  background-image: url('../img/sword.png');
+  z-index: 20;
+}
+.scene-item.left#golden-shield {
+  background-image: url('../img/golden-shield.png');
+  z-index: 19;
+}
+.scene-item.pants {
+
+}
