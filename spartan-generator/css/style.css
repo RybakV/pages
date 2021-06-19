@@ -46,6 +46,11 @@ img {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  transition: .2s;
+  opacity: 0;
+}
+.scene-item[id] {
+  opacity: 1;
 }
 .nav {
   text-align: center;
@@ -143,6 +148,10 @@ img {
 }
 .scene-item.left#golden-shield {
   background-image: url('../img/golden-shield.png');
+  z-index: 19;
+}
+.scene-item.left#celtic-shield {
+  background-image: url('../img/celtic-shield.png');
   z-index: 19;
 }
 .scene-item.pants {
