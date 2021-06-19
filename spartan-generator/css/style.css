@@ -20,7 +20,7 @@ h1 {
 .subheader {
   text-shadow: 1px 1px 0 #7b482e;
   font-weight: 400;
-  margin: 0 0 8px;
+  margin: 8px;
 }
 img {
   max-width: 100%;
@@ -89,8 +89,12 @@ img {
   background-image: url('../img/bg-forest.jpg');
   z-index: 1;
 }
-.scene-item.base#man {
-  background-image: url('../img/man.png');
+.scene-item.base#man1 {
+  background-image: url('../img/man1.png');
+  z-index: 10;
+}
+.scene-item.base#man2 {
+  background-image: url('../img/man2.png');
   z-index: 10;
 }
 .scene-item.pants#leather-pants {
