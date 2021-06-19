@@ -11,13 +11,16 @@ $( ".nav>div" ).click(function() {
   var iconObjs = $(this).attr("class");
   var itemObj = $(".scene-item." + currentClass);
 
-
+  // item id is same - item already equiped - need to unequip item
   if (itemObj.attr("id") == itemId) {
-      // item id is same - item already equiped - need to unequip item
-      itemObj.removeAttr('id');
-      iconObj.removeAttr('equiped');
+
+      // if item has no 'required' class - then unequip it
+      if (!itemObj.hasClass("required")) {
+        itemObj.removeAttr('id');
+        iconObj.removeAttr('equiped');
+      }
   } else {
-      // item id is NOT same - need to equip item
+      // item id is NOT same - equipping the item
       itemObj.removeAttr('id');
       itemObj.attr('id', itemId );
       $('.' + iconObjs).removeAttr('equiped');
@@ -26,7 +29,7 @@ $( ".nav>div" ).click(function() {
 
 });
 
-/* click sound */
+/* click sound effect */
 var fxClick = new Audio("./media/sfx-equip.mp3");
 
 $('.nav img').mouseup(function() {
