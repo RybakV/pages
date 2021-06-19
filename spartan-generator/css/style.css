@@ -125,6 +125,10 @@ img {
   background-image: url('../img/helm.png');
   z-index: 13;
 }
+.scene-item.head#wreath {
+  background-image: url('../img/wreath.png');
+  z-index: 13;
+}
 .scene-item.right#spear {
   background-image: url('../img/spear.png');
   z-index: 20;
