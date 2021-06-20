@@ -32,7 +32,6 @@ $( ".nav>div" ).click(function() {
 $( ".nav>div" ).click(function() {
   var equipedAttack = 0;
   var iconAttack = 0;
-
   var equipedDefence = 0;
   var iconDefence = 0;
 
@@ -41,7 +40,6 @@ $( ".nav>div" ).click(function() {
     // get attack attribute
     var attrAttack = $(this).attr("attack");
     iconAttack = parseInt(attrAttack);
-
     //check if icon has any attack
     if ($.isNumeric(attrAttack)) {
       //attrAttack is numeric - adding icon atack to the equiped attack
@@ -50,11 +48,9 @@ $( ".nav>div" ).click(function() {
     else {
       iconAttack = 0;
     }
-
     // get Defence attribute
     var attrDefence = $(this).attr("defence");
     iconDefence = parseInt(attrDefence);
-
     //check if icon has any Defence
     if ($.isNumeric(attrDefence)) {
       //attr Defence is numeric - adding icon atack to the equiped Defence
@@ -67,9 +63,29 @@ $( ".nav>div" ).click(function() {
 
   $(".total-attack").text(equipedAttack);
   $(".total-defence").text(equipedDefence);
-
 });
 
+/* Icon hover Stats tooltip */
+$('.nav>div').mouseover(function(){
+  var attrAttack = $(this).attr('attack');
+  var attrDefence = $(this).attr('defence');
+
+  // check if we have attack attribute - then create the tooltip wrap
+  if ((typeof attrAttack !== 'undefined' && attrAttack !== false) || (typeof attrDefence !== 'undefined' && attrDefence !== false)) {
+    $(this).append("<div class='tooltip'></div>");
+  }
+  if (typeof attrAttack !== 'undefined' && attrAttack !== false) {
+    $(this).children('.tooltip').append('<span class="tool-atk">' + $(this).attr('attack') + '</span>');
+  }
+  if (typeof attrDefence !== 'undefined' && attrDefence !== false) {
+    $(this).children('.tooltip').append('<span class="tool-def">' + $(this).attr('defence') + '</span>');
+  }
+
+
+});
+$('.nav>div').mouseout(function(){
+  $(this).children('.tooltip').remove();
+});
 
 
 /* click sound effect */
