@@ -16,66 +16,81 @@
 </head>
 <body>
   <h1 class="title">Spartan generator</h1>
-  <div class="subheader">Choose a background:</div>
-  <div class="nav">
-    <div class="bg" id="icon-bg-sparks" equiped="equiped">
-      <img src="./img/icon-bg-sparks.png"/>
-    </div>
-    <div class="bg" id="icon-bg-forest">
-      <img src="./img/icon-bg-forest.png"/>
-    </div>
-  </div>
-  <div class="scene">
-    <div class="scene-item bg required" id="bg-sparks"></div>
-    <div class="scene-item base required" id="man1"></div>
-    <div class="scene-item pants" id="leather-pants"></div>
-    <div class="scene-item cape" id="red-cape"></div>
-    <div class="scene-item head" id="helm"></div>
-    <div class="scene-item right" id="spear"></div>
-    <div class="scene-item left" id="golden-shield"></div>
 
-    <!-- Decoration elements -->
-    <div class="corner top left"></div>
-    <div class="corner top right"></div>
-    <div class="corner bottom left"></div>
-    <div class="corner bottom right"></div>
+<div class="page-content">
+  <!-- CONTENT LEFT -->
+  <div class="content-left">
+    <div class="scene">
+      <div class="scene-item bg required" id="bg-sparks"></div>
+      <div class="scene-item base required" id="man1"></div>
+      <div class="scene-item pants"></div>
+      <div class="scene-item cape"></div>
+      <div class="scene-item head"></div>
+      <div class="scene-item right"></div>
+      <div class="scene-item left"></div>
+
+      <!-- Decoration elements -->
+      <div class="corner top left"></div>
+      <div class="corner top right"></div>
+      <div class="corner bottom left"></div>
+      <div class="corner bottom right"></div>
+    </div>
+    <div class="subheader">Choose equipment:</div>
+    <div class="nav">
+      <div class="right" id="icon-spear" attack="3" defence="1">
+        <img src="./img/icon-spear.png"/>
+      </div>
+      <div class="right" id="icon-sword" attack="4">
+        <img src="./img/icon-sword.png"/>
+      </div>
+      <div class="left" id="icon-golden-shield" defence="2">
+        <img src="./img/icon-golden-shield.png"/>
+      </div>
+      <div class="left" id="icon-celtic-shield" defence="2">
+        <img src="./img/icon-celtic-shield.png"/>
+      </div>
+      <div class="pants" id="leather-pants" defence="1">
+        <img src="./img/icon-leather-pants.png"/>
+      </div>
+      <div class="head" id="helm" defence="2">
+        <img src="./img/icon-helm.png"/>
+      </div>
+      <div class="head" id="wreath">
+        <img src="./img/icon-wreath.png"/>
+      </div>
+      <div class="cape" id="red-cape" defence="1">
+        <img src="./img/icon-red-cape.png"/>
+      </div>
+    </div>
+    <div class="subheader">Choose a base:</div>
+    <div class="nav">
+      <div class="base" id="icon-man1" equiped="equiped">
+        <img src="./img/icon-man1.png"/>
+      </div>
+      <div class="base" id="icon-man2">
+        <img src="./img/icon-man2.png"/>
+      </div>
+    </div>
+    <div class="subheader">Choose a background:</div>
+    <div class="nav">
+      <div class="bg" id="icon-bg-sparks" equiped="equiped">
+        <img src="./img/icon-bg-sparks.png"/>
+      </div>
+      <div class="bg" id="icon-bg-forest">
+        <img src="./img/icon-bg-forest.png"/>
+      </div>
+    </div>
   </div>
-  <div class="subheader">Choose equipment:</div>
-  <div class="nav">
-    <div class="right" id="icon-spear">
-      <img src="./img/icon-spear.png"/>
-    </div>
-    <div class="right" id="icon-sword">
-      <img src="./img/icon-sword.png"/>
-    </div>
-    <div class="left" id="icon-golden-shield">
-      <img src="./img/icon-golden-shield.png"/>
-    </div>
-    <div class="left" id="icon-celtic-shield">
-      <img src="./img/icon-celtic-shield.png"/>
-    </div>
-    <div class="pants" id="leather-pants">
-      <img src="./img/icon-leather-pants.png"/>
-    </div>
-    <div class="head" id="helm">
-      <img src="./img/icon-helm.png"/>
-    </div>
-    <div class="head" id="wreath">
-      <img src="./img/icon-wreath.png"/>
-    </div>
-    <div class="cape" id="red-cape">
-      <img src="./img/icon-red-cape.png"/>
+  <!-- CONTENT RIGHT -->
+  <div class="content-right">
+    <div class="stats">
+      <h2>Stats</h2>
+      <div class="stat">Total attack: <span class="total-attack">0</span></div>
+      <div class="stat">Total defence: <span class="total-defence">0</span></div>
     </div>
   </div>
-  <div class="subheader">Choose a base:</div>
-  <div class="nav">
-    <div class="base" id="icon-man1" equiped="equiped">
-      <img src="./img/icon-man1.png"/>
-    </div>
-    <div class="base" id="icon-man2">
-      <img src="./img/icon-man2.png"/>
-    </div>
-  </div>
+</div>
+
 <script type="text/javascript" src="./js/script.js"></script>
 </body>
 </html>
