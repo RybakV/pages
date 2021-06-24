@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru" dir="ltr">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+</head>
+<body>
+  <header>
+    <ul class="nav">
+      <li class="nav-item">
+        <a href="#">Buy Now</a>
+      </li>
+      <li class="nav-item">
+        <a href="#">Flavors</a>
+      </li>
+      <li class="nav-item">
+        <a href="#">New</a>
+      </li>
+      <li class="nav-item">
+        <a href="#">FAQs</a>
+      </li>
+      <li class="nav-item">
+        <a href="#">Contact</a>
+      </li>
+    </ul>
+  </header>
+<section>
+   <div class="bg-video">
+      <video autoplay="" class="video" loop="" muted="muted">
+         <source src="./win_win_fast_15s-10mb.mp4" type="video/mp4">
+      </video>
+   </div>
+</section>
+<div class="white-section">
+   <div class="container">
+     <h1>Some text here</h1>
+     <p>Crafted with quality ingredients, White Claw® Hard Seltzer is made from a blend of seltzer water, our gluten-free alcohol base, and a hint of fruit flavor. Discover our variety of flavors today.
+     </p>
+   </div>
+</div>
+<style>
+body, html {
+   height: 100%;
+   margin: 0;
+   padding: 0;
+   font-family: Arial, sans-serif;
+}
+section {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+.bg-video, .video {
+    position: absolute;
+}
+.bg-video {
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    z-index: -1;
+}
+.video {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    min-height: 50%;
+    min-width: 50%;
+    opacity: 1;
+}
+
+/* NAV */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 15px 30px;
+  background-color: #0004;
+}
+.nav a {
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+}
+.nav {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+.white-section {
+  padding: 120px 0;
+  text-align: center;
+}
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+</style>
+</body>
+</html>
