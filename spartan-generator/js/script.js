@@ -34,6 +34,8 @@ $( ".nav>div" ).click(function() {
   var iconAttack = 0;
   var equipedDefence = 0;
   var iconDefence = 0;
+  var equipedLeadership = 0;
+  var iconLeadership = 0;
 
   /* Calculate attack and defence summ */
   $('[equiped]').each(function() {
@@ -59,19 +61,33 @@ $( ".nav>div" ).click(function() {
     else {
       iconAttack = 0;
     }
+
+    // get Leadership attribute
+    var attrLeadership = $(this).attr("leadership");
+    iconLeadership = parseInt(attrLeadership);
+    //check if icon has any Leadership
+    if ($.isNumeric(attrLeadership)) {
+      //attr Leadership is numeric - adding icon atack to the equiped Leadership
+      equipedLeadership = equipedLeadership + iconLeadership;
+    }
+    else {
+      iconAttack = 0;
+    }
   });
 
   $(".total-attack").text(equipedAttack);
   $(".total-defence").text(equipedDefence);
+  $(".total-leadership").text(equipedLeadership);
 });
 
 /* Icon hover Stats tooltip */
 $('.nav>div').mouseover(function(){
   var attrAttack = $(this).attr('attack');
   var attrDefence = $(this).attr('defence');
+  var attrLeadership = $(this).attr('leadership');
 
   // check if we have attack attribute - then create the tooltip wrap
-  if ((typeof attrAttack !== 'undefined' && attrAttack !== false) || (typeof attrDefence !== 'undefined' && attrDefence !== false)) {
+  if ((typeof attrAttack !== 'undefined' && attrAttack !== false) || (typeof attrDefence !== 'undefined' && attrDefence !== false) || (typeof attrLeadership !== 'undefined' && attrDefence !== false)) {
     $(this).append("<div class='tooltip'></div>");
   }
   if (typeof attrAttack !== 'undefined' && attrAttack !== false) {
@@ -79,6 +95,9 @@ $('.nav>div').mouseover(function(){
   }
   if (typeof attrDefence !== 'undefined' && attrDefence !== false) {
     $(this).children('.tooltip').append('<span class="tool-def">' + $(this).attr('defence') + '</span>');
+  }
+  if (typeof attrLeadership !== 'undefined' && attrLeadership !== false) {
+    $(this).children('.tooltip').append('<span class="tool-lead">' + $(this).attr('leadership') + '</span>');
   }
 
 

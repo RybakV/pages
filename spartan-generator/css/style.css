@@ -9,6 +9,7 @@ body {
   padding: 64px 40px;
   text-align: left;
   color: #e1a064;
+  text-shadow: 1px 1px 0 #7b482e;
 }
 h1 {
   font-weight: 700;
@@ -184,6 +185,9 @@ img {
 .nav>div .tooltip .tool-def::before, .stat-defence::before {
   background-image: url('../img/icon-defence.svg');
 }
+.nav>div .tooltip .tool-lead::before, .stat-leadership::before {
+  background-image: url('../img/icon-leadership.svg');
+}
 
 /* ----------- images ------------ */
 .scene-item.bg#bg-sparks {
@@ -200,6 +204,10 @@ img {
 }
 .scene-item.base#man2 {
   background-image: url('../img/man2.png');
+  z-index: 10;
+}
+.scene-item.base#man3 {
+  background-image: url('../img/man3.png');
   z-index: 10;
 }
 .scene-item.pants#leather-pants {
@@ -253,7 +261,4 @@ img {
 .scene-item.left#celtic-shield {
   background-image: url('../img/celtic-shield.png');
   z-index: 19;
-}
-.scene-item.pants {
-
 }
