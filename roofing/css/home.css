@@ -67,12 +67,12 @@ button {
     box-shadow: 0 0 12px #fff8; }
 
 .container-fluid, .container, .menu__dropdown-column, .menu__dropdown-header, .footer__left, .footer__right, .hero__text, .reviews__name, .rating, .blog__item, .blog__date, .blog__readmore {
-  padding-left: 20px;
-  padding-right: 20px; }
+  padding-left: 8px;
+  padding-right: 8px; }
 
 .row {
-  margin-left: -20px;
-  margin-right: -20px; }
+  margin-left: -8px;
+  margin-right: -8px; }
 
 .services__panel, .slider, .benefits__items, .blog__panel {
   box-shadow: 0 60px 40px -30px rgba(37, 48, 51, 0.04), 0 10px 50px 0 rgba(37, 48, 51, 0.06); }
@@ -201,10 +201,10 @@ body {
     vertical-align: middle; }
     @media (max-width: 991px) {
       .menu__item {
-        float: none;
         margin: 0;
         color: #fff;
-        position: relative; } }
+        position: relative;
+        display: block; } }
   .menu__link {
     display: block;
     padding: 28px 10px;
@@ -226,7 +226,9 @@ body {
         font-size: 16px;
         display: block;
         color: #fff;
-        text-align: center; } }
+        text-align: center; }
+        .menu__link:hover {
+          color: #29abe2; } }
   .menu__dropdown-menu {
     position: absolute;
     visibility: hidden;
@@ -245,10 +247,11 @@ body {
     @media (max-width: 991px) {
       .menu__dropdown-menu {
         position: static;
-        background-color: #0002;
+        background-color: #00345a;
         display: none;
         padding: 0;
-        min-height: 0; } }
+        min-height: 0;
+        box-shadow: none; } }
     .menu__dropdown-menu::before {
       content: '';
       display: block;
@@ -299,6 +302,12 @@ body {
     transition: .2s; }
     .menu__dropdown-link:hover {
       color: #29abe2; }
+    @media (max-width: 991px) {
+      .menu__dropdown-link {
+        text-align: center;
+        color: #fff; }
+        .menu__dropdown-link:hover {
+          color: #29abe2; } }
   @media (max-width: 991px) {
     .menu__dropdown-menu.show {
       display: block;

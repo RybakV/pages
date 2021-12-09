@@ -45,13 +45,18 @@ menu.forEach(function(o) {
 });
 
 // SLIDER reviews
+/*
 const previousBtn = document.querySelector('.slider__previous')
 const nextBtn = document.querySelector('.slider__next')
 
 const slides = document.querySelector('.slider__slides')
 const slidesNumber = slides.children.length
 
+*/
+
 // Numbered from 0
+
+/*
 let currentSlide = 0
 
 const updateSlider = () => {
@@ -74,4 +79,8 @@ nextBtn.addEventListener('click', () => {
 
   updateSlider()
 })
+
+*/
+
+
 // END SLIDER
