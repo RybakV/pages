@@ -1,0 +1,812 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+body {
+  font-family: 'Bebas Neue', cursive;
+  margin: 0;
+  background-color: #001a54;
+  padding: 40px 40px;
+  text-align: left;
+  color: #9ce25f;
+  text-shadow: 1px 1px 0 #4864d2;
+  font-size: 22px;
+}
+h1 {
+  font-weight: 700;
+  margin: 0 0 8px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 0 #5373fa, 2px 2px 0 #3162cd;
+}
+.subheader {
+  text-shadow: 1px 1px 0 #4864d2;
+  font-weight: 400;
+  margin: 8px 0;
+}
+img {
+  max-width: 100%;
+}
+/* content */
+.page-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.content-left {
+  position: fixed;
+}
+.content-right {
+  padding: 32px 40px 32px 530px;
+}
+@media (max-width: 767px) {
+  .page-content {
+    display: block;
+  }
+  .content-left {
+    width: 100%;
+    position: static;
+  }
+  .content-right {
+    padding: 0;
+  }
+}
+.stat {
+  margin-bottom: 8px;
+  padding-left: 24px;
+  position: relative;
+  line-height: 24px;
+}
+.scene {
+  display: block;
+  width: 500px;
+  height: 500px;
+  position: relative;
+  margin: 16px 0;
+  overflow: hidden;
+  max-height: 80vw;
+  }
+.scene-item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0;
+}
+.scene-item[id] {
+  opacity: 1;
+}
+
+
+/* Icons nav */
+.nav {
+}
+.nav>div {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  width: 160px;
+  height: 160px;
+  margin-bottom: 8px;
+  background-color: #2b2727;
+  border: 3px solid #2f2a2a;
+  box-shadow: inset 0 0 16px #0009;
+  cursor: pointer;
+}
+.nav>div:hover {
+  background-color: #2f2c2c;
+}
+.nav>div[equiped] {
+  border: 3px solid #9ce25f;
+}
+.nav>div[equiped] img {
+  opacity: 1;
+}
+.nav img {
+  display: block;
+  opacity: 0.6;
+  transition: .2s;
+}
+.nav>div:hover img {
+  opacity: 1;
+}
+
+.tooltip {
+  position: absolute;
+  z-index: 2;
+  top: 100%;
+  left: 0;
+  white-space: nowrap;
+  background-color: #0009;
+  padding: 2px;
+  color: #fff;
+  text-shadow: none;
+}
+
+
+/* ----------- images ------------ */
+/* --- BG --- */
+.nav .bg {
+  width: 40px !important;
+  height: 40px !important;
+}
+.scene-item.bg {
+  z-index: 1;
+}
+.scene-item.bg#bg-angel-tears {
+  background-image: url('../img/bg/angel-tears.png');
+}
+.scene-item.bg#bg-aqua-splash {
+  background-image: url('../img/bg/aqua-splash.png');
+}
+.scene-item.bg#bg-crimson-blush {
+  background-image: url('../img/bg/crimson-blush.png');
+}
+.scene-item.bg#bg-deep-relief {
+  background-image: url('../img/bg/deep-relief.png');
+}
+.scene-item.bg#bg-desert-hump {
+  background-image: url('../img/bg/desert-hump.png');
+}
+.scene-item.bg#bg-eternal-constance {
+  background-image: url('../img/bg/eternal-constance.png');
+}
+.scene-item.bg#bg-flying-high {
+  background-image: url('../img/bg/flying-high.png');
+}
+.scene-item.bg#bg-happy-fisher {
+  background-image: url('../img/bg/happy-fisher.png');
+}
+.scene-item.bg#bg-plum-plate {
+  background-image: url('../img/bg/plum-plate.png');
+}
+.scene-item.bg#bg-squeaky-clean {
+  background-image: url('../img/bg/squeaky-clean.png');
+}
+.scene-item.bg#bg-strong-bliss {
+  background-image: url('../img/bg/strong-bliss.png');
+}
+.scene-item.bg#bg-summer-salad {
+  background-image: url('../img/bg/summer-salad.png');
+}
+.scene-item.bg#bg-winter-solstice {
+  background-image: url('../img/bg/winter-solstice.png');
+}
+
+
+/* --- body --- */
+.scene-item.body {
+  z-index: 10;
+}
+.scene-item.body#body-charles {
+  background-image: url('../img/body/charles.png');
+}
+.scene-item.body#body-diamond-paws {
+  background-image: url('../img/body/diamond-paws.png');
+}
+.scene-item.body#body-escrow {
+  background-image: url('../img/body/escrow.png');
+}
+.scene-item.body#body-frankie {
+  background-image: url('../img/body/frankie.png');
+}
+.scene-item.body#body-glenn {
+  background-image: url('../img/body/glenn.png');
+}
+.scene-item.body#body-goldtooth {
+  background-image: url('../img/body/goldtooth.png');
+}
+.scene-item.body#body-grishnak {
+  background-image: url('../img/body/grishnak.png');
+}
+.scene-item.body#body-mariguanna {
+  background-image: url('../img/body/mariguanna.png');
+}
+.scene-item.body#body-ragnar {
+  background-image: url('../img/body/ragnar.png');
+}
+.scene-item.body#body-vitalik {
+  background-image: url('../img/body/vitalik.png');
+}
+.scene-item.body#body-x-yz {
+  background-image: url('../img/body/x-yz.png');
+}
+
+
+
+/* --- eyewear --- */
+.scene-item.eyewear {
+  z-index: 23;
+}
+.scene-item.eyewear#eyewear-3d-glasses{
+  background-image: url('../img/eyewear/3d-glasses.png');
+}
+.scene-item.eyewear#eyewear-bar-shades {
+  background-image: url('../img/eyewear/bar-shades.png');
+}
+.scene-item.eyewear#eyewear-eye-paint {
+  background-image: url('../img/eyewear/eye-paint.png');
+}
+.scene-item.eyewear#eyewear-golden-sunglasses {
+  background-image: url('../img/eyewear/golden-sunglasses.png');
+}
+.scene-item.eyewear#eyewear-monocle {
+  background-image: url('../img/eyewear/monocle.png');
+}
+.scene-item.eyewear#eyewear-orange-sunglasses {
+  background-image: url('../img/eyewear/orange-sunglasses.png');
+}
+.scene-item.eyewear#eyewear-purple-sunglasses {
+  background-image: url('../img/eyewear/purple-sunglasses.png');
+}
+.scene-item.eyewear#eyewear-respirator {
+  background-image: url('../img/eyewear/respirator.png');
+}
+.scene-item.eyewear#eyewear-retro-glasses {
+  background-image: url('../img/eyewear/retro-glasses.png');
+}
+.scene-item.eyewear#eyewear-round-sunglasses {
+  background-image: url('../img/eyewear/round-sunglasses.png');
+}
+.scene-item.eyewear#eyewear-sunglasses {
+  background-image: url('../img/eyewear/sunglasses.png');
+}
+.scene-item.eyewear#eyewear-vr-set {
+  background-image: url('../img/eyewear/vr-set.png');
+}
+
+
+
+/* footwear */
+.scene-item.footwear {
+  z-index: 11;
+}
+.scene-item.footwear#footwear-amish-shoes {
+  background-image: url('../img/footwear/amish-shoes.png');
+}
+.scene-item.footwear#footwear-austranaut-shoes {
+  background-image: url('../img/footwear/austranaut-shoes.png');
+}
+.scene-item.footwear#footwear-basketball-shoes {
+  background-image: url('../img/footwear/basketball-shoes.png');
+}
+.scene-item.footwear#footwear-black-dress-shoes {
+  background-image: url('../img/footwear/black-dress-shoes.png');
+}
+.scene-item.footwear#footwear-black-ninja-boots {
+  background-image: url('../img/footwear/black-ninja-boots.png');
+}
+.scene-item.footwear#footwear-brown-dress-shoes {
+  background-image: url('../img/footwear/brown-dress-shoes.png');
+}
+.scene-item.footwear#footwear-brown-spartan-sandals {
+  background-image: url('../img/footwear/brown-spartan-sandals.png');
+}
+.scene-item.footwear#footwear-chemical-protection-boots {
+  background-image: url('../img/footwear/chemical-protection-boots.png');
+}
+.scene-item.footwear#footwear-clown-shoes {
+  background-image: url('../img/footwear/clown-shoes.png');
+}
+.scene-item.footwear#footwear-golden-knight-boots {
+  background-image: url('../img/footwear/golden-knight-boots.png');
+}
+.scene-item.footwear#footwear-golf-shoes {
+  background-image: url('../img/footwear/golf-shoes.png');
+}
+.scene-item.footwear#footwear-ice-skates {
+  background-image: url('../img/footwear/ice-skates.png');
+}
+.scene-item.footwear#footwear-loafers {
+  background-image: url('../img/footwear/loafers.png');
+}
+.scene-item.footwear#footwear-marine-boots {
+  background-image: url('../img/footwear/marine-boots.png');
+}
+.scene-item.footwear#footwear-platinum-spartan-sandals {
+  background-image: url('../img/footwear/platinum-spartan-sandals.png');
+}
+.scene-item.footwear#footwear-red-football-cleats {
+  background-image: url('../img/footwear/red-football-cleats.png');
+}
+.scene-item.footwear#footwear-samurai-boots {
+  background-image: url('../img/footwear/samurai-boots.png');
+}
+.scene-item.footwear#footwear-silver-knight-boots {
+  background-image: url('../img/footwear/silver-knight-boots.png');
+}
+.scene-item.footwear#footwear-sneakers {
+  background-image: url('../img/footwear/sneakers.png');
+}
+.scene-item.footwear#footwear-sushi-chef-shoes {
+  background-image: url('../img/footwear/sushi-chef-shoes.png');
+}
+.scene-item.footwear#footwear-tennis-socks-shoes {
+  background-image: url('../img/footwear/tennis-socks-shoes.png');
+}
+.scene-item.footwear#footwear-white-football-cleats {
+  background-image: url('../img/footwear/white-football-cleats.png');
+}
+
+/* --- headwear --- */
+.scene-item.headwear {
+  z-index: 25;
+}
+.scene-item.headwear#headwear-amish-hat {
+  background-image: url('../img/headwear/amish-hat.png');
+}
+.scene-item.headwear#headwear-astronnaut-helmet-edit {
+  background-image: url('../img/headwear/astronnaut-helmet-edit.png');
+}
+.scene-item.headwear#headwear-black-golf-hat {
+  background-image: url('../img/headwear/black-golf-hat.png');
+}
+.scene-item.headwear#headwear-black-ninja-headband {
+  background-image: url('../img/headwear/black-ninja-headband.png');
+}
+.scene-item.headwear#headwear-black-ushanka {
+  background-image: url('../img/headwear/black-ushanka.png');
+}
+.scene-item.headwear#headwear-blue-beanie {
+  background-image: url('../img/headwear/blue-beanie.png');
+}
+.scene-item.headwear#headwear-brown-ushanka {
+  background-image: url('../img/headwear/brown-ushanka.png');
+}
+.scene-item.headwear#headwear-caesar-hat {
+  background-image: url('../img/headwear/caesar-hat.png');
+}
+.scene-item.headwear#headwear-clown-hat {
+  background-image: url('../img/headwear/clown-hat.png');
+}
+.scene-item.headwear#headwear-copter-hat {
+  background-image: url('../img/headwear/copter-hat.png');
+}
+.scene-item.headwear#headwear-golden-knight-helmet {
+  background-image: url('../img/headwear/golden-knight-helmet.png');
+}
+.scene-item.headwear#headwear-golden-spartan-helmet {
+  background-image: url('../img/headwear/golden-spartan-helmet.png');
+}
+.scene-item.headwear#headwear-gold-hat {
+  background-image: url('../img/headwear/gold-hat.png');
+}
+.scene-item.headwear#headwear-green-beanie {
+  background-image: url('../img/headwear/green-beanie.png');
+}
+.scene-item.headwear#headwear-grey-football-helmet {
+  background-image: url('../img/headwear/grey-football-helmet.png');
+}
+.scene-item.headwear#headwear-marine-helmet {
+  background-image: url('../img/headwear/marine-helmet.png');
+}
+.scene-item.headwear#headwear-old-hat {
+  background-image: url('../img/headwear/old-hat.png');
+}
+.scene-item.headwear#headwear-party-hat {
+  background-image: url('../img/headwear/party-hat.png');
+}
+.scene-item.headwear#headwear-platinum-spartan-helmet {
+  background-image: url('../img/headwear/platinum-spartan-helmet.png');
+}
+.scene-item.headwear#headwear-purple-ushanka {
+  background-image: url('../img/headwear/purple-ushanka.png');
+}
+.scene-item.headwear#headwear-rainbow-cap {
+  background-image: url('../img/headwear/rainbow-cap.png');
+}
+.scene-item.headwear#headwear-red-beanie {
+  background-image: url('../img/headwear/red-beanie.png');
+}
+.scene-item.headwear#headwear-silver-spartan-helmet {
+  background-image: url('../img/headwear/silver-spartan-helmet.png');
+}
+.scene-item.headwear#headwear-straw-hat {
+  background-image: url('../img/headwear/straw-hat.png');
+}
+.scene-item.headwear#headwear-sushi-chef-hat {
+  background-image: url('../img/headwear/sushi-chef-hat.png');
+}
+.scene-item.headwear#headwear-traffic-cone {
+  background-image: url('../img/headwear/traffic-cone.png');
+}
+.scene-item.headwear#headwear-tuxedo-hat {
+  background-image: url('../img/headwear/tuxedo-hat.png');
+}
+.scene-item.headwear#headwear-violet-beanie {
+  background-image: url('../img/headwear/violet-beanie.png');
+}
+
+/* --- lefthand --- */
+.scene-item.lefthand {
+  z-index: 26;
+}
+.scene-item.lefthand#lefthand-american-football-left {
+  background-image: url('../img/lefthand/american-football-left.png');
+}
+.scene-item.lefthand#lefthand-amish-pitch-fork-left {
+  background-image: url('../img/lefthand/amish-pitch-fork-left.png');
+}
+.scene-item.lefthand#lefthand-banana-left {
+  background-image: url('../img/lefthand/banana-left.png');
+}
+.scene-item.lefthand#lefthand-basketball-left {
+  background-image: url('../img/lefthand/basketball-left.png');
+}
+.scene-item.lefthand#lefthand-beer-left {
+  background-image: url('../img/lefthand/beer-left.png');
+}
+.scene-item.lefthand#lefthand-blue-degen-sword-left {
+  background-image: url('../img/lefthand/blue-degen-sword-left.png');
+}
+.scene-item.lefthand#lefthand-bong-left {
+  background-image: url('../img/lefthand/bong-left.png');
+}
+.scene-item.lefthand#lefthand-bow-arrow-left {
+  background-image: url('../img/lefthand/bow-arrow-left.png');
+}
+.scene-item.lefthand#lefthand-corn-gun-left {
+  background-image: url('../img/lefthand/corn-gun-left.png');
+}
+.scene-item.lefthand#lefthand-diamond-left {
+  background-image: url('../img/lefthand/diamond-left.png');
+}
+.scene-item.lefthand#lefthand-duble-blue-degen-sword-left {
+  background-image: url('../img/lefthand/duble-blue-degen-sword-left.png');
+}
+.scene-item.lefthand#lefthand-duble-red-degen-sword-left {
+  background-image: url('../img/lefthand/duble-red-degen-sword-left.png');
+}
+.scene-item.lefthand#lefthand-duble-yellow-degen-sword-left {
+  background-image: url('../img/lefthand/duble-yellow-degen-sword-left.png');
+}
+.scene-item.lefthand#lefthand-football-left {
+  background-image: url('../img/lefthand/football-left.png');
+}
+.scene-item.lefthand#lefthand-golden-gun-left {
+  background-image: url('../img/lefthand/golden-gun-left.png');
+}
+.scene-item.lefthand#lefthand-golden-spartan-sword-left {
+  background-image: url('../img/lefthand/golden-spartan-sword-left.png');
+}
+.scene-item.lefthand#lefthand-golf-club-left {
+  background-image: url('../img/lefthand/golf-club-left.png');
+}
+.scene-item.lefthand#lefthand-green-degen-sword-left {
+  background-image: url('../img/lefthand/green-degen-sword-left.png');
+}
+.scene-item.lefthand#lefthand-grenade-left {
+  background-image: url('../img/lefthand/grenade-left.png');
+}
+.scene-item.lefthand#lefthand-hockey-stick-left {
+  background-image: url('../img/lefthand/hockey-stick-left.png');
+}
+.scene-item.lefthand#lefthand-katana-left {
+  background-image: url('../img/lefthand/katana-left.png');
+}
+.scene-item.lefthand#lefthand-platinum-spartan-sword-left {
+  background-image: url('../img/lefthand/platinum-spartan-sword-left.png');
+}
+.scene-item.lefthand#lefthand-purple-degen-sword-left {
+  background-image: url('../img/lefthand/purple-degen-sword-left.png');
+}
+.scene-item.lefthand#lefthand-red-degen-sword-left {
+  background-image: url('../img/lefthand/red-degen-sword-left.png');
+}
+.scene-item.lefthand#lefthand-shield-left {
+  background-image: url('../img/lefthand/shield-left.png');
+}
+.scene-item.lefthand#lefthand-silver-spartan-sword-left {
+  background-image: url('../img/lefthand/silver-spartan-sword-left.png');
+}
+.scene-item.lefthand#lefthand-sushi-knife-left {
+  background-image: url('../img/lefthand/sushi-knife-left.png');
+}
+.scene-item.lefthand#lefthand-sword-left {
+  background-image: url('../img/lefthand/sword-left.png');
+}
+.scene-item.lefthand#lefthand-tennis-racket-left {
+  background-image: url('../img/lefthand/tennis-racket-left.png');
+}
+
+/* --- righthand --- */
+.scene-item.righthand {
+  z-index: 26;
+}
+.scene-item.righthand#righthand-american-football-right {
+  background-image: url('../img/righthand/american-football-right.png');
+}
+.scene-item.righthand#righthand-amish-pitch-fork-right {
+  background-image: url('../img/righthand/amish-pitch-fork-right.png');
+}
+.scene-item.righthand#righthand-banana-right {
+  background-image: url('../img/righthand/banana-right.png');
+}
+.scene-item.righthand#righthand-basketball-right {
+  background-image: url('../img/righthand/basketball-right.png');
+}
+.scene-item.righthand#righthand-beer-right {
+  background-image: url('../img/righthand/beer-right.png');
+}
+.scene-item.righthand#righthand-blue-degen-sword-right {
+  background-image: url('../img/righthand/blue-degen-sword-right.png');
+}
+.scene-item.righthand#righthand-bong-right {
+  background-image: url('../img/righthand/bong-right.png');
+}
+.scene-item.righthand#righthand-bow-arrow-right {
+  background-image: url('../img/righthand/bow-arrow-right.png');
+}
+.scene-item.righthand#righthand-corn-gun-right {
+  background-image: url('../img/righthand/corn-gun-right.png');
+}
+.scene-item.righthand#righthand-diamond-right {
+  background-image: url('../img/righthand/diamond-right.png');
+}
+.scene-item.righthand#righthand-duble-blue-degen-sword-right {
+  background-image: url('../img/righthand/duble-blue-degen-sword-right.png');
+}
+.scene-item.righthand#righthand-duble-red-degen-sword-right {
+  background-image: url('../img/righthand/duble-red-degen-sword-right.png');
+}
+.scene-item.righthand#righthand-duble-yellow-degen-sword-right {
+  background-image: url('../img/righthand/duble-yellow-degen-sword-right.png');
+}
+.scene-item.righthand#righthand-football-right {
+  background-image: url('../img/righthand/football-right.png');
+}
+.scene-item.righthand#righthand-golden-gun-right {
+  background-image: url('../img/righthand/golden-gun-right.png');
+}
+.scene-item.righthand#righthand-golden-spartan-sword-right {
+  background-image: url('../img/righthand/golden-spartan-sword-right.png');
+}
+.scene-item.righthand#righthand-golf-club-right {
+  background-image: url('../img/righthand/golf-club-right.png');
+}
+.scene-item.righthand#righthand-green-degen-sword-right {
+  background-image: url('../img/righthand/green-degen-sword-right.png');
+}
+.scene-item.righthand#righthand-grenade-right {
+  background-image: url('../img/righthand/grenade-right.png');
+}
+.scene-item.righthand#righthand-hockey-stick-right {
+  background-image: url('../img/righthand/hockey-stick-right.png');
+}
+.scene-item.righthand#righthand-katana-right {
+  background-image: url('../img/righthand/katana-right.png');
+}
+.scene-item.righthand#righthand-platinum-spartan-sword-right {
+  background-image: url('../img/righthand/platinum-spartan-sword-right.png');
+}
+.scene-item.righthand#righthand-purple-degen-sword-right {
+  background-image: url('../img/righthand/purple-degen-sword-right.png');
+}
+.scene-item.righthand#righthand-red-degen-sword-right {
+  background-image: url('../img/righthand/red-degen-sword-right.png');
+}
+.scene-item.righthand#righthand-shield-right {
+  background-image: url('../img/righthand/shield-right.png');
+}
+.scene-item.righthand#righthand-silver-spartan-sword-right {
+  background-image: url('../img/righthand/silver-spartan-sword-right.png');
+}
+.scene-item.righthand#righthand-sushi-knife-right {
+  background-image: url('../img/righthand/sushi-knife-right.png');
+}
+.scene-item.righthand#righthand-sword-right {
+  background-image: url('../img/righthand/sword-right.png');
+}
+.scene-item.righthand#righthand-tennis-racket-right {
+  background-image: url('../img/righthand/tennis-racket-right.png');
+}
+
+
+/* --- pants --- */
+.scene-item.pants {
+  z-index: 12;
+}
+.scene-item.pants#pants-amish-pants {
+  background-image: url('../img/pants/amish-pants.png');
+}
+.scene-item.pants#pants-argentina-pants {
+  background-image: url('../img/pants/argentina-pants.png');
+}
+.scene-item.pants#pants-astronaut-pants {
+  background-image: url('../img/pants/astronaut-pants.png');
+}
+.scene-item.pants#pants-black-dress-pants {
+  background-image: url('../img/pants/black-dress-pants.png');
+}
+.scene-item.pants#pants-black-ninja-pants {
+  background-image: url('../img/pants/black-ninja-pants.png');
+}
+.scene-item.pants#pants-black-pants {
+  background-image: url('../img/pants/black-pants.png');
+}
+.scene-item.pants#pants-black-soccer-pants {
+  background-image: url('../img/pants/black-soccer-pants.png');
+}
+.scene-item.pants#pants-blue-hockey-pants {
+  background-image: url('../img/pants/blue-hockey-pants.png');
+}
+.scene-item.pants#pants-blue-jeans {
+  background-image: url('../img/pants/blue-jeans.png');
+}
+.scene-item.pants#pants-brazil-pants {
+  background-image: url('../img/pants/brazil-pants.png');
+}
+.scene-item.pants#pants-cargo-shorts {
+  background-image: url('../img/pants/cargo-shorts.png');
+}
+.scene-item.pants#pants-chemical-protection-pants {
+  background-image: url('../img/pants/chemical-protection-pants.png');
+}
+.scene-item.pants#pants-classic-plaid-pants {
+  background-image: url('../img/pants/classic-plaid-pants.png');
+}
+.scene-item.pants#pants-clown-pants {
+  background-image: url('../img/pants/clown-pants.png');
+}
+.scene-item.pants#pants-golden-grieves {
+  background-image: url('../img/pants/golden-grieves.png');
+}
+.scene-item.pants#pants-golden-pants {
+  background-image: url('../img/pants/golden-pants.png');
+}
+.scene-item.pants#pants-gray-football-pants {
+  background-image: url('../img/pants/gray-football-pants.png');
+}
+.scene-item.pants#pants-gray-jeans {
+  background-image: url('../img/pants/gray-jeans.png');
+}
+.scene-item.pants#pants-grey-dress-pants {
+  background-image: url('../img/pants/grey-dress-pants.png');
+}
+.scene-item.pants#pants-grey-pants {
+  background-image: url('../img/pants/grey-pants.png');
+}
+.scene-item.pants#pants-marine-pants {
+  background-image: url('../img/pants/marine-pants.png');
+}
+.scene-item.pants#pants-rainbow-pants {
+  background-image: url('../img/pants/rainbow-pants.png');
+}
+.scene-item.pants#pants-red-basketball-pants {
+  background-image: url('../img/pants/red-basketball-pants.png');
+}
+.scene-item.pants#pants-red-football-pants {
+  background-image: url('../img/pants/red-football-pants.png');
+}
+.scene-item.pants#pants-ribbed-zombie-pants {
+  background-image: url('../img/pants/ribbed-zombie-pants.png');
+}
+.scene-item.pants#pants-samurai-pants {
+  background-image: url('../img/pants/samurai-pants.png');
+}
+.scene-item.pants#pants-silver-grieves {
+  background-image: url('../img/pants/silver-grieves.png');
+}
+.scene-item.pants#pants-spartan-pants {
+  background-image: url('../img/pants/spartan-pants.png');
+}
+.scene-item.pants#pants-sushi-chef-pants {
+  background-image: url('../img/pants/sushi-chef-pants.png');
+}
+.scene-item.pants#pants-taewkondo-pants {
+  background-image: url('../img/pants/taewkondo-pants.png');
+}
+.scene-item.pants#pants-tennis-pants {
+  background-image: url('../img/pants/tennis-pants.png');
+}
+.scene-item.pants#pants-tuxedo-pants {
+  background-image: url('../img/pants/tuxedo-pants.png');
+}
+
+
+/* --- torso --- */
+.scene-item.torso {
+  z-index: 20;
+}
+.scene-item.torso#torso-amish-shirt {
+  background-image: url('../img/torso/amish-shirt.png');
+}
+.scene-item.torso#torso-argentina-jersey {
+  background-image: url('../img/torso/argentina-jersey.png');
+}
+.scene-item.torso#torso-astronaut-torso {
+  background-image: url('../img/torso/astronaut-torso.png');
+}
+.scene-item.torso#torso-beer-mug-shirt {
+  background-image: url('../img/torso/beer-mug-shirt.png');
+}
+.scene-item.torso#torso-black-ninja-robe {
+  background-image: url('../img/torso/black-ninja-robe.png');
+}
+.scene-item.torso#torso-blue-hockey-jersey {
+  background-image: url('../img/torso/blue-hockey-jersey.png');
+}
+.scene-item.torso#torso-bow-tie-suit {
+  background-image: url('../img/torso/bow-tie-suit.png');
+}
+.scene-item.torso#torso-brazil-jersey {
+  background-image: url('../img/torso/brazil-jersey.png');
+}
+.scene-item.torso#torso-chemical-protection-robe {
+  background-image: url('../img/torso/chemical-protection-robe.png');
+}
+.scene-item.torso#torso-clown-jacket {
+  background-image: url('../img/torso/clown-jacket.png');
+}
+.scene-item.torso#torso-golden-armor {
+  background-image: url('../img/torso/golden-armor.png');
+}
+.scene-item.torso#torso-golden-jacket {
+  background-image: url('../img/torso/golden-jacket.png');
+}
+.scene-item.torso#torso-golden-spartan-armor {
+  background-image: url('../img/torso/golden-spartan-armor.png');
+}
+.scene-item.torso#torso-grey-jacket {
+  background-image: url('../img/torso/grey-jacket.png');
+}
+.scene-item.torso#torso-marine-shirt {
+  background-image: url('../img/torso/marine-shirt.png');
+}
+.scene-item.torso#torso-platinum-spartan-armor {
+  background-image: url('../img/torso/platinum-spartan-armor.png');
+}
+.scene-item.torso#torso-rainbow-jacket {
+  background-image: url('../img/torso/rainbow-jacket.png');
+}
+.scene-item.torso#torso-red-basketball-jersey {
+  background-image: url('../img/torso/red-basketball-jersey.png');
+}
+.scene-item.torso#torso-red-collared-shirt {
+  background-image: url('../img/torso/red-collared-shirt.png');
+}
+.scene-item.torso#torso-red-football-jersey {
+  background-image: url('../img/torso/red-football-jersey.png');
+}
+.scene-item.torso#torso-ribbed-zombie-shirt {
+  background-image: url('../img/torso/ribbed-zombie-shirt.png');
+}
+.scene-item.torso#torso-samurai-armor {
+  background-image: url('../img/torso/samurai-armor.png');
+}
+.scene-item.torso#torso-silver-armor {
+  background-image: url('../img/torso/silver-armor.png');
+}
+.scene-item.torso#torso-striped-soccer-jersey {
+  background-image: url('../img/torso/striped-soccer-jersey.png');
+}
+.scene-item.torso#torso-suit {
+  background-image: url('../img/torso/suit.png');
+}
+.scene-item.torso#torso-suit-and-tie {
+  background-image: url('../img/torso/suit-and-tie.png');
+}
+.scene-item.torso#torso-sushi-chef-robe {
+  background-image: url('../img/torso/sushi-chef-robe.png');
+}
+.scene-item.torso#torso-taewkondo-robe {
+  background-image: url('../img/torso/taewkondo-robe.png');
+}
+.scene-item.torso#torso-tennis-shirt {
+  background-image: url('../img/torso/tennis-shirt.png');
+}
+.scene-item.torso#torso-tuxedo-jacket {
+  background-image: url('../img/torso/tuxedo-jacket.png');
+}
+.scene-item.torso#torso-weed-plant-shirt {
+  background-image: url('../img/torso/weed-plant-shirt.png');
+}
+.scene-item.torso#torso-white-football-jersey {
+  background-image: url('../img/torso/white-football-jersey.png');
+}

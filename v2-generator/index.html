@@ -1,0 +1,713 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru" dir="ltr">
+
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>V2 Generator</title>
+  <!-- CSS files-->
+  <link rel="stylesheet" href="./css/style.css" type="text/css" />
+  <!-- JS files-->
+  <script type="text/javascript" src="./js/jquery.min.js"></script>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico"/>
+</head>
+<body>
+
+
+<div class="page-content">
+  <!-- CONTENT LEFT -->
+  <div class="content-left">
+    <h1 class="title">V2 Generator</h1>
+    <div class="scene">
+      <div class="scene-item bg required" id="bg-eternal-constance"></div>
+      <div class="scene-item body required" id="body-charles"></div>
+      <div class="scene-item eyewear"></div>
+      <div class="scene-item headwear"></div>
+      <div class="scene-item footwear"></div>
+      <div class="scene-item pants"></div>
+      <div class="scene-item lefthand"></div>
+      <div class="scene-item righthand"></div>
+      <div class="scene-item torso"></div>
+    </div>
+
+  </div>
+  <!-- CONTENT RIGHT -->
+  <div class="content-right">
+    <div class="subheader">Background:</div>
+    <div class="nav">
+      <div class="bg" id="icon-bg-angel-tears">
+        <img src="./img/bg/angel-tears.png" alt="angel-tears"/>
+      </div>
+      <div class="bg" id="icon-bg-aqua-splash">
+        <img src="./img/bg/aqua-splash.png" alt="aqua-splash"/>
+      </div>
+      <div class="bg" id="icon-bg-crimson-blush">
+        <img src="./img/bg/crimson-blush.png" alt="crimson-blush"/>
+      </div>
+      <div class="bg" id="icon-bg-deep-relief">
+        <img src="./img/bg/deep-relief.png" alt="deep-relief"/>
+      </div>
+      <div class="bg" id="icon-bg-desert-hump">
+        <img src="./img/bg/desert-hump.png" alt="desert-hump"/>
+      </div>
+      <div class="bg" id="icon-bg-eternal-constance" equiped="equiped">
+        <img src="./img/bg/eternal-constance.png" alt="eternal-constance"/>
+      </div>
+      <div class="bg" id="icon-bg-flying-high">
+        <img src="./img/bg/flying-high.png" alt="flying-high"/>
+      </div>
+      <div class="bg" id="icon-bg-happy-fisher">
+        <img src="./img/bg/happy-fisher.png" alt="happy-fisher"/>
+      </div>
+      <div class="bg" id="icon-bg-plum-plate">
+        <img src="./img/bg/plum-plate.png" alt="plum-plate"/>
+      </div>
+      <div class="bg" id="icon-bg-squeaky-clean">
+        <img src="./img/bg/squeaky-clean.png" alt="squeaky-clean"/>
+      </div>
+      <div class="bg" id="icon-bg-strong-bliss">
+        <img src="./img/bg/strong-bliss.png" alt="strong-bliss"/>
+      </div>
+      <div class="bg" id="icon-bg-summer-salad">
+        <img src="./img/bg/summer-salad.png" alt="summer-salad"/>
+      </div>
+      <div class="bg" id="icon-bg-winter-solstice">
+        <img src="./img/bg/winter-solstice.png" alt="winter-solstice"/>
+      </div>
+
+    </div>
+
+    <div class="subheader">body:</div>
+    <div class="nav">
+      <div class="body" id="icon-body-charles" equiped="equiped">
+        <img src="./img/body/charles.png" alt="charles"/>
+      </div>
+      <div class="body" id="icon-body-diamond-paws">
+        <img src="./img/body/diamond-paws.png" alt="diamond-paws"/>
+      </div>
+      <div class="body" id="icon-body-escrow">
+        <img src="./img/body/escrow.png" alt="escrow"/>
+      </div>
+      <div class="body" id="icon-body-frankie">
+        <img src="./img/body/frankie.png" alt="frankie"/>
+      </div>
+      <div class="body" id="icon-body-glenn">
+        <img src="./img/body/glenn.png" alt="glenn"/>
+      </div>
+      <div class="body" id="icon-body-goldtooth">
+        <img src="./img/body/goldtooth.png" alt="goldtooth"/>
+      </div>
+      <div class="body" id="icon-body-grishnak">
+        <img src="./img/body/grishnak.png" alt="grishnak"/>
+      </div>
+      <div class="body" id="icon-body-mariguanna">
+        <img src="./img/body/mariguanna.png" alt="mariguanna"/>
+      </div>
+      <div class="body" id="icon-body-ragnar">
+        <img src="./img/body/ragnar.png" alt="ragnar"/>
+      </div>
+      <div class="body" id="icon-body-vitalik">
+        <img src="./img/body/vitalik.png" alt="vitalik"/>
+      </div>
+      <div class="body" id="icon-body-x-yz">
+        <img src="./img/body/x-yz.png" alt="x-yz"/>
+      </div>
+    </div>
+
+
+    <div class="subheader">eyewear:</div>
+    <div class="nav">
+      <div class="eyewear" id="icon-eyewear-3d-glasses">
+        <img src="./img/eyewear/3d-glasses.png" alt="3d-glasses"/>
+      </div>
+      <div class="eyewear" id="icon-eyewear-bar-shades">
+        <img src="./img/eyewear/bar-shades.png" alt="bar-shades"/>
+      </div>
+      <div class="eyewear" id="icon-eyewear-eye-paint">
+        <img src="./img/eyewear/eye-paint.png" alt="eye-paint"/>
+      </div>
+      <div class="eyewear" id="icon-eyewear-golden-sunglasses">
+        <img src="./img/eyewear/golden-sunglasses.png" alt="golden-sunglasses"/>
+      </div>
+      <div class="eyewear" id="icon-eyewear-monocle">
+        <img src="./img/eyewear/monocle.png" alt="monocle"/>
+      </div>
+      <div class="eyewear" id="icon-eyewear-orange-sunglasses">
+        <img src="./img/eyewear/orange-sunglasses.png" alt="orange-sunglasses"/>
+      </div>
+      <div class="eyewear" id="icon-eyewear-purple-sunglasses">
+        <img src="./img/eyewear/purple-sunglasses.png" alt="purple-sunglasses"/>
+      </div>
+      <div class="eyewear" id="icon-eyewear-respirator">
+        <img src="./img/eyewear/respirator.png" alt="respirator"/>
+      </div>
+      <div class="eyewear" id="icon-eyewear-retro-glasses">
+        <img src="./img/eyewear/retro-glasses.png" alt="retro-glasses"/>
+      </div>
+      <div class="eyewear" id="icon-eyewear-round-sunglasses">
+        <img src="./img/eyewear/round-sunglasses.png" alt="round-sunglasses"/>
+      </div>
+      <div class="eyewear" id="icon-eyewear-sunglasses">
+        <img src="./img/eyewear/sunglasses.png" alt="sunglasses"/>
+      </div>
+      <div class="eyewear" id="icon-eyewear-vr-set">
+        <img src="./img/eyewear/vr-set.png" alt="vr-set"/>
+      </div>
+    </div>
+
+
+    <div class="subheader">footwear:</div>
+    <div class="nav">
+      <div class="footwear" id="icon-footwear-amish-shoes">
+        <img src="./img/footwear/amish-shoes.png" alt="amish-shoes"/>
+      </div>
+      <div class="footwear" id="icon-footwear-austranaut-shoes">
+        <img src="./img/footwear/austranaut-shoes.png" alt="austranaut-shoes"/>
+      </div>
+      <div class="footwear" id="icon-footwear-basketball-shoes">
+        <img src="./img/footwear/basketball-shoes.png" alt="basketball-shoes"/>
+      </div>
+      <div class="footwear" id="icon-footwear-black-dress-shoes">
+        <img src="./img/footwear/black-dress-shoes.png" alt="black-dress-shoes"/>
+      </div>
+      <div class="footwear" id="icon-footwear-black-ninja-boots">
+        <img src="./img/footwear/black-ninja-boots.png" alt="black-ninja-boots"/>
+      </div>
+      <div class="footwear" id="icon-footwear-brown-dress-shoes">
+        <img src="./img/footwear/brown-dress-shoes.png" alt="brown-dress-shoes"/>
+      </div>
+      <div class="footwear" id="icon-footwear-brown-spartan-sandals">
+        <img src="./img/footwear/brown-spartan-sandals.png" alt="brown-spartan-sandals"/>
+      </div>
+      <div class="footwear" id="icon-footwear-chemical-protection-boots">
+        <img src="./img/footwear/chemical-protection-boots.png" alt="chemical-protection-boots"/>
+      </div>
+      <div class="footwear" id="icon-footwear-clown-shoes">
+        <img src="./img/footwear/clown-shoes.png" alt="clown-shoes"/>
+      </div>
+      <div class="footwear" id="icon-footwear-golden-knight-boots">
+        <img src="./img/footwear/golden-knight-boots.png" alt="golden-knight-boots"/>
+      </div>
+      <div class="footwear" id="icon-footwear-golf-shoes">
+        <img src="./img/footwear/golf-shoes.png" alt="golf-shoes"/>
+      </div>
+      <div class="footwear" id="icon-footwear-ice-skates">
+        <img src="./img/footwear/ice-skates.png" alt="ice-skates"/>
+      </div>
+      <div class="footwear" id="icon-footwear-loafers">
+        <img src="./img/footwear/loafers.png" alt="loafers"/>
+      </div>
+      <div class="footwear" id="icon-footwear-marine-boots">
+        <img src="./img/footwear/marine-boots.png" alt="marine-boots"/>
+      </div>
+      <div class="footwear" id="icon-footwear-platinum-spartan-sandals">
+        <img src="./img/footwear/platinum-spartan-sandals.png" alt="platinum-spartan-sandals"/>
+      </div>
+      <div class="footwear" id="icon-footwear-red-football-cleats">
+        <img src="./img/footwear/red-football-cleats.png" alt="red-football-cleats"/>
+      </div>
+      <div class="footwear" id="icon-footwear-samurai-boots">
+        <img src="./img/footwear/samurai-boots.png" alt="samurai-boots"/>
+      </div>
+      <div class="footwear" id="icon-footwear-silver-knight-boots">
+        <img src="./img/footwear/silver-knight-boots.png" alt="silver-knight-boots"/>
+      </div>
+      <div class="footwear" id="icon-footwear-sneakers">
+        <img src="./img/footwear/sneakers.png" alt="sneakers"/>
+      </div>
+      <div class="footwear" id="icon-footwear-sushi-chef-shoes">
+        <img src="./img/footwear/sushi-chef-shoes.png" alt="sushi-chef-shoes"/>
+      </div>
+      <div class="footwear" id="icon-footwear-tennis-socks-shoes">
+        <img src="./img/footwear/tennis-socks-shoes.png" alt="tennis-socks-shoes"/>
+      </div>
+      <div class="footwear" id="icon-footwear-white-football-cleats">
+        <img src="./img/footwear/white-football-cleats.png" alt="white-football-cleats"/>
+      </div>
+
+    </div>
+
+    <div class="subheader">headwear:</div>
+    <div class="nav">
+      <div class="headwear" id="icon-headwear-amish-hat">
+        <img src="./img/headwear/amish-hat.png" alt="amish-hat"/>
+      </div>
+      <div class="headwear" id="icon-headwear-astronnaut-helmet-edit">
+        <img src="./img/headwear/astronnaut-helmet-edit.png" alt="astronnaut-helmet-edit"/>
+      </div>
+      <div class="headwear" id="icon-headwear-black-golf-hat">
+        <img src="./img/headwear/black-golf-hat.png" alt="black-golf-hat"/>
+      </div>
+      <div class="headwear" id="icon-headwear-black-ninja-headband">
+        <img src="./img/headwear/black-ninja-headband.png" alt="black-ninja-headband"/>
+      </div>
+      <div class="headwear" id="icon-headwear-black-ushanka">
+        <img src="./img/headwear/black-ushanka.png" alt="black-ushanka"/>
+      </div>
+      <div class="headwear" id="icon-headwear-blue-beanie">
+        <img src="./img/headwear/blue-beanie.png" alt="blue-beanie"/>
+      </div>
+      <div class="headwear" id="icon-headwear-brown-ushanka">
+        <img src="./img/headwear/brown-ushanka.png" alt="brown-ushanka"/>
+      </div>
+      <div class="headwear" id="icon-headwear-caesar-hat">
+        <img src="./img/headwear/caesar-hat.png" alt="caesar-hat"/>
+      </div>
+      <div class="headwear" id="icon-headwear-clown-hat">
+        <img src="./img/headwear/clown-hat.png" alt="clown-hat"/>
+      </div>
+      <div class="headwear" id="icon-headwear-copter-hat">
+        <img src="./img/headwear/copter-hat.png" alt="copter-hat"/>
+      </div>
+      <div class="headwear" id="icon-headwear-golden-knight-helmet">
+        <img src="./img/headwear/golden-knight-helmet.png" alt="golden-knight-helmet"/>
+      </div>
+      <div class="headwear" id="icon-headwear-golden-spartan-helmet">
+        <img src="./img/headwear/golden-spartan-helmet.png" alt="golden-spartan-helmet"/>
+      </div>
+      <div class="headwear" id="icon-headwear-gold-hat">
+        <img src="./img/headwear/gold-hat.png" alt="gold-hat"/>
+      </div>
+      <div class="headwear" id="icon-headwear-green-beanie">
+        <img src="./img/headwear/green-beanie.png" alt="green-beanie"/>
+      </div>
+      <div class="headwear" id="icon-headwear-grey-football-helmet">
+        <img src="./img/headwear/grey-football-helmet.png" alt="grey-football-helmet"/>
+      </div>
+      <div class="headwear" id="icon-headwear-marine-helmet">
+        <img src="./img/headwear/marine-helmet.png" alt="marine-helmet"/>
+      </div>
+      <div class="headwear" id="icon-headwear-old-hat">
+        <img src="./img/headwear/old-hat.png" alt="old-hat"/>
+      </div>
+      <div class="headwear" id="icon-headwear-party-hat">
+        <img src="./img/headwear/party-hat.png" alt="party-hat"/>
+      </div>
+      <div class="headwear" id="icon-headwear-platinum-spartan-helmet">
+        <img src="./img/headwear/platinum-spartan-helmet.png" alt="platinum-spartan-helmet"/>
+      </div>
+      <div class="headwear" id="icon-headwear-purple-ushanka">
+        <img src="./img/headwear/purple-ushanka.png" alt="purple-ushanka"/>
+      </div>
+      <div class="headwear" id="icon-headwear-rainbow-cap">
+        <img src="./img/headwear/rainbow-cap.png" alt="rainbow-cap"/>
+      </div>
+      <div class="headwear" id="icon-headwear-red-beanie">
+        <img src="./img/headwear/red-beanie.png" alt="red-beanie"/>
+      </div>
+      <div class="headwear" id="icon-headwear-silver-spartan-helmet">
+        <img src="./img/headwear/silver-spartan-helmet.png" alt="silver-spartan-helmet"/>
+      </div>
+      <div class="headwear" id="icon-headwear-straw-hat">
+        <img src="./img/headwear/straw-hat.png" alt="straw-hat"/>
+      </div>
+      <div class="headwear" id="icon-headwear-sushi-chef-hat">
+        <img src="./img/headwear/sushi-chef-hat.png" alt="sushi-chef-hat"/>
+      </div>
+      <div class="headwear" id="icon-headwear-traffic-cone">
+        <img src="./img/headwear/traffic-cone.png" alt="traffic-cone"/>
+      </div>
+      <div class="headwear" id="icon-headwear-tuxedo-hat">
+        <img src="./img/headwear/tuxedo-hat.png" alt="tuxedo-hat"/>
+      </div>
+      <div class="headwear" id="icon-headwear-violet-beanie">
+        <img src="./img/headwear/violet-beanie.png" alt="violet-beanie"/>
+      </div>
+
+    </div>
+
+    <div class="subheader">lefthand:</div>
+    <div class="nav">
+      <div class="lefthand" id="icon-lefthand-american-football-left">
+        <img src="./img/lefthand/american-football-left.png" alt="american-football-left"/>
+      </div>
+      <div class="lefthand" id="icon-lefthand-amish-pitch-fork-left">
+        <img src="./img/lefthand/amish-pitch-fork-left.png" alt="amish-pitch-fork-left"/>
+      </div>
+      <div class="lefthand" id="icon-lefthand-banana-left">
+        <img src="./img/lefthand/banana-left.png" alt="banana-left"/>
+      </div>
+      <div class="lefthand" id="icon-lefthand-basketball-left">
+        <img src="./img/lefthand/basketball-left.png" alt="basketball-left"/>
+      </div>
+      <div class="lefthand" id="icon-lefthand-beer-left">
+        <img src="./img/lefthand/beer-left.png" alt="beer-left"/>
+      </div>
+      <div class="lefthand" id="icon-lefthand-blue-degen-sword-left">
+        <img src="./img/lefthand/blue-degen-sword-left.png" alt="blue-degen-sword-left"/>
+      </div>
+      <div class="lefthand" id="icon-lefthand-bong-left">
+        <img src="./img/lefthand/bong-left.png" alt="bong-left"/>
+      </div>
+      <div class="lefthand" id="icon-lefthand-bow-arrow-left">
+        <img src="./img/lefthand/bow-arrow-left.png" alt="bow-arrow-left"/>
+      </div>
+      <div class="lefthand" id="icon-lefthand-corn-gun-left">
+        <img src="./img/lefthand/corn-gun-left.png" alt="corn-gun-left"/>
+      </div>
+      <div class="lefthand" id="icon-lefthand-diamond-left">
+        <img src="./img/lefthand/diamond-left.png" alt="diamond-left"/>
+      </div>
+      <div class="lefthand" id="icon-lefthand-duble-blue-degen-sword-left">
+        <img src="./img/lefthand/duble-blue-degen-sword-left.png" alt="duble-blue-degen-sword-left"/>
+      </div>
+      <div class="lefthand" id="icon-lefthand-duble-red-degen-sword-left">
+        <img src="./img/lefthand/duble-red-degen-sword-left.png" alt="duble-red-degen-sword-left"/>
+      </div>
+      <div class="lefthand" id="icon-lefthand-duble-yellow-degen-sword-left">
+        <img src="./img/lefthand/duble-yellow-degen-sword-left.png" alt="duble-yellow-degen-sword-left"/>
+      </div>
+      <div class="lefthand" id="icon-lefthand-football-left">
+        <img src="./img/lefthand/football-left.png" alt="football-left"/>
+      </div>
+      <div class="lefthand" id="icon-lefthand-golden-gun-left">
+        <img src="./img/lefthand/golden-gun-left.png" alt="golden-gun-left"/>
+      </div>
+      <div class="lefthand" id="icon-lefthand-golden-spartan-sword-left">
+        <img src="./img/lefthand/golden-spartan-sword-left.png" alt="golden-spartan-sword-left"/>
+      </div>
+      <div class="lefthand" id="icon-lefthand-golf-club-left">
+        <img src="./img/lefthand/golf-club-left.png" alt="golf-club-left"/>
+      </div>
+      <div class="lefthand" id="icon-lefthand-green-degen-sword-left">
+        <img src="./img/lefthand/green-degen-sword-left.png" alt="green-degen-sword-left"/>
+      </div>
+      <div class="lefthand" id="icon-lefthand-grenade-left">
+        <img src="./img/lefthand/grenade-left.png" alt="grenade-left"/>
+      </div>
+      <div class="lefthand" id="icon-lefthand-hockey-stick-left">
+        <img src="./img/lefthand/hockey-stick-left.png" alt="hockey-stick-left"/>
+      </div>
+      <div class="lefthand" id="icon-lefthand-katana-left">
+        <img src="./img/lefthand/katana-left.png" alt="katana-left"/>
+      </div>
+      <div class="lefthand" id="icon-lefthand-platinum-spartan-sword-left">
+        <img src="./img/lefthand/platinum-spartan-sword-left.png" alt="platinum-spartan-sword-left"/>
+      </div>
+      <div class="lefthand" id="icon-lefthand-purple-degen-sword-left">
+        <img src="./img/lefthand/purple-degen-sword-left.png" alt="purple-degen-sword-left"/>
+      </div>
+      <div class="lefthand" id="icon-lefthand-red-degen-sword-left">
+        <img src="./img/lefthand/red-degen-sword-left.png" alt="red-degen-sword-left"/>
+      </div>
+      <div class="lefthand" id="icon-lefthand-shield-left">
+        <img src="./img/lefthand/shield-left.png" alt="shield-left"/>
+      </div>
+      <div class="lefthand" id="icon-lefthand-silver-spartan-sword-left">
+        <img src="./img/lefthand/silver-spartan-sword-left.png" alt="silver-spartan-sword-left"/>
+      </div>
+      <div class="lefthand" id="icon-lefthand-sushi-knife-left">
+        <img src="./img/lefthand/sushi-knife-left.png" alt="sushi-knife-left"/>
+      </div>
+      <div class="lefthand" id="icon-lefthand-sword-left">
+        <img src="./img/lefthand/sword-left.png" alt="sword-left"/>
+      </div>
+      <div class="lefthand" id="icon-lefthand-tennis-racket-left">
+        <img src="./img/lefthand/tennis-racket-left.png" alt="tennis-racket-left"/>
+      </div>
+
+    </div>
+    <div class="subheader">righthand:</div>
+    <div class="nav">
+      <div class="righthand" id="icon-righthand-american-football-right">
+        <img src="./img/righthand/american-football-right.png" alt="american-football-right"/>
+      </div>
+      <div class="righthand" id="icon-righthand-amish-pitch-fork-right">
+        <img src="./img/righthand/amish-pitch-fork-right.png" alt="amish-pitch-fork-right"/>
+      </div>
+      <div class="righthand" id="icon-righthand-banana-right">
+        <img src="./img/righthand/banana-right.png" alt="banana-right"/>
+      </div>
+      <div class="righthand" id="icon-righthand-basketball-right">
+        <img src="./img/righthand/basketball-right.png" alt="basketball-right"/>
+      </div>
+      <div class="righthand" id="icon-righthand-beer-right">
+        <img src="./img/righthand/beer-right.png" alt="beer-right"/>
+      </div>
+      <div class="righthand" id="icon-righthand-blue-degen-sword-right">
+        <img src="./img/righthand/blue-degen-sword-right.png" alt="blue-degen-sword-right"/>
+      </div>
+      <div class="righthand" id="icon-righthand-bong-right">
+        <img src="./img/righthand/bong-right.png" alt="bong-right"/>
+      </div>
+      <div class="righthand" id="icon-righthand-bow-arrow-right">
+        <img src="./img/righthand/bow-arrow-right.png" alt="bow-arrow-right"/>
+      </div>
+      <div class="righthand" id="icon-righthand-corn-gun-right">
+        <img src="./img/righthand/corn-gun-right.png" alt="corn-gun-right"/>
+      </div>
+      <div class="righthand" id="icon-righthand-diamond-right">
+        <img src="./img/righthand/diamond-right.png" alt="diamond-right"/>
+      </div>
+      <div class="righthand" id="icon-righthand-duble-blue-degen-sword-right">
+        <img src="./img/righthand/duble-blue-degen-sword-right.png" alt="duble-blue-degen-sword-right"/>
+      </div>
+      <div class="righthand" id="icon-righthand-duble-red-degen-sword-right">
+        <img src="./img/righthand/duble-red-degen-sword-right.png" alt="duble-red-degen-sword-right"/>
+      </div>
+      <div class="righthand" id="icon-righthand-duble-yellow-degen-sword-right">
+        <img src="./img/righthand/duble-yellow-degen-sword-right.png" alt="duble-yellow-degen-sword-right"/>
+      </div>
+      <div class="righthand" id="icon-righthand-football-right">
+        <img src="./img/righthand/football-right.png" alt="football-right"/>
+      </div>
+      <div class="righthand" id="icon-righthand-golden-gun-right">
+        <img src="./img/righthand/golden-gun-right.png" alt="golden-gun-right"/>
+      </div>
+      <div class="righthand" id="icon-righthand-golden-spartan-sword-right">
+        <img src="./img/righthand/golden-spartan-sword-right.png" alt="golden-spartan-sword-right"/>
+      </div>
+      <div class="righthand" id="icon-righthand-golf-club-right">
+        <img src="./img/righthand/golf-club-right.png" alt="golf-club-right"/>
+      </div>
+      <div class="righthand" id="icon-righthand-green-degen-sword-right">
+        <img src="./img/righthand/green-degen-sword-right.png" alt="green-degen-sword-right"/>
+      </div>
+      <div class="righthand" id="icon-righthand-grenade-right">
+        <img src="./img/righthand/grenade-right.png" alt="grenade-right"/>
+      </div>
+      <div class="righthand" id="icon-righthand-hockey-stick-right">
+        <img src="./img/righthand/hockey-stick-right.png" alt="hockey-stick-right"/>
+      </div>
+      <div class="righthand" id="icon-righthand-katana-right">
+        <img src="./img/righthand/katana-right.png" alt="katana-right"/>
+      </div>
+      <div class="righthand" id="icon-righthand-platinum-spartan-sword-right">
+        <img src="./img/righthand/platinum-spartan-sword-right.png" alt="platinum-spartan-sword-right"/>
+      </div>
+      <div class="righthand" id="icon-righthand-purple-degen-sword-right">
+        <img src="./img/righthand/purple-degen-sword-right.png" alt="purple-degen-sword-right"/>
+      </div>
+      <div class="righthand" id="icon-righthand-red-degen-sword-right">
+        <img src="./img/righthand/red-degen-sword-right.png" alt="red-degen-sword-right"/>
+      </div>
+      <div class="righthand" id="icon-righthand-shield-right">
+        <img src="./img/righthand/shield-right.png" alt="shield-right"/>
+      </div>
+      <div class="righthand" id="icon-righthand-silver-spartan-sword-right">
+        <img src="./img/righthand/silver-spartan-sword-right.png" alt="silver-spartan-sword-right"/>
+      </div>
+      <div class="righthand" id="icon-righthand-sushi-knife-right">
+        <img src="./img/righthand/sushi-knife-right.png" alt="sushi-knife-right"/>
+      </div>
+      <div class="righthand" id="icon-righthand-sword-right">
+        <img src="./img/righthand/sword-right.png" alt="sword-right"/>
+      </div>
+      <div class="righthand" id="icon-righthand-tennis-racket-right">
+        <img src="./img/righthand/tennis-racket-right.png" alt="tennis-racket-right"/>
+      </div>
+
+    </div>
+
+
+    <div class="subheader">pants:</div>
+    <div class="nav">
+      <div class="pants" id="icon-pants-amish-pants">
+        <img src="./img/pants/amish-pants.png" alt="amish-pants"/>
+      </div>
+      <div class="pants" id="icon-pants-argentina-pants">
+        <img src="./img/pants/argentina-pants.png" alt="argentina-pants"/>
+      </div>
+      <div class="pants" id="icon-pants-astronaut-pants">
+        <img src="./img/pants/astronaut-pants.png" alt="astronaut-pants"/>
+      </div>
+      <div class="pants" id="icon-pants-black-dress-pants">
+        <img src="./img/pants/black-dress-pants.png" alt="black-dress-pants"/>
+      </div>
+      <div class="pants" id="icon-pants-black-ninja-pants">
+        <img src="./img/pants/black-ninja-pants.png" alt="black-ninja-pants"/>
+      </div>
+      <div class="pants" id="icon-pants-black-pants">
+        <img src="./img/pants/black-pants.png" alt="black-pants"/>
+      </div>
+      <div class="pants" id="icon-pants-black-soccer-pants">
+        <img src="./img/pants/black-soccer-pants.png" alt="black-soccer-pants"/>
+      </div>
+      <div class="pants" id="icon-pants-blue-hockey-pants">
+        <img src="./img/pants/blue-hockey-pants.png" alt="blue-hockey-pants"/>
+      </div>
+      <div class="pants" id="icon-pants-blue-jeans">
+        <img src="./img/pants/blue-jeans.png" alt="blue-jeans"/>
+      </div>
+      <div class="pants" id="icon-pants-brazil-pants">
+        <img src="./img/pants/brazil-pants.png" alt="brazil-pants"/>
+      </div>
+      <div class="pants" id="icon-pants-cargo-shorts">
+        <img src="./img/pants/cargo-shorts.png" alt="cargo-shorts"/>
+      </div>
+      <div class="pants" id="icon-pants-chemical-protection-pants">
+        <img src="./img/pants/chemical-protection-pants.png" alt="chemical-protection-pants"/>
+      </div>
+      <div class="pants" id="icon-pants-classic-plaid-pants">
+        <img src="./img/pants/classic-plaid-pants.png" alt="classic-plaid-pants"/>
+      </div>
+      <div class="pants" id="icon-pants-clown-pants">
+        <img src="./img/pants/clown-pants.png" alt="clown-pants"/>
+      </div>
+      <div class="pants" id="icon-pants-golden-grieves">
+        <img src="./img/pants/golden-grieves.png" alt="golden-grieves"/>
+      </div>
+      <div class="pants" id="icon-pants-golden-pants">
+        <img src="./img/pants/golden-pants.png" alt="golden-pants"/>
+      </div>
+      <div class="pants" id="icon-pants-gray-football-pants">
+        <img src="./img/pants/gray-football-pants.png" alt="gray-football-pants"/>
+      </div>
+      <div class="pants" id="icon-pants-gray-jeans">
+        <img src="./img/pants/gray-jeans.png" alt="gray-jeans"/>
+      </div>
+      <div class="pants" id="icon-pants-grey-dress-pants">
+        <img src="./img/pants/grey-dress-pants.png" alt="grey-dress-pants"/>
+      </div>
+      <div class="pants" id="icon-pants-grey-pants">
+        <img src="./img/pants/grey-pants.png" alt="grey-pants"/>
+      </div>
+      <div class="pants" id="icon-pants-marine-pants">
+        <img src="./img/pants/marine-pants.png" alt="marine-pants"/>
+      </div>
+      <div class="pants" id="icon-pants-rainbow-pants">
+        <img src="./img/pants/rainbow-pants.png" alt="rainbow-pants"/>
+      </div>
+      <div class="pants" id="icon-pants-red-basketball-pants">
+        <img src="./img/pants/red-basketball-pants.png" alt="red-basketball-pants"/>
+      </div>
+      <div class="pants" id="icon-pants-red-football-pants">
+        <img src="./img/pants/red-football-pants.png" alt="red-football-pants"/>
+      </div>
+      <div class="pants" id="icon-pants-ribbed-zombie-pants">
+        <img src="./img/pants/ribbed-zombie-pants.png" alt="ribbed-zombie-pants"/>
+      </div>
+      <div class="pants" id="icon-pants-samurai-pants">
+        <img src="./img/pants/samurai-pants.png" alt="samurai-pants"/>
+      </div>
+      <div class="pants" id="icon-pants-silver-grieves">
+        <img src="./img/pants/silver-grieves.png" alt="silver-grieves"/>
+      </div>
+      <div class="pants" id="icon-pants-spartan-pants">
+        <img src="./img/pants/spartan-pants.png" alt="spartan-pants"/>
+      </div>
+      <div class="pants" id="icon-pants-sushi-chef-pants">
+        <img src="./img/pants/sushi-chef-pants.png" alt="sushi-chef-pants"/>
+      </div>
+      <div class="pants" id="icon-pants-taewkondo-pants">
+        <img src="./img/pants/taewkondo-pants.png" alt="taewkondo-pants"/>
+      </div>
+      <div class="pants" id="icon-pants-tennis-pants">
+        <img src="./img/pants/tennis-pants.png" alt="tennis-pants"/>
+      </div>
+      <div class="pants" id="icon-pants-tuxedo-pants">
+        <img src="./img/pants/tuxedo-pants.png" alt="tuxedo-pants"/>
+      </div>
+
+    </div>
+
+    <div class="subheader">torso:</div>
+    <div class="nav">
+      <div class="torso" id="icon-torso-amish-shirt">
+        <img src="./img/torso/amish-shirt.png" alt="amish-shirt"/>
+      </div>
+      <div class="torso" id="icon-torso-argentina-jersey">
+        <img src="./img/torso/argentina-jersey.png" alt="argentina-jersey"/>
+      </div>
+      <div class="torso" id="icon-torso-astronaut-torso">
+        <img src="./img/torso/astronaut-torso.png" alt="astronaut-torso"/>
+      </div>
+      <div class="torso" id="icon-torso-beer-mug-shirt">
+        <img src="./img/torso/beer-mug-shirt.png" alt="beer-mug-shirt"/>
+      </div>
+      <div class="torso" id="icon-torso-black-ninja-robe">
+        <img src="./img/torso/black-ninja-robe.png" alt="black-ninja-robe"/>
+      </div>
+      <div class="torso" id="icon-torso-blue-hockey-jersey">
+        <img src="./img/torso/blue-hockey-jersey.png" alt="blue-hockey-jersey"/>
+      </div>
+      <div class="torso" id="icon-torso-bow-tie-suit">
+        <img src="./img/torso/bow-tie-suit.png" alt="bow-tie-suit"/>
+      </div>
+      <div class="torso" id="icon-torso-brazil-jersey">
+        <img src="./img/torso/brazil-jersey.png" alt="brazil-jersey"/>
+      </div>
+      <div class="torso" id="icon-torso-chemical-protection-robe">
+        <img src="./img/torso/chemical-protection-robe.png" alt="chemical-protection-robe"/>
+      </div>
+      <div class="torso" id="icon-torso-clown-jacket">
+        <img src="./img/torso/clown-jacket.png" alt="clown-jacket"/>
+      </div>
+      <div class="torso" id="icon-torso-golden-armor">
+        <img src="./img/torso/golden-armor.png" alt="golden-armor"/>
+      </div>
+      <div class="torso" id="icon-torso-golden-jacket">
+        <img src="./img/torso/golden-jacket.png" alt="golden-jacket"/>
+      </div>
+      <div class="torso" id="icon-torso-golden-spartan-armor">
+        <img src="./img/torso/golden-spartan-armor.png" alt="golden-spartan-armor"/>
+      </div>
+      <div class="torso" id="icon-torso-grey-jacket">
+        <img src="./img/torso/grey-jacket.png" alt="grey-jacket"/>
+      </div>
+      <div class="torso" id="icon-torso-marine-shirt">
+        <img src="./img/torso/marine-shirt.png" alt="marine-shirt"/>
+      </div>
+      <div class="torso" id="icon-torso-platinum-spartan-armor">
+        <img src="./img/torso/platinum-spartan-armor.png" alt="platinum-spartan-armor"/>
+      </div>
+      <div class="torso" id="icon-torso-rainbow-jacket">
+        <img src="./img/torso/rainbow-jacket.png" alt="rainbow-jacket"/>
+      </div>
+      <div class="torso" id="icon-torso-red-basketball-jersey">
+        <img src="./img/torso/red-basketball-jersey.png" alt="red-basketball-jersey"/>
+      </div>
+      <div class="torso" id="icon-torso-red-collared-shirt">
+        <img src="./img/torso/red-collared-shirt.png" alt="red-collared-shirt"/>
+      </div>
+      <div class="torso" id="icon-torso-red-football-jersey">
+        <img src="./img/torso/red-football-jersey.png" alt="red-football-jersey"/>
+      </div>
+      <div class="torso" id="icon-torso-ribbed-zombie-shirt">
+        <img src="./img/torso/ribbed-zombie-shirt.png" alt="ribbed-zombie-shirt"/>
+      </div>
+      <div class="torso" id="icon-torso-samurai-armor">
+        <img src="./img/torso/samurai-armor.png" alt="samurai-armor"/>
+      </div>
+      <div class="torso" id="icon-torso-silver-armor">
+        <img src="./img/torso/silver-armor.png" alt="silver-armor"/>
+      </div>
+      <div class="torso" id="icon-torso-striped-soccer-jersey">
+        <img src="./img/torso/striped-soccer-jersey.png" alt="striped-soccer-jersey"/>
+      </div>
+      <div class="torso" id="icon-torso-suit">
+        <img src="./img/torso/suit.png" alt="suit"/>
+      </div>
+      <div class="torso" id="icon-torso-suit-and-tie">
+        <img src="./img/torso/suit-and-tie.png" alt="suit-and-tie"/>
+      </div>
+      <div class="torso" id="icon-torso-sushi-chef-robe">
+        <img src="./img/torso/sushi-chef-robe.png" alt="sushi-chef-robe"/>
+      </div>
+      <div class="torso" id="icon-torso-taewkondo-robe">
+        <img src="./img/torso/taewkondo-robe.png" alt="taewkondo-robe"/>
+      </div>
+      <div class="torso" id="icon-torso-tennis-shirt">
+        <img src="./img/torso/tennis-shirt.png" alt="tennis-shirt"/>
+      </div>
+      <div class="torso" id="icon-torso-tuxedo-jacket">
+        <img src="./img/torso/tuxedo-jacket.png" alt="tuxedo-jacket"/>
+      </div>
+      <div class="torso" id="icon-torso-weed-plant-shirt">
+        <img src="./img/torso/weed-plant-shirt.png" alt="weed-plant-shirt"/>
+      </div>
+      <div class="torso" id="icon-torso-white-football-jersey">
+        <img src="./img/torso/white-football-jersey.png" alt="white-football-jersey"/>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<script type="text/javascript" src="./js/script.js"></script>
+</body>
+</html>
