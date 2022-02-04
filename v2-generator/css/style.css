@@ -7,11 +7,16 @@ body {
   font-family: 'Bebas Neue', cursive;
   margin: 0;
   background-color: #001a54;
-  padding: 40px 40px;
+  padding: 40px;
   text-align: left;
   color: #9ce25f;
   text-shadow: 1px 1px 0 #4864d2;
   font-size: 22px;
+}
+@media (max-width: 767px) {
+  body {
+    padding: 12px;
+  }
 }
 h1 {
   font-weight: 700;
@@ -23,9 +28,21 @@ h1 {
   text-shadow: 1px 1px 0 #4864d2;
   font-weight: 400;
   margin: 8px 0;
+  font-size: 1.4em;
 }
+
 img {
   max-width: 100%;
+}
+.copyright {
+    font-size: 12px;
+    font-family: Arial;
+    color: #fff;
+    opacity: .5;
+    text-align: center;
+}
+.copyright a {
+  color: #fff;
 }
 /* content */
 .page-content {
@@ -65,6 +82,14 @@ img {
   margin: 16px 0;
   overflow: hidden;
   max-height: 80vw;
+  }
+  @media (max-width: 767px) {
+    .scene {
+      width: calc(100vw - 24px);
+      height: calc(100vw - 24px);
+      margin: 0;
+      max-height: 100%;
+    }
   }
 .scene-item {
   position: absolute;
