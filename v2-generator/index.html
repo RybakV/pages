@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>V2 Generator</title>
 
-  <meta property="og:image" content="https://rybakv.github.io/pages/v2-generator/img/og-image.jpg">
+  <meta property="og:image" content="https://rybakv.github.io/pages/v2-generator/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <!-- CSS files-->
   <link rel="stylesheet" href="./css/style.css" type="text/css" />
@@ -30,7 +30,7 @@
       <div class="scene-item eyewear"></div>
       <div class="scene-item headwear"></div>
       <div class="scene-item footwear"></div>
-      <div class="scene-item pants"></div>
+      <div class="scene-item pants required" id="pants-underwear"></div>
       <div class="scene-item lefthand"></div>
       <div class="scene-item righthand"></div>
       <div class="scene-item torso"></div>
@@ -125,8 +125,8 @@
       <div class="headwear" id="icon-headwear-amish-hat">
         <img src="./img/headwear/amish-hat.png" alt="amish-hat"/>
       </div>
-      <div class="headwear" id="icon-headwear-astronnaut-helmet-edit">
-        <img src="./img/headwear/astronnaut-helmet-edit.png" alt="astronnaut-helmet-edit"/>
+      <div class="headwear" id="icon-headwear-astronnaut-helmet">
+        <img src="./img/headwear/astronnaut-helmet.png" alt="astronnaut-helmet"/>
       </div>
       <div class="headwear" id="icon-headwear-black-golf-hat">
         <img src="./img/headwear/black-golf-hat.png" alt="black-golf-hat"/>
@@ -187,6 +187,9 @@
       </div>
       <div class="headwear" id="icon-headwear-red-beanie">
         <img src="./img/headwear/red-beanie.png" alt="red-beanie"/>
+      </div>
+      <div class="headwear" id="icon-headwear-silver-knight-helmet">
+        <img src="./img/headwear/silver-knight-helmet.png" alt="silver-knight-helmet"/>
       </div>
       <div class="headwear" id="icon-headwear-silver-spartan-helmet">
         <img src="./img/headwear/silver-spartan-helmet.png" alt="silver-spartan-helmet"/>
@@ -373,8 +376,8 @@
       <div class="lefthand" id="icon-lefthand-bong-left">
         <img src="./img/lefthand/bong-left.png" alt="bong-left"/>
       </div>
-      <div class="lefthand" id="icon-lefthand-bow-arrow-left">
-        <img src="./img/lefthand/bow-arrow-left.png" alt="bow-arrow-left"/>
+      <div class="lefthand" id="icon-lefthand-bow-and-arrow-left">
+        <img src="./img/lefthand/bow-and-arrow-left.png" alt="bow-and-arrow-left"/>
       </div>
       <div class="lefthand" id="icon-lefthand-corn-gun-left">
         <img src="./img/lefthand/corn-gun-left.png" alt="corn-gun-left"/>
@@ -382,14 +385,14 @@
       <div class="lefthand" id="icon-lefthand-diamond-left">
         <img src="./img/lefthand/diamond-left.png" alt="diamond-left"/>
       </div>
-      <div class="lefthand" id="icon-lefthand-duble-blue-degen-sword-left">
-        <img src="./img/lefthand/duble-blue-degen-sword-left.png" alt="duble-blue-degen-sword-left"/>
+      <div class="lefthand" id="icon-lefthand-double-blue-degen-sword-left">
+        <img src="./img/lefthand/double-blue-degen-sword-left.png" alt="double-blue-degen-sword-left"/>
       </div>
-      <div class="lefthand" id="icon-lefthand-duble-red-degen-sword-left">
-        <img src="./img/lefthand/duble-red-degen-sword-left.png" alt="duble-red-degen-sword-left"/>
+      <div class="lefthand" id="icon-lefthand-double-red-degen-sword-left">
+        <img src="./img/lefthand/double-red-degen-sword-left.png" alt="double-red-degen-sword-left"/>
       </div>
-      <div class="lefthand" id="icon-lefthand-duble-yellow-degen-sword-left">
-        <img src="./img/lefthand/duble-yellow-degen-sword-left.png" alt="duble-yellow-degen-sword-left"/>
+      <div class="lefthand" id="icon-lefthand-double-yellow-degen-sword-left">
+        <img src="./img/lefthand/double-yellow-degen-sword-left.png" alt="double-yellow-degen-sword-left"/>
       </div>
       <div class="lefthand" id="icon-lefthand-football-left">
         <img src="./img/lefthand/football-left.png" alt="football-left"/>
@@ -465,8 +468,8 @@
       <div class="righthand" id="icon-righthand-bong-right">
         <img src="./img/righthand/bong-right.png" alt="bong-right"/>
       </div>
-      <div class="righthand" id="icon-righthand-bow-arrow-right">
-        <img src="./img/righthand/bow-arrow-right.png" alt="bow-arrow-right"/>
+      <div class="righthand" id="icon-righthand-bow-and-arrow-right">
+        <img src="./img/righthand/bow-and-arrow-right.png" alt="bow-and-arrow-right"/>
       </div>
       <div class="righthand" id="icon-righthand-corn-gun-right">
         <img src="./img/righthand/corn-gun-right.png" alt="corn-gun-right"/>
@@ -474,14 +477,14 @@
       <div class="righthand" id="icon-righthand-diamond-right">
         <img src="./img/righthand/diamond-right.png" alt="diamond-right"/>
       </div>
-      <div class="righthand" id="icon-righthand-duble-blue-degen-sword-right">
-        <img src="./img/righthand/duble-blue-degen-sword-right.png" alt="duble-blue-degen-sword-right"/>
+      <div class="righthand" id="icon-righthand-double-blue-degen-sword-right">
+        <img src="./img/righthand/double-blue-degen-sword-right.png" alt="double-blue-degen-sword-right"/>
       </div>
-      <div class="righthand" id="icon-righthand-duble-red-degen-sword-right">
-        <img src="./img/righthand/duble-red-degen-sword-right.png" alt="duble-red-degen-sword-right"/>
+      <div class="righthand" id="icon-righthand-double-red-degen-sword-right">
+        <img src="./img/righthand/double-red-degen-sword-right.png" alt="double-red-degen-sword-right"/>
       </div>
-      <div class="righthand" id="icon-righthand-duble-yellow-degen-sword-right">
-        <img src="./img/righthand/duble-yellow-degen-sword-right.png" alt="duble-yellow-degen-sword-right"/>
+      <div class="righthand" id="icon-righthand-double-yellow-degen-sword-right">
+        <img src="./img/righthand/double-yellow-degen-sword-right.png" alt="double-yellow-degen-sword-right"/>
       </div>
       <div class="righthand" id="icon-righthand-football-right">
         <img src="./img/righthand/football-right.png" alt="football-right"/>
@@ -584,8 +587,8 @@
       <div class="pants" id="icon-pants-golden-pants">
         <img src="./img/pants/golden-pants.png" alt="golden-pants"/>
       </div>
-      <div class="pants" id="icon-pants-gray-football-pants">
-        <img src="./img/pants/gray-football-pants.png" alt="gray-football-pants"/>
+      <div class="pants" id="icon-pants-grey-football-pants">
+        <img src="./img/pants/grey-football-pants.png" alt="grey-football-pants"/>
       </div>
       <div class="pants" id="icon-pants-gray-jeans">
         <img src="./img/pants/gray-jeans.png" alt="gray-jeans"/>
@@ -632,7 +635,9 @@
       <div class="pants" id="icon-pants-tuxedo-pants">
         <img src="./img/pants/tuxedo-pants.png" alt="tuxedo-pants"/>
       </div>
-
+      <div class="pants" id="icon-pants-underwear" equiped="equiped">
+        <img src="./img/pants/underwear.png" alt="underwear"/>
+      </div>
     </div>
 
     <div class="subheader">footwear:</div>
@@ -697,8 +702,8 @@
       <div class="footwear" id="icon-footwear-sushi-chef-shoes">
         <img src="./img/footwear/sushi-chef-shoes.png" alt="sushi-chef-shoes"/>
       </div>
-      <div class="footwear" id="icon-footwear-tennis-socks-shoes">
-        <img src="./img/footwear/tennis-socks-shoes.png" alt="tennis-socks-shoes"/>
+      <div class="footwear" id="icon-footwear-tennis-socks-and-shoes">
+        <img src="./img/footwear/tennis-socks-and-shoes.png" alt="tennis-socks-and-shoes"/>
       </div>
       <div class="footwear" id="icon-footwear-white-football-cleats">
         <img src="./img/footwear/white-football-cleats.png" alt="white-football-cleats"/>

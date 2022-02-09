@@ -54,7 +54,7 @@ img {
   position: fixed;
 }
 .content-right {
-  padding: 32px 40px 32px 530px;
+  padding: 32px 40px 32px 820px;
 }
 @media (max-width: 767px) {
   .page-content {
@@ -76,8 +76,8 @@ img {
 }
 .scene {
   display: block;
-  width: 500px;
-  height: 500px;
+  width: 800px;
+  height: 800px;
   position: relative;
   margin: 16px 0;
   overflow: hidden;
@@ -352,8 +352,8 @@ img {
 .scene-item.footwear#footwear-sushi-chef-shoes {
   background-image: url('../img/footwear/sushi-chef-shoes.png');
 }
-.scene-item.footwear#footwear-tennis-socks-shoes {
-  background-image: url('../img/footwear/tennis-socks-shoes.png');
+.scene-item.footwear#footwear-tennis-socks-and-shoes {
+  background-image: url('../img/footwear/tennis-socks-and-shoes.png');
 }
 .scene-item.footwear#footwear-white-football-cleats {
   background-image: url('../img/footwear/white-football-cleats.png');
@@ -366,8 +366,8 @@ img {
 .scene-item.headwear#headwear-amish-hat {
   background-image: url('../img/headwear/amish-hat.png');
 }
-.scene-item.headwear#headwear-astronnaut-helmet-edit {
-  background-image: url('../img/headwear/astronnaut-helmet-edit.png');
+.scene-item.headwear#headwear-astronnaut-helmet {
+  background-image: url('../img/headwear/astronnaut-helmet.png');
 }
 .scene-item.headwear#headwear-black-golf-hat {
   background-image: url('../img/headwear/black-golf-hat.png');
@@ -432,6 +432,9 @@ img {
 .scene-item.headwear#headwear-silver-spartan-helmet {
   background-image: url('../img/headwear/silver-spartan-helmet.png');
 }
+.scene-item.headwear#headwear-silver-knight-helmet {
+  background-image: url('../img/headwear/silver-knight-helmet.png');
+}
 .scene-item.headwear#headwear-straw-hat {
   background-image: url('../img/headwear/straw-hat.png');
 }
@@ -473,8 +476,8 @@ img {
 .scene-item.lefthand#lefthand-bong-left {
   background-image: url('../img/lefthand/bong-left.png');
 }
-.scene-item.lefthand#lefthand-bow-arrow-left {
-  background-image: url('../img/lefthand/bow-arrow-left.png');
+.scene-item.lefthand#lefthand-bow-and-arrow-left {
+  background-image: url('../img/lefthand/bow-and-arrow-left.png');
 }
 .scene-item.lefthand#lefthand-corn-gun-left {
   background-image: url('../img/lefthand/corn-gun-left.png');
@@ -482,14 +485,14 @@ img {
 .scene-item.lefthand#lefthand-diamond-left {
   background-image: url('../img/lefthand/diamond-left.png');
 }
-.scene-item.lefthand#lefthand-duble-blue-degen-sword-left {
-  background-image: url('../img/lefthand/duble-blue-degen-sword-left.png');
+.scene-item.lefthand#lefthand-double-blue-degen-sword-left {
+  background-image: url('../img/lefthand/double-blue-degen-sword-left.png');
 }
-.scene-item.lefthand#lefthand-duble-red-degen-sword-left {
-  background-image: url('../img/lefthand/duble-red-degen-sword-left.png');
+.scene-item.lefthand#lefthand-double-red-degen-sword-left {
+  background-image: url('../img/lefthand/double-red-degen-sword-left.png');
 }
-.scene-item.lefthand#lefthand-duble-yellow-degen-sword-left {
-  background-image: url('../img/lefthand/duble-yellow-degen-sword-left.png');
+.scene-item.lefthand#lefthand-double-yellow-degen-sword-left {
+  background-image: url('../img/lefthand/double-yellow-degen-sword-left.png');
 }
 .scene-item.lefthand#lefthand-football-left {
   background-image: url('../img/lefthand/football-left.png');
@@ -565,8 +568,8 @@ img {
 .scene-item.righthand#righthand-bong-right {
   background-image: url('../img/righthand/bong-right.png');
 }
-.scene-item.righthand#righthand-bow-arrow-right {
-  background-image: url('../img/righthand/bow-arrow-right.png');
+.scene-item.righthand#righthand-bow-and-arrow-right {
+  background-image: url('../img/righthand/bow-and-arrow-right.png');
 }
 .scene-item.righthand#righthand-corn-gun-right {
   background-image: url('../img/righthand/corn-gun-right.png');
@@ -574,14 +577,14 @@ img {
 .scene-item.righthand#righthand-diamond-right {
   background-image: url('../img/righthand/diamond-right.png');
 }
-.scene-item.righthand#righthand-duble-blue-degen-sword-right {
-  background-image: url('../img/righthand/duble-blue-degen-sword-right.png');
+.scene-item.righthand#righthand-double-blue-degen-sword-right {
+  background-image: url('../img/righthand/double-blue-degen-sword-right.png');
 }
-.scene-item.righthand#righthand-duble-red-degen-sword-right {
-  background-image: url('../img/righthand/duble-red-degen-sword-right.png');
+.scene-item.righthand#righthand-double-red-degen-sword-right {
+  background-image: url('../img/righthand/double-red-degen-sword-right.png');
 }
-.scene-item.righthand#righthand-duble-yellow-degen-sword-right {
-  background-image: url('../img/righthand/duble-yellow-degen-sword-right.png');
+.scene-item.righthand#righthand-double-yellow-degen-sword-right {
+  background-image: url('../img/righthand/double-yellow-degen-sword-right.png');
 }
 .scene-item.righthand#righthand-football-right {
   background-image: url('../img/righthand/football-right.png');
@@ -685,8 +688,8 @@ img {
 .scene-item.pants#pants-golden-pants {
   background-image: url('../img/pants/golden-pants.png');
 }
-.scene-item.pants#pants-gray-football-pants {
-  background-image: url('../img/pants/gray-football-pants.png');
+.scene-item.pants#pants-grey-football-pants {
+  background-image: url('../img/pants/grey-football-pants.png');
 }
 .scene-item.pants#pants-gray-jeans {
   background-image: url('../img/pants/gray-jeans.png');
@@ -733,7 +736,9 @@ img {
 .scene-item.pants#pants-tuxedo-pants {
   background-image: url('../img/pants/tuxedo-pants.png');
 }
-
+.scene-item.pants#pants-underwear {
+  background-image: url('../img/pants/underwear.png');
+}
 
 /* --- torso --- */
 .scene-item.torso {
