@@ -319,6 +319,9 @@ img {
 .scene-item.footwear#footwear-clown-shoes {
   background-image: url('../img/footwear/clown-shoes.png');
 }
+.scene-item.footwear#footwear-golden-shoes {
+  background-image: url('../img/footwear/golden-shoes.png');
+}
 .scene-item.footwear#footwear-golden-knight-boots {
   background-image: url('../img/footwear/golden-knight-boots.png');
 }
@@ -339,6 +342,9 @@ img {
 }
 .scene-item.footwear#footwear-red-football-cleats {
   background-image: url('../img/footwear/red-football-cleats.png');
+}
+.scene-item.footwear#footwear-red-soccer-cleats {
+  background-image: url('../img/footwear/red-soccer-cleats.png');
 }
 .scene-item.footwear#footwear-samurai-boots {
   background-image: url('../img/footwear/samurai-boots.png');
