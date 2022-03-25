@@ -1,0 +1,1428 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru" dir="ltr">
+
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Face Generator</title>
+
+  <meta property="og:image" content="https://rybakv.github.io/pages/face-generator/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- CSS files-->
+  <link rel="stylesheet" href="./css/style.css" type="text/css" />
+  <!-- JS files-->
+  <script type="text/javascript" src="./js/jquery.min.js"></script>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico"/>
+</head>
+<body>
+
+
+<div class="page-content">
+  <!-- CONTENT LEFT -->
+  <div class="content-left">
+    <h1 class="title">Face Generator</h1>
+    <div class="scene">
+      <div class="scene-item bg required" id="bg-art"></div>
+      <div class="scene-item beardbl required" id="beardbl-art"></div>
+      <div class="scene-item beardbr required" id="beardbr-art"></div>
+      <div class="scene-item earl required" id="earl-art"></div>
+      <div class="scene-item earr required" id="earr-art"></div>
+      <div class="scene-item beardtl required" id="beardtl-art"></div>
+      <div class="scene-item beardtr required" id="beardtr-art"></div>
+      <div class="scene-item lipsl required" id="lipsl-art"></div>
+      <div class="scene-item lipsr required" id="lipsr-art"></div>
+      <div class="scene-item eyel required" id="eyel-art"></div>
+      <div class="scene-item eyer required" id="eyer-art"></div>
+      <div class="scene-item hairl required" id="hairl-art"></div>
+      <div class="scene-item hairr required" id="hairr-art"></div>
+
+    </div>
+
+  </div>
+  <!-- CONTENT RIGHT -->
+  <div class="content-right">
+
+    <div class="subheader">Art:</div>
+    <div class="nav">
+      <div class="bg" id="icon-bg-art" equiped="equiped">
+        <img src="./img/art/background.png" alt="background"/>
+      </div>
+      <div class="hairl" id="icon-hairl-art" equiped="equiped">
+        <img src="./img/art/hair-l.png" alt="hairl"/>
+      </div>
+      <div class="hairr" id="icon-hairr-art" equiped="equiped">
+        <img src="./img/art/hair-r.png" alt="hairr"/>
+      </div>
+      <div class="earl" id="icon-earl-art" equiped="equiped">
+        <img src="./img/art/ear-l.png" alt="earl"/>
+      </div>
+      <div class="earr" id="icon-earr-art" equiped="equiped">
+        <img src="./img/art/ear-r.png" alt="earr"/>
+      </div>
+      <div class="eyel" id="icon-eyel-art" equiped="equiped">
+        <img src="./img/art/eye-l.png" alt="eyel"/>
+      </div>
+      <div class="eyer" id="icon-eyer-art" equiped="equiped">
+        <img src="./img/art/eye-r.png" alt="eyer"/>
+      </div>
+      <div class="lipsl" id="icon-lipsl-art" equiped="equiped">
+        <img src="./img/art/lips-l.png" alt="lipsl"/>
+      </div>
+      <div class="lipsr" id="icon-lipsr-art" equiped="equiped">
+        <img src="./img/art/lips-r.png" alt="lipsr"/>
+      </div>
+      <div class="beardbl" id="icon-beardbl-art" equiped="equiped">
+        <img src="./img/art/beard-b-l.png" alt="beardbl"/>
+      </div>
+      <div class="beardbr" id="icon-beardbr-art" equiped="equiped">
+        <img src="./img/art/beard-b-r.png" alt="beardbr"/>
+      </div>
+      <div class="beardtl" id="icon-beardtl-art" equiped="equiped">
+        <img src="./img/art/beard-t-l.png" alt="beardtl"/>
+      </div>
+      <div class="beardtr" id="icon-beardtr-art" equiped="equiped">
+        <img src="./img/art/beard-t-r.png" alt="beardtr"/>
+      </div>
+    </div>
+
+    <div class="subheader">burger-boi:</div>
+    <div class="nav">
+      <div class="bg" id="icon-bg-burger-boi">
+        <img src="./img/burger-boi/background.png" alt="background"/>
+      </div>
+      <div class="hairl" id="icon-hairl-burger-boi">
+        <img src="./img/burger-boi/hair-l.png" alt="hairl"/>
+      </div>
+      <div class="hairr" id="icon-hairr-burger-boi">
+        <img src="./img/burger-boi/hair-r.png" alt="hairr"/>
+      </div>
+      <div class="earl" id="icon-earl-burger-boi">
+        <img src="./img/burger-boi/ear-l.png" alt="earl"/>
+      </div>
+      <div class="earr" id="icon-earr-burger-boi">
+        <img src="./img/burger-boi/ear-r.png" alt="earr"/>
+      </div>
+      <div class="eyel" id="icon-eyel-burger-boi">
+        <img src="./img/burger-boi/eye-l.png" alt="eyel"/>
+      </div>
+      <div class="eyer" id="icon-eyer-burger-boi">
+        <img src="./img/burger-boi/eye-r.png" alt="eyer"/>
+      </div>
+      <div class="lipsl" id="icon-lipsl-burger-boi">
+        <img src="./img/burger-boi/lips-l.png" alt="lipsl"/>
+      </div>
+      <div class="lipsr" id="icon-lipsr-burger-boi">
+        <img src="./img/burger-boi/lips-r.png" alt="lipsr"/>
+      </div>
+      <div class="beardbl" id="icon-beardbl-burger-boi">
+        <img src="./img/burger-boi/beard-b-l.png" alt="beardbl"/>
+      </div>
+      <div class="beardbr" id="icon-beardbr-burger-boi">
+        <img src="./img/burger-boi/beard-b-r.png" alt="beardbr"/>
+      </div>
+      <div class="beardtl" id="icon-beardtl-burger-boi">
+        <img src="./img/burger-boi/beard-t-l.png" alt="beardtl"/>
+      </div>
+      <div class="beardtr" id="icon-beardtr-burger-boi">
+        <img src="./img/burger-boi/beard-t-r.png" alt="beardtr"/>
+      </div>
+    </div>
+
+    <div class="subheader">cat:</div>
+    <div class="nav">
+      <div class="bg" id="icon-bg-cat">
+        <img src="./img/cat/background.png" alt="background"/>
+      </div>
+      <div class="hairl" id="icon-hairl-cat">
+        <img src="./img/cat/hair-l.png" alt="hairl"/>
+      </div>
+      <div class="hairr" id="icon-hairr-cat">
+        <img src="./img/cat/hair-r.png" alt="hairr"/>
+      </div>
+      <div class="earl" id="icon-earl-cat">
+        <img src="./img/cat/ear-l.png" alt="earl"/>
+      </div>
+      <div class="earr" id="icon-earr-cat">
+        <img src="./img/cat/ear-r.png" alt="earr"/>
+      </div>
+      <div class="eyel" id="icon-eyel-cat">
+        <img src="./img/cat/eye-l.png" alt="eyel"/>
+      </div>
+      <div class="eyer" id="icon-eyer-cat">
+        <img src="./img/cat/eye-r.png" alt="eyer"/>
+      </div>
+      <div class="lipsl" id="icon-lipsl-cat">
+        <img src="./img/cat/lips-l.png" alt="lipsl"/>
+      </div>
+      <div class="lipsr" id="icon-lipsr-cat">
+        <img src="./img/cat/lips-r.png" alt="lipsr"/>
+      </div>
+      <div class="beardbl" id="icon-beardbl-cat">
+        <img src="./img/cat/beard-b-l.png" alt="beardbl"/>
+      </div>
+      <div class="beardbr" id="icon-beardbr-cat">
+        <img src="./img/cat/beard-b-r.png" alt="beardbr"/>
+      </div>
+      <div class="beardtl" id="icon-beardtl-cat">
+        <img src="./img/cat/beard-t-l.png" alt="beardtl"/>
+      </div>
+      <div class="beardtr" id="icon-beardtr-cat">
+        <img src="./img/cat/beard-t-r.png" alt="beardtr"/>
+      </div>
+    </div>
+
+    <div class="subheader">charlie:</div>
+    <div class="nav">
+      <div class="bg" id="icon-bg-charlie">
+        <img src="./img/charlie/background.png" alt="background"/>
+      </div>
+      <div class="hairl" id="icon-hairl-charlie">
+        <img src="./img/charlie/hair-l.png" alt="hairl"/>
+      </div>
+      <div class="hairr" id="icon-hairr-charlie">
+        <img src="./img/charlie/hair-r.png" alt="hairr"/>
+      </div>
+      <div class="earl" id="icon-earl-charlie">
+        <img src="./img/charlie/ear-l.png" alt="earl"/>
+      </div>
+      <div class="earr" id="icon-earr-charlie">
+        <img src="./img/charlie/ear-r.png" alt="earr"/>
+      </div>
+      <div class="eyel" id="icon-eyel-charlie">
+        <img src="./img/charlie/eye-l.png" alt="eyel"/>
+      </div>
+      <div class="eyer" id="icon-eyer-charlie">
+        <img src="./img/charlie/eye-r.png" alt="eyer"/>
+      </div>
+      <div class="lipsl" id="icon-lipsl-charlie">
+        <img src="./img/charlie/lips-l.png" alt="lipsl"/>
+      </div>
+      <div class="lipsr" id="icon-lipsr-charlie">
+        <img src="./img/charlie/lips-r.png" alt="lipsr"/>
+      </div>
+      <div class="beardbl" id="icon-beardbl-charlie">
+        <img src="./img/charlie/beard-b-l.png" alt="beardbl"/>
+      </div>
+      <div class="beardbr" id="icon-beardbr-charlie">
+        <img src="./img/charlie/beard-b-r.png" alt="beardbr"/>
+      </div>
+      <div class="beardtl" id="icon-beardtl-charlie">
+        <img src="./img/charlie/beard-t-l.png" alt="beardtl"/>
+      </div>
+      <div class="beardtr" id="icon-beardtr-charlie">
+        <img src="./img/charlie/beard-t-r.png" alt="beardtr"/>
+      </div>
+    </div>
+
+    <div class="subheader">crystal-wolf:</div>
+    <div class="nav">
+      <div class="bg" id="icon-bg-crystal-wolf">
+        <img src="./img/crystal-wolf/background.png" alt="background"/>
+      </div>
+      <div class="hairl" id="icon-hairl-crystal-wolf">
+        <img src="./img/crystal-wolf/hair-l.png" alt="hairl"/>
+      </div>
+      <div class="hairr" id="icon-hairr-crystal-wolf">
+        <img src="./img/crystal-wolf/hair-r.png" alt="hairr"/>
+      </div>
+      <div class="earl" id="icon-earl-crystal-wolf">
+        <img src="./img/crystal-wolf/ear-l.png" alt="earl"/>
+      </div>
+      <div class="earr" id="icon-earr-crystal-wolf">
+        <img src="./img/crystal-wolf/ear-r.png" alt="earr"/>
+      </div>
+      <div class="eyel" id="icon-eyel-crystal-wolf">
+        <img src="./img/crystal-wolf/eye-l.png" alt="eyel"/>
+      </div>
+      <div class="eyer" id="icon-eyer-crystal-wolf">
+        <img src="./img/crystal-wolf/eye-r.png" alt="eyer"/>
+      </div>
+      <div class="lipsl" id="icon-lipsl-crystal-wolf">
+        <img src="./img/crystal-wolf/lips-l.png" alt="lipsl"/>
+      </div>
+      <div class="lipsr" id="icon-lipsr-crystal-wolf">
+        <img src="./img/crystal-wolf/lips-r.png" alt="lipsr"/>
+      </div>
+      <div class="beardbl" id="icon-beardbl-crystal-wolf">
+        <img src="./img/crystal-wolf/beard-b-l.png" alt="beardbl"/>
+      </div>
+      <div class="beardbr" id="icon-beardbr-crystal-wolf">
+        <img src="./img/crystal-wolf/beard-b-r.png" alt="beardbr"/>
+      </div>
+      <div class="beardtl" id="icon-beardtl-crystal-wolf">
+        <img src="./img/crystal-wolf/beard-t-l.png" alt="beardtl"/>
+      </div>
+      <div class="beardtr" id="icon-beardtr-crystal-wolf">
+        <img src="./img/crystal-wolf/beard-t-r.png" alt="beardtr"/>
+      </div>
+    </div>
+
+    <div class="subheader">darryl:</div>
+    <div class="nav">
+      <div class="bg" id="icon-bg-darryl">
+        <img src="./img/darryl/background.png" alt="background"/>
+      </div>
+      <div class="hairl" id="icon-hairl-darryl">
+        <img src="./img/darryl/hair-l.png" alt="hairl"/>
+      </div>
+      <div class="hairr" id="icon-hairr-darryl">
+        <img src="./img/darryl/hair-r.png" alt="hairr"/>
+      </div>
+      <div class="earl" id="icon-earl-darryl">
+        <img src="./img/darryl/ear-l.png" alt="earl"/>
+      </div>
+      <div class="earr" id="icon-earr-darryl">
+        <img src="./img/darryl/ear-r.png" alt="earr"/>
+      </div>
+      <div class="eyel" id="icon-eyel-darryl">
+        <img src="./img/darryl/eye-l.png" alt="eyel"/>
+      </div>
+      <div class="eyer" id="icon-eyer-darryl">
+        <img src="./img/darryl/eye-r.png" alt="eyer"/>
+      </div>
+      <div class="lipsl" id="icon-lipsl-darryl">
+        <img src="./img/darryl/lips-l.png" alt="lipsl"/>
+      </div>
+      <div class="lipsr" id="icon-lipsr-darryl">
+        <img src="./img/darryl/lips-r.png" alt="lipsr"/>
+      </div>
+      <div class="beardbl" id="icon-beardbl-darryl">
+        <img src="./img/darryl/beard-b-l.png" alt="beardbl"/>
+      </div>
+      <div class="beardbr" id="icon-beardbr-darryl">
+        <img src="./img/darryl/beard-b-r.png" alt="beardbr"/>
+      </div>
+      <div class="beardtl" id="icon-beardtl-darryl">
+        <img src="./img/darryl/beard-t-l.png" alt="beardtl"/>
+      </div>
+      <div class="beardtr" id="icon-beardtr-darryl">
+        <img src="./img/darryl/beard-t-r.png" alt="beardtr"/>
+      </div>
+    </div>
+
+    <div class="subheader">diamond-paws:</div>
+    <div class="nav">
+      <div class="bg" id="icon-bg-diamond-paws">
+        <img src="./img/diamond-paws/background.png" alt="background"/>
+      </div>
+      <div class="hairl" id="icon-hairl-diamond-paws">
+        <img src="./img/diamond-paws/hair-l.png" alt="hairl"/>
+      </div>
+      <div class="hairr" id="icon-hairr-diamond-paws">
+        <img src="./img/diamond-paws/hair-r.png" alt="hairr"/>
+      </div>
+      <div class="earl" id="icon-earl-diamond-paws">
+        <img src="./img/diamond-paws/ear-l.png" alt="earl"/>
+      </div>
+      <div class="earr" id="icon-earr-diamond-paws">
+        <img src="./img/diamond-paws/ear-r.png" alt="earr"/>
+      </div>
+      <div class="eyel" id="icon-eyel-diamond-paws">
+        <img src="./img/diamond-paws/eye-l.png" alt="eyel"/>
+      </div>
+      <div class="eyer" id="icon-eyer-diamond-paws">
+        <img src="./img/diamond-paws/eye-r.png" alt="eyer"/>
+      </div>
+      <div class="lipsl" id="icon-lipsl-diamond-paws">
+        <img src="./img/diamond-paws/lips-l.png" alt="lipsl"/>
+      </div>
+      <div class="lipsr" id="icon-lipsr-diamond-paws">
+        <img src="./img/diamond-paws/lips-r.png" alt="lipsr"/>
+      </div>
+      <div class="beardbl" id="icon-beardbl-diamond-paws">
+        <img src="./img/diamond-paws/beard-b-l.png" alt="beardbl"/>
+      </div>
+      <div class="beardbr" id="icon-beardbr-diamond-paws">
+        <img src="./img/diamond-paws/beard-b-r.png" alt="beardbr"/>
+      </div>
+      <div class="beardtl" id="icon-beardtl-diamond-paws">
+        <img src="./img/diamond-paws/beard-t-l.png" alt="beardtl"/>
+      </div>
+      <div class="beardtr" id="icon-beardtr-diamond-paws">
+        <img src="./img/diamond-paws/beard-t-r.png" alt="beardtr"/>
+      </div>
+    </div>
+
+    <div class="subheader">escrow:</div>
+    <div class="nav">
+      <div class="bg" id="icon-bg-escrow">
+        <img src="./img/escrow/background.png" alt="background"/>
+      </div>
+      <div class="hairl" id="icon-hairl-escrow">
+        <img src="./img/escrow/hair-l.png" alt="hairl"/>
+      </div>
+      <div class="hairr" id="icon-hairr-escrow">
+        <img src="./img/escrow/hair-r.png" alt="hairr"/>
+      </div>
+      <div class="earl" id="icon-earl-escrow">
+        <img src="./img/escrow/ear-l.png" alt="earl"/>
+      </div>
+      <div class="earr" id="icon-earr-escrow">
+        <img src="./img/escrow/ear-r.png" alt="earr"/>
+      </div>
+      <div class="eyel" id="icon-eyel-escrow">
+        <img src="./img/escrow/eye-l.png" alt="eyel"/>
+      </div>
+      <div class="eyer" id="icon-eyer-escrow">
+        <img src="./img/escrow/eye-r.png" alt="eyer"/>
+      </div>
+      <div class="lipsl" id="icon-lipsl-escrow">
+        <img src="./img/escrow/lips-l.png" alt="lipsl"/>
+      </div>
+      <div class="lipsr" id="icon-lipsr-escrow">
+        <img src="./img/escrow/lips-r.png" alt="lipsr"/>
+      </div>
+      <div class="beardbl" id="icon-beardbl-escrow">
+        <img src="./img/escrow/beard-b-l.png" alt="beardbl"/>
+      </div>
+      <div class="beardbr" id="icon-beardbr-escrow">
+        <img src="./img/escrow/beard-b-r.png" alt="beardbr"/>
+      </div>
+      <div class="beardtl" id="icon-beardtl-escrow">
+        <img src="./img/escrow/beard-t-l.png" alt="beardtl"/>
+      </div>
+      <div class="beardtr" id="icon-beardtr-escrow">
+        <img src="./img/escrow/beard-t-r.png" alt="beardtr"/>
+      </div>
+    </div>
+
+    <div class="subheader">fire-monster:</div>
+    <div class="nav">
+      <div class="bg" id="icon-bg-fire-monster">
+        <img src="./img/fire-monster/background.png" alt="background"/>
+      </div>
+      <div class="hairl" id="icon-hairl-fire-monster">
+        <img src="./img/fire-monster/hair-l.png" alt="hairl"/>
+      </div>
+      <div class="hairr" id="icon-hairr-fire-monster">
+        <img src="./img/fire-monster/hair-r.png" alt="hairr"/>
+      </div>
+      <div class="earl" id="icon-earl-fire-monster">
+        <img src="./img/fire-monster/ear-l.png" alt="earl"/>
+      </div>
+      <div class="earr" id="icon-earr-fire-monster">
+        <img src="./img/fire-monster/ear-r.png" alt="earr"/>
+      </div>
+      <div class="eyel" id="icon-eyel-fire-monster">
+        <img src="./img/fire-monster/eye-l.png" alt="eyel"/>
+      </div>
+      <div class="eyer" id="icon-eyer-fire-monster">
+        <img src="./img/fire-monster/eye-r.png" alt="eyer"/>
+      </div>
+      <div class="lipsl" id="icon-lipsl-fire-monster">
+        <img src="./img/fire-monster/lips-l.png" alt="lipsl"/>
+      </div>
+      <div class="lipsr" id="icon-lipsr-fire-monster">
+        <img src="./img/fire-monster/lips-r.png" alt="lipsr"/>
+      </div>
+      <div class="beardbl" id="icon-beardbl-fire-monster">
+        <img src="./img/fire-monster/beard-b-l.png" alt="beardbl"/>
+      </div>
+      <div class="beardbr" id="icon-beardbr-fire-monster">
+        <img src="./img/fire-monster/beard-b-r.png" alt="beardbr"/>
+      </div>
+      <div class="beardtl" id="icon-beardtl-fire-monster">
+        <img src="./img/fire-monster/beard-t-l.png" alt="beardtl"/>
+      </div>
+      <div class="beardtr" id="icon-beardtr-fire-monster">
+        <img src="./img/fire-monster/beard-t-r.png" alt="beardtr"/>
+      </div>
+    </div>
+
+    <div class="subheader">frankie:</div>
+    <div class="nav">
+      <div class="bg" id="icon-bg-frankie">
+        <img src="./img/frankie/background.png" alt="background"/>
+      </div>
+      <div class="hairl" id="icon-hairl-frankie">
+        <img src="./img/frankie/hair-l.png" alt="hairl"/>
+      </div>
+      <div class="hairr" id="icon-hairr-frankie">
+        <img src="./img/frankie/hair-r.png" alt="hairr"/>
+      </div>
+      <div class="earl" id="icon-earl-frankie">
+        <img src="./img/frankie/ear-l.png" alt="earl"/>
+      </div>
+      <div class="earr" id="icon-earr-frankie">
+        <img src="./img/frankie/ear-r.png" alt="earr"/>
+      </div>
+      <div class="eyel" id="icon-eyel-frankie">
+        <img src="./img/frankie/eye-l.png" alt="eyel"/>
+      </div>
+      <div class="eyer" id="icon-eyer-frankie">
+        <img src="./img/frankie/eye-r.png" alt="eyer"/>
+      </div>
+      <div class="lipsl" id="icon-lipsl-frankie">
+        <img src="./img/frankie/lips-l.png" alt="lipsl"/>
+      </div>
+      <div class="lipsr" id="icon-lipsr-frankie">
+        <img src="./img/frankie/lips-r.png" alt="lipsr"/>
+      </div>
+      <div class="beardbl" id="icon-beardbl-frankie">
+        <img src="./img/frankie/beard-b-l.png" alt="beardbl"/>
+      </div>
+      <div class="beardbr" id="icon-beardbr-frankie">
+        <img src="./img/frankie/beard-b-r.png" alt="beardbr"/>
+      </div>
+      <div class="beardtl" id="icon-beardtl-frankie">
+        <img src="./img/frankie/beard-t-l.png" alt="beardtl"/>
+      </div>
+      <div class="beardtr" id="icon-beardtr-frankie">
+        <img src="./img/frankie/beard-t-r.png" alt="beardtr"/>
+      </div>
+    </div>
+
+    <div class="subheader">gaba:</div>
+    <div class="nav">
+      <div class="bg" id="icon-bg-gaba">
+        <img src="./img/gaba/background.png" alt="background"/>
+      </div>
+      <div class="hairl" id="icon-hairl-gaba">
+        <img src="./img/gaba/hair-l.png" alt="hairl"/>
+      </div>
+      <div class="hairr" id="icon-hairr-gaba">
+        <img src="./img/gaba/hair-r.png" alt="hairr"/>
+      </div>
+      <div class="earl" id="icon-earl-gaba">
+        <img src="./img/gaba/ear-l.png" alt="earl"/>
+      </div>
+      <div class="earr" id="icon-earr-gaba">
+        <img src="./img/gaba/ear-r.png" alt="earr"/>
+      </div>
+      <div class="eyel" id="icon-eyel-gaba">
+        <img src="./img/gaba/eye-l.png" alt="eyel"/>
+      </div>
+      <div class="eyer" id="icon-eyer-gaba">
+        <img src="./img/gaba/eye-r.png" alt="eyer"/>
+      </div>
+      <div class="lipsl" id="icon-lipsl-gaba">
+        <img src="./img/gaba/lips-l.png" alt="lipsl"/>
+      </div>
+      <div class="lipsr" id="icon-lipsr-gaba">
+        <img src="./img/gaba/lips-r.png" alt="lipsr"/>
+      </div>
+      <div class="beardbl" id="icon-beardbl-gaba">
+        <img src="./img/gaba/beard-b-l.png" alt="beardbl"/>
+      </div>
+      <div class="beardbr" id="icon-beardbr-gaba">
+        <img src="./img/gaba/beard-b-r.png" alt="beardbr"/>
+      </div>
+      <div class="beardtl" id="icon-beardtl-gaba">
+        <img src="./img/gaba/beard-t-l.png" alt="beardtl"/>
+      </div>
+      <div class="beardtr" id="icon-beardtr-gaba">
+        <img src="./img/gaba/beard-t-r.png" alt="beardtr"/>
+      </div>
+    </div>
+
+    <div class="subheader">girl:</div>
+    <div class="nav">
+      <div class="bg" id="icon-bg-girl">
+        <img src="./img/girl/background.png" alt="background"/>
+      </div>
+      <div class="hairl" id="icon-hairl-girl">
+        <img src="./img/girl/hair-l.png" alt="hairl"/>
+      </div>
+      <div class="hairr" id="icon-hairr-girl">
+        <img src="./img/girl/hair-r.png" alt="hairr"/>
+      </div>
+      <div class="earl" id="icon-earl-girl">
+        <img src="./img/girl/ear-l.png" alt="earl"/>
+      </div>
+      <div class="earr" id="icon-earr-girl">
+        <img src="./img/girl/ear-r.png" alt="earr"/>
+      </div>
+      <div class="eyel" id="icon-eyel-girl">
+        <img src="./img/girl/eye-l.png" alt="eyel"/>
+      </div>
+      <div class="eyer" id="icon-eyer-girl">
+        <img src="./img/girl/eye-r.png" alt="eyer"/>
+      </div>
+      <div class="lipsl" id="icon-lipsl-girl">
+        <img src="./img/girl/lips-l.png" alt="lipsl"/>
+      </div>
+      <div class="lipsr" id="icon-lipsr-girl">
+        <img src="./img/girl/lips-r.png" alt="lipsr"/>
+      </div>
+      <div class="beardbl" id="icon-beardbl-girl">
+        <img src="./img/girl/beard-b-l.png" alt="beardbl"/>
+      </div>
+      <div class="beardbr" id="icon-beardbr-girl">
+        <img src="./img/girl/beard-b-r.png" alt="beardbr"/>
+      </div>
+      <div class="beardtl" id="icon-beardtl-girl">
+        <img src="./img/girl/beard-t-l.png" alt="beardtl"/>
+      </div>
+      <div class="beardtr" id="icon-beardtr-girl">
+        <img src="./img/girl/beard-t-r.png" alt="beardtr"/>
+      </div>
+    </div>
+
+    <div class="subheader">glenn:</div>
+    <div class="nav">
+      <div class="bg" id="icon-bg-glenn">
+        <img src="./img/glenn/background.png" alt="background"/>
+      </div>
+      <div class="hairl" id="icon-hairl-glenn">
+        <img src="./img/glenn/hair-l.png" alt="hairl"/>
+      </div>
+      <div class="hairr" id="icon-hairr-glenn">
+        <img src="./img/glenn/hair-r.png" alt="hairr"/>
+      </div>
+      <div class="earl" id="icon-earl-glenn">
+        <img src="./img/glenn/ear-l.png" alt="earl"/>
+      </div>
+      <div class="earr" id="icon-earr-glenn">
+        <img src="./img/glenn/ear-r.png" alt="earr"/>
+      </div>
+      <div class="eyel" id="icon-eyel-glenn">
+        <img src="./img/glenn/eye-l.png" alt="eyel"/>
+      </div>
+      <div class="eyer" id="icon-eyer-glenn">
+        <img src="./img/glenn/eye-r.png" alt="eyer"/>
+      </div>
+      <div class="lipsl" id="icon-lipsl-glenn">
+        <img src="./img/glenn/lips-l.png" alt="lipsl"/>
+      </div>
+      <div class="lipsr" id="icon-lipsr-glenn">
+        <img src="./img/glenn/lips-r.png" alt="lipsr"/>
+      </div>
+      <div class="beardbl" id="icon-beardbl-glenn">
+        <img src="./img/glenn/beard-b-l.png" alt="beardbl"/>
+      </div>
+      <div class="beardbr" id="icon-beardbr-glenn">
+        <img src="./img/glenn/beard-b-r.png" alt="beardbr"/>
+      </div>
+      <div class="beardtl" id="icon-beardtl-glenn">
+        <img src="./img/glenn/beard-t-l.png" alt="beardtl"/>
+      </div>
+      <div class="beardtr" id="icon-beardtr-glenn">
+        <img src="./img/glenn/beard-t-r.png" alt="beardtr"/>
+      </div>
+    </div>
+
+    <div class="subheader">goblin:</div>
+    <div class="nav">
+      <div class="bg" id="icon-bg-goblin">
+        <img src="./img/goblin/background.png" alt="background"/>
+      </div>
+      <div class="hairl" id="icon-hairl-goblin">
+        <img src="./img/goblin/hair-l.png" alt="hairl"/>
+      </div>
+      <div class="hairr" id="icon-hairr-goblin">
+        <img src="./img/goblin/hair-r.png" alt="hairr"/>
+      </div>
+      <div class="earl" id="icon-earl-goblin">
+        <img src="./img/goblin/ear-l.png" alt="earl"/>
+      </div>
+      <div class="earr" id="icon-earr-goblin">
+        <img src="./img/goblin/ear-r.png" alt="earr"/>
+      </div>
+      <div class="eyel" id="icon-eyel-goblin">
+        <img src="./img/goblin/eye-l.png" alt="eyel"/>
+      </div>
+      <div class="eyer" id="icon-eyer-goblin">
+        <img src="./img/goblin/eye-r.png" alt="eyer"/>
+      </div>
+      <div class="lipsl" id="icon-lipsl-goblin">
+        <img src="./img/goblin/lips-l.png" alt="lipsl"/>
+      </div>
+      <div class="lipsr" id="icon-lipsr-goblin">
+        <img src="./img/goblin/lips-r.png" alt="lipsr"/>
+      </div>
+      <div class="beardbl" id="icon-beardbl-goblin">
+        <img src="./img/goblin/beard-b-l.png" alt="beardbl"/>
+      </div>
+      <div class="beardbr" id="icon-beardbr-goblin">
+        <img src="./img/goblin/beard-b-r.png" alt="beardbr"/>
+      </div>
+      <div class="beardtl" id="icon-beardtl-goblin">
+        <img src="./img/goblin/beard-t-l.png" alt="beardtl"/>
+      </div>
+      <div class="beardtr" id="icon-beardtr-goblin">
+        <img src="./img/goblin/beard-t-r.png" alt="beardtr"/>
+      </div>
+    </div>
+
+    <div class="subheader">gold-tooth:</div>
+    <div class="nav">
+      <div class="bg" id="icon-bg-gold-tooth">
+        <img src="./img/gold-tooth/background.png" alt="background"/>
+      </div>
+      <div class="hairl" id="icon-hairl-gold-tooth">
+        <img src="./img/gold-tooth/hair-l.png" alt="hairl"/>
+      </div>
+      <div class="hairr" id="icon-hairr-gold-tooth">
+        <img src="./img/gold-tooth/hair-r.png" alt="hairr"/>
+      </div>
+      <div class="earl" id="icon-earl-gold-tooth">
+        <img src="./img/gold-tooth/ear-l.png" alt="earl"/>
+      </div>
+      <div class="earr" id="icon-earr-gold-tooth">
+        <img src="./img/gold-tooth/ear-r.png" alt="earr"/>
+      </div>
+      <div class="eyel" id="icon-eyel-gold-tooth">
+        <img src="./img/gold-tooth/eye-l.png" alt="eyel"/>
+      </div>
+      <div class="eyer" id="icon-eyer-gold-tooth">
+        <img src="./img/gold-tooth/eye-r.png" alt="eyer"/>
+      </div>
+      <div class="lipsl" id="icon-lipsl-gold-tooth">
+        <img src="./img/gold-tooth/lips-l.png" alt="lipsl"/>
+      </div>
+      <div class="lipsr" id="icon-lipsr-gold-tooth">
+        <img src="./img/gold-tooth/lips-r.png" alt="lipsr"/>
+      </div>
+      <div class="beardbl" id="icon-beardbl-gold-tooth">
+        <img src="./img/gold-tooth/beard-b-l.png" alt="beardbl"/>
+      </div>
+      <div class="beardbr" id="icon-beardbr-gold-tooth">
+        <img src="./img/gold-tooth/beard-b-r.png" alt="beardbr"/>
+      </div>
+      <div class="beardtl" id="icon-beardtl-gold-tooth">
+        <img src="./img/gold-tooth/beard-t-l.png" alt="beardtl"/>
+      </div>
+      <div class="beardtr" id="icon-beardtr-gold-tooth">
+        <img src="./img/gold-tooth/beard-t-r.png" alt="beardtr"/>
+      </div>
+    </div>
+
+    <div class="subheader">grishnak:</div>
+    <div class="nav">
+      <div class="bg" id="icon-bg-grishnak">
+        <img src="./img/grishnak/background.png" alt="background"/>
+      </div>
+      <div class="hairl" id="icon-hairl-grishnak">
+        <img src="./img/grishnak/hair-l.png" alt="hairl"/>
+      </div>
+      <div class="hairr" id="icon-hairr-grishnak">
+        <img src="./img/grishnak/hair-r.png" alt="hairr"/>
+      </div>
+      <div class="earl" id="icon-earl-grishnak">
+        <img src="./img/grishnak/ear-l.png" alt="earl"/>
+      </div>
+      <div class="earr" id="icon-earr-grishnak">
+        <img src="./img/grishnak/ear-r.png" alt="earr"/>
+      </div>
+      <div class="eyel" id="icon-eyel-grishnak">
+        <img src="./img/grishnak/eye-l.png" alt="eyel"/>
+      </div>
+      <div class="eyer" id="icon-eyer-grishnak">
+        <img src="./img/grishnak/eye-r.png" alt="eyer"/>
+      </div>
+      <div class="lipsl" id="icon-lipsl-grishnak">
+        <img src="./img/grishnak/lips-l.png" alt="lipsl"/>
+      </div>
+      <div class="lipsr" id="icon-lipsr-grishnak">
+        <img src="./img/grishnak/lips-r.png" alt="lipsr"/>
+      </div>
+      <div class="beardbl" id="icon-beardbl-grishnak">
+        <img src="./img/grishnak/beard-b-l.png" alt="beardbl"/>
+      </div>
+      <div class="beardbr" id="icon-beardbr-grishnak">
+        <img src="./img/grishnak/beard-b-r.png" alt="beardbr"/>
+      </div>
+      <div class="beardtl" id="icon-beardtl-grishnak">
+        <img src="./img/grishnak/beard-t-l.png" alt="beardtl"/>
+      </div>
+      <div class="beardtr" id="icon-beardtr-grishnak">
+        <img src="./img/grishnak/beard-t-r.png" alt="beardtr"/>
+      </div>
+    </div>
+
+    <div class="subheader">mancel-iron:</div>
+    <div class="nav">
+      <div class="bg" id="icon-bg-mancel-iron">
+        <img src="./img/mancel-iron/background.png" alt="background"/>
+      </div>
+      <div class="hairl" id="icon-hairl-mancel-iron">
+        <img src="./img/mancel-iron/hair-l.png" alt="hairl"/>
+      </div>
+      <div class="hairr" id="icon-hairr-mancel-iron">
+        <img src="./img/mancel-iron/hair-r.png" alt="hairr"/>
+      </div>
+      <div class="earl" id="icon-earl-mancel-iron">
+        <img src="./img/mancel-iron/ear-l.png" alt="earl"/>
+      </div>
+      <div class="earr" id="icon-earr-mancel-iron">
+        <img src="./img/mancel-iron/ear-r.png" alt="earr"/>
+      </div>
+      <div class="eyel" id="icon-eyel-mancel-iron">
+        <img src="./img/mancel-iron/eye-l.png" alt="eyel"/>
+      </div>
+      <div class="eyer" id="icon-eyer-mancel-iron">
+        <img src="./img/mancel-iron/eye-r.png" alt="eyer"/>
+      </div>
+      <div class="lipsl" id="icon-lipsl-mancel-iron">
+        <img src="./img/mancel-iron/lips-l.png" alt="lipsl"/>
+      </div>
+      <div class="lipsr" id="icon-lipsr-mancel-iron">
+        <img src="./img/mancel-iron/lips-r.png" alt="lipsr"/>
+      </div>
+      <div class="beardbl" id="icon-beardbl-mancel-iron">
+        <img src="./img/mancel-iron/beard-b-l.png" alt="beardbl"/>
+      </div>
+      <div class="beardbr" id="icon-beardbr-mancel-iron">
+        <img src="./img/mancel-iron/beard-b-r.png" alt="beardbr"/>
+      </div>
+      <div class="beardtl" id="icon-beardtl-mancel-iron">
+        <img src="./img/mancel-iron/beard-t-l.png" alt="beardtl"/>
+      </div>
+      <div class="beardtr" id="icon-beardtr-mancel-iron">
+        <img src="./img/mancel-iron/beard-t-r.png" alt="beardtr"/>
+      </div>
+    </div>
+
+    <div class="subheader">mancel-stone:</div>
+    <div class="nav">
+      <div class="bg" id="icon-bg-mancel-stone">
+        <img src="./img/mancel-stone/background.png" alt="background"/>
+      </div>
+      <div class="hairl" id="icon-hairl-mancel-stone">
+        <img src="./img/mancel-stone/hair-l.png" alt="hairl"/>
+      </div>
+      <div class="hairr" id="icon-hairr-mancel-stone">
+        <img src="./img/mancel-stone/hair-r.png" alt="hairr"/>
+      </div>
+      <div class="earl" id="icon-earl-mancel-stone">
+        <img src="./img/mancel-stone/ear-l.png" alt="earl"/>
+      </div>
+      <div class="earr" id="icon-earr-mancel-stone">
+        <img src="./img/mancel-stone/ear-r.png" alt="earr"/>
+      </div>
+      <div class="eyel" id="icon-eyel-mancel-stone">
+        <img src="./img/mancel-stone/eye-l.png" alt="eyel"/>
+      </div>
+      <div class="eyer" id="icon-eyer-mancel-stone">
+        <img src="./img/mancel-stone/eye-r.png" alt="eyer"/>
+      </div>
+      <div class="lipsl" id="icon-lipsl-mancel-stone">
+        <img src="./img/mancel-stone/lips-l.png" alt="lipsl"/>
+      </div>
+      <div class="lipsr" id="icon-lipsr-mancel-stone">
+        <img src="./img/mancel-stone/lips-r.png" alt="lipsr"/>
+      </div>
+      <div class="beardbl" id="icon-beardbl-mancel-stone">
+        <img src="./img/mancel-stone/beard-b-l.png" alt="beardbl"/>
+      </div>
+      <div class="beardbr" id="icon-beardbr-mancel-stone">
+        <img src="./img/mancel-stone/beard-b-r.png" alt="beardbr"/>
+      </div>
+      <div class="beardtl" id="icon-beardtl-mancel-stone">
+        <img src="./img/mancel-stone/beard-t-l.png" alt="beardtl"/>
+      </div>
+      <div class="beardtr" id="icon-beardtr-mancel-stone">
+        <img src="./img/mancel-stone/beard-t-r.png" alt="beardtr"/>
+      </div>
+    </div>
+
+    <div class="subheader">mariguana:</div>
+    <div class="nav">
+      <div class="bg" id="icon-bg-mariguana">
+        <img src="./img/mariguana/background.png" alt="background"/>
+      </div>
+      <div class="hairl" id="icon-hairl-mariguana">
+        <img src="./img/mariguana/hair-l.png" alt="hairl"/>
+      </div>
+      <div class="hairr" id="icon-hairr-mariguana">
+        <img src="./img/mariguana/hair-r.png" alt="hairr"/>
+      </div>
+      <div class="earl" id="icon-earl-mariguana">
+        <img src="./img/mariguana/ear-l.png" alt="earl"/>
+      </div>
+      <div class="earr" id="icon-earr-mariguana">
+        <img src="./img/mariguana/ear-r.png" alt="earr"/>
+      </div>
+      <div class="eyel" id="icon-eyel-mariguana">
+        <img src="./img/mariguana/eye-l.png" alt="eyel"/>
+      </div>
+      <div class="eyer" id="icon-eyer-mariguana">
+        <img src="./img/mariguana/eye-r.png" alt="eyer"/>
+      </div>
+      <div class="lipsl" id="icon-lipsl-mariguana">
+        <img src="./img/mariguana/lips-l.png" alt="lipsl"/>
+      </div>
+      <div class="lipsr" id="icon-lipsr-mariguana">
+        <img src="./img/mariguana/lips-r.png" alt="lipsr"/>
+      </div>
+      <div class="beardbl" id="icon-beardbl-mariguana">
+        <img src="./img/mariguana/beard-b-l.png" alt="beardbl"/>
+      </div>
+      <div class="beardbr" id="icon-beardbr-mariguana">
+        <img src="./img/mariguana/beard-b-r.png" alt="beardbr"/>
+      </div>
+      <div class="beardtl" id="icon-beardtl-mariguana">
+        <img src="./img/mariguana/beard-t-l.png" alt="beardtl"/>
+      </div>
+      <div class="beardtr" id="icon-beardtr-mariguana">
+        <img src="./img/mariguana/beard-t-r.png" alt="beardtr"/>
+      </div>
+    </div>
+
+    <div class="subheader">mime:</div>
+    <div class="nav">
+      <div class="bg" id="icon-bg-mime">
+        <img src="./img/mime/background.png" alt="background"/>
+      </div>
+      <div class="hairl" id="icon-hairl-mime">
+        <img src="./img/mime/hair-l.png" alt="hairl"/>
+      </div>
+      <div class="hairr" id="icon-hairr-mime">
+        <img src="./img/mime/hair-r.png" alt="hairr"/>
+      </div>
+      <div class="earl" id="icon-earl-mime">
+        <img src="./img/mime/ear-l.png" alt="earl"/>
+      </div>
+      <div class="earr" id="icon-earr-mime">
+        <img src="./img/mime/ear-r.png" alt="earr"/>
+      </div>
+      <div class="eyel" id="icon-eyel-mime">
+        <img src="./img/mime/eye-l.png" alt="eyel"/>
+      </div>
+      <div class="eyer" id="icon-eyer-mime">
+        <img src="./img/mime/eye-r.png" alt="eyer"/>
+      </div>
+      <div class="lipsl" id="icon-lipsl-mime">
+        <img src="./img/mime/lips-l.png" alt="lipsl"/>
+      </div>
+      <div class="lipsr" id="icon-lipsr-mime">
+        <img src="./img/mime/lips-r.png" alt="lipsr"/>
+      </div>
+      <div class="beardbl" id="icon-beardbl-mime">
+        <img src="./img/mime/beard-b-l.png" alt="beardbl"/>
+      </div>
+      <div class="beardbr" id="icon-beardbr-mime">
+        <img src="./img/mime/beard-b-r.png" alt="beardbr"/>
+      </div>
+      <div class="beardtl" id="icon-beardtl-mime">
+        <img src="./img/mime/beard-t-l.png" alt="beardtl"/>
+      </div>
+      <div class="beardtr" id="icon-beardtr-mime">
+        <img src="./img/mime/beard-t-r.png" alt="beardtr"/>
+      </div>
+    </div>
+
+    <div class="subheader">mushroom-man:</div>
+    <div class="nav">
+      <div class="bg" id="icon-bg-mushroom-man">
+        <img src="./img/mushroom-man/background.png" alt="background"/>
+      </div>
+      <div class="hairl" id="icon-hairl-mushroom-man">
+        <img src="./img/mushroom-man/hair-l.png" alt="hairl"/>
+      </div>
+      <div class="hairr" id="icon-hairr-mushroom-man">
+        <img src="./img/mushroom-man/hair-r.png" alt="hairr"/>
+      </div>
+      <div class="earl" id="icon-earl-mushroom-man">
+        <img src="./img/mushroom-man/ear-l.png" alt="earl"/>
+      </div>
+      <div class="earr" id="icon-earr-mushroom-man">
+        <img src="./img/mushroom-man/ear-r.png" alt="earr"/>
+      </div>
+      <div class="eyel" id="icon-eyel-mushroom-man">
+        <img src="./img/mushroom-man/eye-l.png" alt="eyel"/>
+      </div>
+      <div class="eyer" id="icon-eyer-mushroom-man">
+        <img src="./img/mushroom-man/eye-r.png" alt="eyer"/>
+      </div>
+      <div class="lipsl" id="icon-lipsl-mushroom-man">
+        <img src="./img/mushroom-man/lips-l.png" alt="lipsl"/>
+      </div>
+      <div class="lipsr" id="icon-lipsr-mushroom-man">
+        <img src="./img/mushroom-man/lips-r.png" alt="lipsr"/>
+      </div>
+      <div class="beardbl" id="icon-beardbl-mushroom-man">
+        <img src="./img/mushroom-man/beard-b-l.png" alt="beardbl"/>
+      </div>
+      <div class="beardbr" id="icon-beardbr-mushroom-man">
+        <img src="./img/mushroom-man/beard-b-r.png" alt="beardbr"/>
+      </div>
+      <div class="beardtl" id="icon-beardtl-mushroom-man">
+        <img src="./img/mushroom-man/beard-t-l.png" alt="beardtl"/>
+      </div>
+      <div class="beardtr" id="icon-beardtr-mushroom-man">
+        <img src="./img/mushroom-man/beard-t-r.png" alt="beardtr"/>
+      </div>
+    </div>
+
+    <div class="subheader">nature-witch:</div>
+    <div class="nav">
+      <div class="bg" id="icon-bg-nature-witch">
+        <img src="./img/nature-witch/background.png" alt="background"/>
+      </div>
+      <div class="hairl" id="icon-hairl-nature-witch">
+        <img src="./img/nature-witch/hair-l.png" alt="hairl"/>
+      </div>
+      <div class="hairr" id="icon-hairr-nature-witch">
+        <img src="./img/nature-witch/hair-r.png" alt="hairr"/>
+      </div>
+      <div class="earl" id="icon-earl-nature-witch">
+        <img src="./img/nature-witch/ear-l.png" alt="earl"/>
+      </div>
+      <div class="earr" id="icon-earr-nature-witch">
+        <img src="./img/nature-witch/ear-r.png" alt="earr"/>
+      </div>
+      <div class="eyel" id="icon-eyel-nature-witch">
+        <img src="./img/nature-witch/eye-l.png" alt="eyel"/>
+      </div>
+      <div class="eyer" id="icon-eyer-nature-witch">
+        <img src="./img/nature-witch/eye-r.png" alt="eyer"/>
+      </div>
+      <div class="lipsl" id="icon-lipsl-nature-witch">
+        <img src="./img/nature-witch/lips-l.png" alt="lipsl"/>
+      </div>
+      <div class="lipsr" id="icon-lipsr-nature-witch">
+        <img src="./img/nature-witch/lips-r.png" alt="lipsr"/>
+      </div>
+      <div class="beardbl" id="icon-beardbl-nature-witch">
+        <img src="./img/nature-witch/beard-b-l.png" alt="beardbl"/>
+      </div>
+      <div class="beardbr" id="icon-beardbr-nature-witch">
+        <img src="./img/nature-witch/beard-b-r.png" alt="beardbr"/>
+      </div>
+      <div class="beardtl" id="icon-beardtl-nature-witch">
+        <img src="./img/nature-witch/beard-t-l.png" alt="beardtl"/>
+      </div>
+      <div class="beardtr" id="icon-beardtr-nature-witch">
+        <img src="./img/nature-witch/beard-t-r.png" alt="beardtr"/>
+      </div>
+    </div>
+
+    <div class="subheader">pirate:</div>
+    <div class="nav">
+      <div class="bg" id="icon-bg-pirate">
+        <img src="./img/pirate/background.png" alt="background"/>
+      </div>
+      <div class="hairl" id="icon-hairl-pirate">
+        <img src="./img/pirate/hair-l.png" alt="hairl"/>
+      </div>
+      <div class="hairr" id="icon-hairr-pirate">
+        <img src="./img/pirate/hair-r.png" alt="hairr"/>
+      </div>
+      <div class="earl" id="icon-earl-pirate">
+        <img src="./img/pirate/ear-l.png" alt="earl"/>
+      </div>
+      <div class="earr" id="icon-earr-pirate">
+        <img src="./img/pirate/ear-r.png" alt="earr"/>
+      </div>
+      <div class="eyel" id="icon-eyel-pirate">
+        <img src="./img/pirate/eye-l.png" alt="eyel"/>
+      </div>
+      <div class="eyer" id="icon-eyer-pirate">
+        <img src="./img/pirate/eye-r.png" alt="eyer"/>
+      </div>
+      <div class="lipsl" id="icon-lipsl-pirate">
+        <img src="./img/pirate/lips-l.png" alt="lipsl"/>
+      </div>
+      <div class="lipsr" id="icon-lipsr-pirate">
+        <img src="./img/pirate/lips-r.png" alt="lipsr"/>
+      </div>
+      <div class="beardbl" id="icon-beardbl-pirate">
+        <img src="./img/pirate/beard-b-l.png" alt="beardbl"/>
+      </div>
+      <div class="beardbr" id="icon-beardbr-pirate">
+        <img src="./img/pirate/beard-b-r.png" alt="beardbr"/>
+      </div>
+      <div class="beardtl" id="icon-beardtl-pirate">
+        <img src="./img/pirate/beard-t-l.png" alt="beardtl"/>
+      </div>
+      <div class="beardtr" id="icon-beardtr-pirate">
+        <img src="./img/pirate/beard-t-r.png" alt="beardtr"/>
+      </div>
+    </div>
+
+    <div class="subheader">polymask:</div>
+    <div class="nav">
+      <div class="bg" id="icon-bg-polymask">
+        <img src="./img/polymask/background.png" alt="background"/>
+      </div>
+      <div class="hairl" id="icon-hairl-polymask">
+        <img src="./img/polymask/hair-l.png" alt="hairl"/>
+      </div>
+      <div class="hairr" id="icon-hairr-polymask">
+        <img src="./img/polymask/hair-r.png" alt="hairr"/>
+      </div>
+      <div class="earl" id="icon-earl-polymask">
+        <img src="./img/polymask/ear-l.png" alt="earl"/>
+      </div>
+      <div class="earr" id="icon-earr-polymask">
+        <img src="./img/polymask/ear-r.png" alt="earr"/>
+      </div>
+      <div class="eyel" id="icon-eyel-polymask">
+        <img src="./img/polymask/eye-l.png" alt="eyel"/>
+      </div>
+      <div class="eyer" id="icon-eyer-polymask">
+        <img src="./img/polymask/eye-r.png" alt="eyer"/>
+      </div>
+      <div class="lipsl" id="icon-lipsl-polymask">
+        <img src="./img/polymask/lips-l.png" alt="lipsl"/>
+      </div>
+      <div class="lipsr" id="icon-lipsr-polymask">
+        <img src="./img/polymask/lips-r.png" alt="lipsr"/>
+      </div>
+      <div class="beardbl" id="icon-beardbl-polymask">
+        <img src="./img/polymask/beard-b-l.png" alt="beardbl"/>
+      </div>
+      <div class="beardbr" id="icon-beardbr-polymask">
+        <img src="./img/polymask/beard-b-r.png" alt="beardbr"/>
+      </div>
+      <div class="beardtl" id="icon-beardtl-polymask">
+        <img src="./img/polymask/beard-t-l.png" alt="beardtl"/>
+      </div>
+      <div class="beardtr" id="icon-beardtr-polymask">
+        <img src="./img/polymask/beard-t-r.png" alt="beardtr"/>
+      </div>
+    </div>
+
+    <div class="subheader">ragnar:</div>
+    <div class="nav">
+      <div class="bg" id="icon-bg-ragnar">
+        <img src="./img/ragnar/background.png" alt="background"/>
+      </div>
+      <div class="hairl" id="icon-hairl-ragnar">
+        <img src="./img/ragnar/hair-l.png" alt="hairl"/>
+      </div>
+      <div class="hairr" id="icon-hairr-ragnar">
+        <img src="./img/ragnar/hair-r.png" alt="hairr"/>
+      </div>
+      <div class="earl" id="icon-earl-ragnar">
+        <img src="./img/ragnar/ear-l.png" alt="earl"/>
+      </div>
+      <div class="earr" id="icon-earr-ragnar">
+        <img src="./img/ragnar/ear-r.png" alt="earr"/>
+      </div>
+      <div class="eyel" id="icon-eyel-ragnar">
+        <img src="./img/ragnar/eye-l.png" alt="eyel"/>
+      </div>
+      <div class="eyer" id="icon-eyer-ragnar">
+        <img src="./img/ragnar/eye-r.png" alt="eyer"/>
+      </div>
+      <div class="lipsl" id="icon-lipsl-ragnar">
+        <img src="./img/ragnar/lips-l.png" alt="lipsl"/>
+      </div>
+      <div class="lipsr" id="icon-lipsr-ragnar">
+        <img src="./img/ragnar/lips-r.png" alt="lipsr"/>
+      </div>
+      <div class="beardbl" id="icon-beardbl-ragnar">
+        <img src="./img/ragnar/beard-b-l.png" alt="beardbl"/>
+      </div>
+      <div class="beardbr" id="icon-beardbr-ragnar">
+        <img src="./img/ragnar/beard-b-r.png" alt="beardbr"/>
+      </div>
+      <div class="beardtl" id="icon-beardtl-ragnar">
+        <img src="./img/ragnar/beard-t-l.png" alt="beardtl"/>
+      </div>
+      <div class="beardtr" id="icon-beardtr-ragnar">
+        <img src="./img/ragnar/beard-t-r.png" alt="beardtr"/>
+      </div>
+    </div>
+
+    <div class="subheader">robot:</div>
+    <div class="nav">
+      <div class="bg" id="icon-bg-robot">
+        <img src="./img/robot/background.png" alt="background"/>
+      </div>
+      <div class="hairl" id="icon-hairl-robot">
+        <img src="./img/robot/hair-l.png" alt="hairl"/>
+      </div>
+      <div class="hairr" id="icon-hairr-robot">
+        <img src="./img/robot/hair-r.png" alt="hairr"/>
+      </div>
+      <div class="earl" id="icon-earl-robot">
+        <img src="./img/robot/ear-l.png" alt="earl"/>
+      </div>
+      <div class="earr" id="icon-earr-robot">
+        <img src="./img/robot/ear-r.png" alt="earr"/>
+      </div>
+      <div class="eyel" id="icon-eyel-robot">
+        <img src="./img/robot/eye-l.png" alt="eyel"/>
+      </div>
+      <div class="eyer" id="icon-eyer-robot">
+        <img src="./img/robot/eye-r.png" alt="eyer"/>
+      </div>
+      <div class="lipsl" id="icon-lipsl-robot">
+        <img src="./img/robot/lips-l.png" alt="lipsl"/>
+      </div>
+      <div class="lipsr" id="icon-lipsr-robot">
+        <img src="./img/robot/lips-r.png" alt="lipsr"/>
+      </div>
+      <div class="beardbl" id="icon-beardbl-robot">
+        <img src="./img/robot/beard-b-l.png" alt="beardbl"/>
+      </div>
+      <div class="beardbr" id="icon-beardbr-robot">
+        <img src="./img/robot/beard-b-r.png" alt="beardbr"/>
+      </div>
+      <div class="beardtl" id="icon-beardtl-robot">
+        <img src="./img/robot/beard-t-l.png" alt="beardtl"/>
+      </div>
+      <div class="beardtr" id="icon-beardtr-robot">
+        <img src="./img/robot/beard-t-r.png" alt="beardtr"/>
+      </div>
+    </div>
+    <div class="subheader">shadow-punk:</div>
+    <div class="nav">
+      <div class="bg" id="icon-bg-shadow-punk">
+        <img src="./img/shadow-punk/background.png" alt="background"/>
+      </div>
+      <div class="hairl" id="icon-hairl-shadow-punk">
+        <img src="./img/shadow-punk/hair-l.png" alt="hairl"/>
+      </div>
+      <div class="hairr" id="icon-hairr-shadow-punk">
+        <img src="./img/shadow-punk/hair-r.png" alt="hairr"/>
+      </div>
+      <div class="earl" id="icon-earl-shadow-punk">
+        <img src="./img/shadow-punk/ear-l.png" alt="earl"/>
+      </div>
+      <div class="earr" id="icon-earr-shadow-punk">
+        <img src="./img/shadow-punk/ear-r.png" alt="earr"/>
+      </div>
+      <div class="eyel" id="icon-eyel-shadow-punk">
+        <img src="./img/shadow-punk/eye-l.png" alt="eyel"/>
+      </div>
+      <div class="eyer" id="icon-eyer-shadow-punk">
+        <img src="./img/shadow-punk/eye-r.png" alt="eyer"/>
+      </div>
+      <div class="lipsl" id="icon-lipsl-shadow-punk">
+        <img src="./img/shadow-punk/lips-l.png" alt="lipsl"/>
+      </div>
+      <div class="lipsr" id="icon-lipsr-shadow-punk">
+        <img src="./img/shadow-punk/lips-r.png" alt="lipsr"/>
+      </div>
+      <div class="beardbl" id="icon-beardbl-shadow-punk">
+        <img src="./img/shadow-punk/beard-b-l.png" alt="beardbl"/>
+      </div>
+      <div class="beardbr" id="icon-beardbr-shadow-punk">
+        <img src="./img/shadow-punk/beard-b-r.png" alt="beardbr"/>
+      </div>
+      <div class="beardtl" id="icon-beardtl-shadow-punk">
+        <img src="./img/shadow-punk/beard-t-l.png" alt="beardtl"/>
+      </div>
+      <div class="beardtr" id="icon-beardtr-shadow-punk">
+        <img src="./img/shadow-punk/beard-t-r.png" alt="beardtr"/>
+      </div>
+    </div>
+
+    <div class="subheader">snakeface:</div>
+    <div class="nav">
+      <div class="bg" id="icon-bg-snakeface">
+        <img src="./img/snakeface/background.png" alt="background"/>
+      </div>
+      <div class="hairl" id="icon-hairl-snakeface">
+        <img src="./img/snakeface/hair-l.png" alt="hairl"/>
+      </div>
+      <div class="hairr" id="icon-hairr-snakeface">
+        <img src="./img/snakeface/hair-r.png" alt="hairr"/>
+      </div>
+      <div class="earl" id="icon-earl-snakeface">
+        <img src="./img/snakeface/ear-l.png" alt="earl"/>
+      </div>
+      <div class="earr" id="icon-earr-snakeface">
+        <img src="./img/snakeface/ear-r.png" alt="earr"/>
+      </div>
+      <div class="eyel" id="icon-eyel-snakeface">
+        <img src="./img/snakeface/eye-l.png" alt="eyel"/>
+      </div>
+      <div class="eyer" id="icon-eyer-snakeface">
+        <img src="./img/snakeface/eye-r.png" alt="eyer"/>
+      </div>
+      <div class="lipsl" id="icon-lipsl-snakeface">
+        <img src="./img/snakeface/lips-l.png" alt="lipsl"/>
+      </div>
+      <div class="lipsr" id="icon-lipsr-snakeface">
+        <img src="./img/snakeface/lips-r.png" alt="lipsr"/>
+      </div>
+      <div class="beardbl" id="icon-beardbl-snakeface">
+        <img src="./img/snakeface/beard-b-l.png" alt="beardbl"/>
+      </div>
+      <div class="beardbr" id="icon-beardbr-snakeface">
+        <img src="./img/snakeface/beard-b-r.png" alt="beardbr"/>
+      </div>
+      <div class="beardtl" id="icon-beardtl-snakeface">
+        <img src="./img/snakeface/beard-t-l.png" alt="beardtl"/>
+      </div>
+      <div class="beardtr" id="icon-beardtr-snakeface">
+        <img src="./img/snakeface/beard-t-r.png" alt="beardtr"/>
+      </div>
+    </div>
+
+    <div class="subheader">trollman:</div>
+    <div class="nav">
+      <div class="bg" id="icon-bg-trollman">
+        <img src="./img/trollman/background.png" alt="background"/>
+      </div>
+      <div class="hairl" id="icon-hairl-trollman">
+        <img src="./img/trollman/hair-l.png" alt="hairl"/>
+      </div>
+      <div class="hairr" id="icon-hairr-trollman">
+        <img src="./img/trollman/hair-r.png" alt="hairr"/>
+      </div>
+      <div class="earl" id="icon-earl-trollman">
+        <img src="./img/trollman/ear-l.png" alt="earl"/>
+      </div>
+      <div class="earr" id="icon-earr-trollman">
+        <img src="./img/trollman/ear-r.png" alt="earr"/>
+      </div>
+      <div class="eyel" id="icon-eyel-trollman">
+        <img src="./img/trollman/eye-l.png" alt="eyel"/>
+      </div>
+      <div class="eyer" id="icon-eyer-trollman">
+        <img src="./img/trollman/eye-r.png" alt="eyer"/>
+      </div>
+      <div class="lipsl" id="icon-lipsl-trollman">
+        <img src="./img/trollman/lips-l.png" alt="lipsl"/>
+      </div>
+      <div class="lipsr" id="icon-lipsr-trollman">
+        <img src="./img/trollman/lips-r.png" alt="lipsr"/>
+      </div>
+      <div class="beardbl" id="icon-beardbl-trollman">
+        <img src="./img/trollman/beard-b-l.png" alt="beardbl"/>
+      </div>
+      <div class="beardbr" id="icon-beardbr-trollman">
+        <img src="./img/trollman/beard-b-r.png" alt="beardbr"/>
+      </div>
+      <div class="beardtl" id="icon-beardtl-trollman">
+        <img src="./img/trollman/beard-t-l.png" alt="beardtl"/>
+      </div>
+      <div class="beardtr" id="icon-beardtr-trollman">
+        <img src="./img/trollman/beard-t-r.png" alt="beardtr"/>
+      </div>
+    </div>
+
+    <div class="subheader">vitalik:</div>
+    <div class="nav">
+      <div class="bg" id="icon-bg-vitalik">
+        <img src="./img/vitalik/background.png" alt="background"/>
+      </div>
+      <div class="hairl" id="icon-hairl-vitalik">
+        <img src="./img/vitalik/hair-l.png" alt="hairl"/>
+      </div>
+      <div class="hairr" id="icon-hairr-vitalik">
+        <img src="./img/vitalik/hair-r.png" alt="hairr"/>
+      </div>
+      <div class="earl" id="icon-earl-vitalik">
+        <img src="./img/vitalik/ear-l.png" alt="earl"/>
+      </div>
+      <div class="earr" id="icon-earr-vitalik">
+        <img src="./img/vitalik/ear-r.png" alt="earr"/>
+      </div>
+      <div class="eyel" id="icon-eyel-vitalik">
+        <img src="./img/vitalik/eye-l.png" alt="eyel"/>
+      </div>
+      <div class="eyer" id="icon-eyer-vitalik">
+        <img src="./img/vitalik/eye-r.png" alt="eyer"/>
+      </div>
+      <div class="lipsl" id="icon-lipsl-vitalik">
+        <img src="./img/vitalik/lips-l.png" alt="lipsl"/>
+      </div>
+      <div class="lipsr" id="icon-lipsr-vitalik">
+        <img src="./img/vitalik/lips-r.png" alt="lipsr"/>
+      </div>
+      <div class="beardbl" id="icon-beardbl-vitalik">
+        <img src="./img/vitalik/beard-b-l.png" alt="beardbl"/>
+      </div>
+      <div class="beardbr" id="icon-beardbr-vitalik">
+        <img src="./img/vitalik/beard-b-r.png" alt="beardbr"/>
+      </div>
+      <div class="beardtl" id="icon-beardtl-vitalik">
+        <img src="./img/vitalik/beard-t-l.png" alt="beardtl"/>
+      </div>
+      <div class="beardtr" id="icon-beardtr-vitalik">
+        <img src="./img/vitalik/beard-t-r.png" alt="beardtr"/>
+      </div>
+    </div>
+
+    <div class="subheader">wicked-man:</div>
+    <div class="nav">
+      <div class="bg" id="icon-bg-wicked-man">
+        <img src="./img/wicked-man/background.png" alt="background"/>
+      </div>
+      <div class="hairl" id="icon-hairl-wicked-man">
+        <img src="./img/wicked-man/hair-l.png" alt="hairl"/>
+      </div>
+      <div class="hairr" id="icon-hairr-wicked-man">
+        <img src="./img/wicked-man/hair-r.png" alt="hairr"/>
+      </div>
+      <div class="earl" id="icon-earl-wicked-man">
+        <img src="./img/wicked-man/ear-l.png" alt="earl"/>
+      </div>
+      <div class="earr" id="icon-earr-wicked-man">
+        <img src="./img/wicked-man/ear-r.png" alt="earr"/>
+      </div>
+      <div class="eyel" id="icon-eyel-wicked-man">
+        <img src="./img/wicked-man/eye-l.png" alt="eyel"/>
+      </div>
+      <div class="eyer" id="icon-eyer-wicked-man">
+        <img src="./img/wicked-man/eye-r.png" alt="eyer"/>
+      </div>
+      <div class="lipsl" id="icon-lipsl-wicked-man">
+        <img src="./img/wicked-man/lips-l.png" alt="lipsl"/>
+      </div>
+      <div class="lipsr" id="icon-lipsr-wicked-man">
+        <img src="./img/wicked-man/lips-r.png" alt="lipsr"/>
+      </div>
+      <div class="beardbl" id="icon-beardbl-wicked-man">
+        <img src="./img/wicked-man/beard-b-l.png" alt="beardbl"/>
+      </div>
+      <div class="beardbr" id="icon-beardbr-wicked-man">
+        <img src="./img/wicked-man/beard-b-r.png" alt="beardbr"/>
+      </div>
+      <div class="beardtl" id="icon-beardtl-wicked-man">
+        <img src="./img/wicked-man/beard-t-l.png" alt="beardtl"/>
+      </div>
+      <div class="beardtr" id="icon-beardtr-wicked-man">
+        <img src="./img/wicked-man/beard-t-r.png" alt="beardtr"/>
+      </div>
+    </div>
+
+    <div class="subheader">zombie:</div>
+    <div class="nav">
+      <div class="bg" id="icon-bg-zombie">
+        <img src="./img/zombie/background.png" alt="background"/>
+      </div>
+      <div class="hairl" id="icon-hairl-zombie">
+        <img src="./img/zombie/hair-l.png" alt="hairl"/>
+      </div>
+      <div class="hairr" id="icon-hairr-zombie">
+        <img src="./img/zombie/hair-r.png" alt="hairr"/>
+      </div>
+      <div class="earl" id="icon-earl-zombie">
+        <img src="./img/zombie/ear-l.png" alt="earl"/>
+      </div>
+      <div class="earr" id="icon-earr-zombie">
+        <img src="./img/zombie/ear-r.png" alt="earr"/>
+      </div>
+      <div class="eyel" id="icon-eyel-zombie">
+        <img src="./img/zombie/eye-l.png" alt="eyel"/>
+      </div>
+      <div class="eyer" id="icon-eyer-zombie">
+        <img src="./img/zombie/eye-r.png" alt="eyer"/>
+      </div>
+      <div class="lipsl" id="icon-lipsl-zombie">
+        <img src="./img/zombie/lips-l.png" alt="lipsl"/>
+      </div>
+      <div class="lipsr" id="icon-lipsr-zombie">
+        <img src="./img/zombie/lips-r.png" alt="lipsr"/>
+      </div>
+      <div class="beardbl" id="icon-beardbl-zombie">
+        <img src="./img/zombie/beard-b-l.png" alt="beardbl"/>
+      </div>
+      <div class="beardbr" id="icon-beardbr-zombie">
+        <img src="./img/zombie/beard-b-r.png" alt="beardbr"/>
+      </div>
+      <div class="beardtl" id="icon-beardtl-zombie">
+        <img src="./img/zombie/beard-t-l.png" alt="beardtl"/>
+      </div>
+      <div class="beardtr" id="icon-beardtr-zombie">
+        <img src="./img/zombie/beard-t-r.png" alt="beardtr"/>
+      </div>
+    </div>
+
+  </div>
+</div>
+<div class="copyright"><a href="https://universe.xyz/" target="_blank">Universe.xyz</a> © 2022. Open-sourced.</div>
+<script type="text/javascript" src="./js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,1526 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+body {
+  font-family: 'Bebas Neue', cursive;
+  margin: 0;
+  background-color: #3e4c39;
+  padding: 40px;
+  text-align: left;
+  color: #e7e6c9;
+  text-shadow: 1px 1px 0 #2e343d;
+  font-size: 22px;
+}
+@media (max-width: 767px) {
+  body {
+    padding: 12px;
+  }
+}
+h1 {
+  font-weight: 700;
+  margin: 0 0 8px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 0 #2b2727, 2px 2px 0 #2e343d
+}
+.subheader {
+  text-shadow: 1px 1px 0 #4864d2;
+  font-weight: 400;
+  margin: 8px 0;
+  font-size: 1.4em;
+}
+
+img {
+  max-width: 100%;
+}
+.copyright {
+    font-size: 12px;
+    font-family: Arial;
+    color: #fff;
+    opacity: .5;
+    text-align: center;
+}
+.copyright a {
+  color: #fff;
+}
+/* content */
+.page-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.content-left {
+  position: fixed;
+}
+.content-right {
+  padding: 32px 40px 32px 820px;
+}
+@media (max-width: 767px) {
+  .page-content {
+    display: block;
+  }
+  .content-left {
+    width: 100%;
+    position: static;
+  }
+  .content-right {
+    padding: 0;
+  }
+}
+.stat {
+  margin-bottom: 8px;
+  padding-left: 24px;
+  position: relative;
+  line-height: 24px;
+}
+.scene {
+  display: block;
+  width: 800px;
+  height: 800px;
+  position: relative;
+  margin: 16px 0;
+  overflow: hidden;
+  max-height: 80vw;
+  }
+  @media (max-width: 767px) {
+    .scene {
+      width: calc(100vw - 24px);
+      height: calc(100vw - 24px);
+      margin: 0;
+      max-height: 100%;
+    }
+  }
+.scene-item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0;
+}
+.scene-item[id] {
+  opacity: 1;
+}
+
+
+/* Icons nav */
+.nav {
+}
+.nav>div {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  width: 160px;
+  height: 160px;
+  margin-bottom: 8px;
+  background-color: #2b2727;
+  border: 3px solid #2f2a2a;
+  box-shadow: inset 0 0 16px #0009;
+  cursor: pointer;
+}
+.nav>div:hover {
+  background-color: #2f2c2c;
+}
+.nav>div[equiped] {
+  border: 3px solid #9ce25f;
+}
+.nav>div[equiped] img {
+  opacity: 1;
+}
+.nav img {
+  display: block;
+  opacity: 0.6;
+  transition: .2s;
+}
+.nav>div:hover img {
+  opacity: 1;
+}
+
+.tooltip {
+  position: absolute;
+  z-index: 2;
+  top: 100%;
+  left: 0;
+  white-space: nowrap;
+  background-color: #0009;
+  padding: 2px;
+  color: #fff;
+  text-shadow: none;
+}
+
+
+/* ----------- images ------------ */
+/* .nav .bg {
+  width: 40px !important;
+  height: 40px !important;
+} */
+.scene-item.bg {
+  z-index: 1;
+}
+.scene-item.beardbl {
+  z-index: 2;
+}
+.scene-item.beardbr {
+  z-index: 2;
+}
+.scene-item.earl {
+  z-index: 3;
+}
+.scene-item.earr {
+  z-index: 3;
+}
+.scene-item.beardtl {
+  z-index: 4;
+}
+.scene-item.beardtr {
+  z-index: 4;
+}
+.scene-item.lipsl {
+  z-index: 5;
+}
+.scene-item.lipsr {
+  z-index: 5;
+}
+.scene-item.eyel {
+  z-index: 6;
+}
+.scene-item.eyer {
+  z-index: 6;
+}
+.scene-item.hairl {
+  z-index: 7;
+}
+.scene-item.hairr {
+  z-index: 7;
+}
+/* ----------------- art ------------------- */
+
+.scene-item.bg#bg-art {
+  background-image: url('../img/art/background.png');
+}
+.scene-item.beardbl#beardbl-art {
+  background-image: url('../img/art/beard-b-l.png');
+}
+.scene-item.beardbr#beardbr-art {
+  background-image: url('../img/art/beard-b-r.png');
+}
+.scene-item.beardtl#beardtl-art {
+  background-image: url('../img/art/beard-t-l.png');
+}
+.scene-item.beardtr#beardtr-art {
+  background-image: url('../img/art/beard-t-r.png');
+}
+.scene-item.earl#earl-art {
+  background-image: url('../img/art/ear-l.png');
+}
+.scene-item.earr#earr-art {
+  background-image: url('../img/art/ear-r.png');
+}
+.scene-item.eyel#eyel-art {
+  background-image: url('../img/art/eye-l.png');
+}
+.scene-item.eyer#eyer-art {
+  background-image: url('../img/art/eye-r.png');
+}
+.scene-item.hairl#hairl-art {
+  background-image: url('../img/art/hair-l.png');
+}
+.scene-item.hairr#hairr-art {
+  background-image: url('../img/art/hair-r.png');
+}
+.scene-item.lipsl#lipsl-art {
+  background-image: url('../img/art/lips-l.png');
+}
+.scene-item.lipsr#lipsr-art {
+  background-image: url('../img/art/lips-r.png');
+}
+
+/* --------------- burger-boi ------------- */
+.scene-item.bg#bg-burger-boi {
+  background-image: url('../img/burger-boi/background.png');
+}
+.scene-item.beardbl#beardbl-burger-boi {
+  background-image: url('../img/burger-boi/beard-b-l.png');
+}
+.scene-item.beardbr#beardbr-burger-boi {
+  background-image: url('../img/burger-boi/beard-b-r.png');
+}
+.scene-item.beardtl#beardtl-burger-boi {
+  background-image: url('../img/burger-boi/beard-t-l.png');
+}
+.scene-item.beardtr#beardtr-burger-boi {
+  background-image: url('../img/burger-boi/beard-t-r.png');
+}
+.scene-item.earl#earl-burger-boi {
+  background-image: url('../img/burger-boi/ear-l.png');
+}
+.scene-item.earr#earr-burger-boi {
+  background-image: url('../img/burger-boi/ear-r.png');
+}
+.scene-item.eyel#eyel-burger-boi {
+  background-image: url('../img/burger-boi/eye-l.png');
+}
+.scene-item.eyer#eyer-burger-boi {
+  background-image: url('../img/burger-boi/eye-r.png');
+}
+.scene-item.hairl#hairl-burger-boi {
+  background-image: url('../img/burger-boi/hair-l.png');
+}
+.scene-item.hairr#hairr-burger-boi {
+  background-image: url('../img/burger-boi/hair-r.png');
+}
+.scene-item.lipsl#lipsl-burger-boi {
+  background-image: url('../img/burger-boi/lips-l.png');
+}
+.scene-item.lipsr#lipsr-burger-boi {
+  background-image: url('../img/burger-boi/lips-r.png');
+}
+
+/* ---------------- burger-boi ---------------- */
+.scene-item.bg#bg-cat {
+  background-image: url('../img/cat/background.png');
+}
+.scene-item.beardbl#beardbl-cat {
+  background-image: url('../img/cat/beard-b-l.png');
+}
+.scene-item.beardbr#beardbr-cat {
+  background-image: url('../img/cat/beard-b-r.png');
+}
+.scene-item.beardtl#beardtl-cat {
+  background-image: url('../img/cat/beard-t-l.png');
+}
+.scene-item.beardtr#beardtr-cat {
+  background-image: url('../img/cat/beard-t-r.png');
+}
+.scene-item.earl#earl-cat {
+  background-image: url('../img/cat/ear-l.png');
+}
+.scene-item.earr#earr-cat {
+  background-image: url('../img/cat/ear-r.png');
+}
+.scene-item.eyel#eyel-cat {
+  background-image: url('../img/cat/eye-l.png');
+}
+.scene-item.eyer#eyer-cat {
+  background-image: url('../img/cat/eye-r.png');
+}
+.scene-item.hairl#hairl-cat {
+  background-image: url('../img/cat/hair-l.png');
+}
+.scene-item.hairr#hairr-cat {
+  background-image: url('../img/cat/hair-r.png');
+}
+.scene-item.lipsl#lipsl-cat {
+  background-image: url('../img/cat/lips-l.png');
+}
+.scene-item.lipsr#lipsr-cat {
+  background-image: url('../img/cat/lips-r.png');
+}
+/* ----------------- charlie ------------------- */
+
+.scene-item.bg#bg-charlie {
+  background-image: url('../img/charlie/background.png');
+}
+.scene-item.beardbl#beardbl-charlie {
+  background-image: url('../img/charlie/beard-b-l.png');
+}
+.scene-item.beardbr#beardbr-charlie {
+  background-image: url('../img/charlie/beard-b-r.png');
+}
+.scene-item.beardtl#beardtl-charlie {
+  background-image: url('../img/charlie/beard-t-l.png');
+}
+.scene-item.beardtr#beardtr-charlie {
+  background-image: url('../img/charlie/beard-t-r.png');
+}
+.scene-item.earl#earl-charlie {
+  background-image: url('../img/charlie/ear-l.png');
+}
+.scene-item.earr#earr-charlie {
+  background-image: url('../img/charlie/ear-r.png');
+}
+.scene-item.eyel#eyel-charlie {
+  background-image: url('../img/charlie/eye-l.png');
+}
+.scene-item.eyer#eyer-charlie {
+  background-image: url('../img/charlie/eye-r.png');
+}
+.scene-item.hairl#hairl-charlie {
+  background-image: url('../img/charlie/hair-l.png');
+}
+.scene-item.hairr#hairr-charlie {
+  background-image: url('../img/charlie/hair-r.png');
+}
+.scene-item.lipsl#lipsl-charlie {
+  background-image: url('../img/charlie/lips-l.png');
+}
+.scene-item.lipsr#lipsr-charlie {
+  background-image: url('../img/charlie/lips-r.png');
+}
+/* ----------------- crystal-wolf ------------------- */
+
+.scene-item.bg#bg-crystal-wolf {
+  background-image: url('../img/crystal-wolf/background.png');
+}
+.scene-item.beardbl#beardbl-crystal-wolf {
+  background-image: url('../img/crystal-wolf/beard-b-l.png');
+}
+.scene-item.beardbr#beardbr-crystal-wolf {
+  background-image: url('../img/crystal-wolf/beard-b-r.png');
+}
+.scene-item.beardtl#beardtl-crystal-wolf {
+  background-image: url('../img/crystal-wolf/beard-t-l.png');
+}
+.scene-item.beardtr#beardtr-crystal-wolf {
+  background-image: url('../img/crystal-wolf/beard-t-r.png');
+}
+.scene-item.earl#earl-crystal-wolf {
+  background-image: url('../img/crystal-wolf/ear-l.png');
+}
+.scene-item.earr#earr-crystal-wolf {
+  background-image: url('../img/crystal-wolf/ear-r.png');
+}
+.scene-item.eyel#eyel-crystal-wolf {
+  background-image: url('../img/crystal-wolf/eye-l.png');
+}
+.scene-item.eyer#eyer-crystal-wolf {
+  background-image: url('../img/crystal-wolf/eye-r.png');
+}
+.scene-item.hairl#hairl-crystal-wolf {
+  background-image: url('../img/crystal-wolf/hair-l.png');
+}
+.scene-item.hairr#hairr-crystal-wolf {
+  background-image: url('../img/crystal-wolf/hair-r.png');
+}
+.scene-item.lipsl#lipsl-crystal-wolf {
+  background-image: url('../img/crystal-wolf/lips-l.png');
+}
+.scene-item.lipsr#lipsr-crystal-wolf {
+  background-image: url('../img/crystal-wolf/lips-r.png');
+}
+/* ----------------- darryl ------------------- */
+
+.scene-item.bg#bg-darryl {
+  background-image: url('../img/darryl/background.png');
+}
+.scene-item.beardbl#beardbl-darryl {
+  background-image: url('../img/darryl/beard-b-l.png');
+}
+.scene-item.beardbr#beardbr-darryl {
+  background-image: url('../img/darryl/beard-b-r.png');
+}
+.scene-item.beardtl#beardtl-darryl {
+  background-image: url('../img/darryl/beard-t-l.png');
+}
+.scene-item.beardtr#beardtr-darryl {
+  background-image: url('../img/darryl/beard-t-r.png');
+}
+.scene-item.earl#earl-darryl {
+  background-image: url('../img/darryl/ear-l.png');
+}
+.scene-item.earr#earr-darryl {
+  background-image: url('../img/darryl/ear-r.png');
+}
+.scene-item.eyel#eyel-darryl {
+  background-image: url('../img/darryl/eye-l.png');
+}
+.scene-item.eyer#eyer-darryl {
+  background-image: url('../img/darryl/eye-r.png');
+}
+.scene-item.hairl#hairl-darryl {
+  background-image: url('../img/darryl/hair-l.png');
+}
+.scene-item.hairr#hairr-darryl {
+  background-image: url('../img/darryl/hair-r.png');
+}
+.scene-item.lipsl#lipsl-darryl {
+  background-image: url('../img/darryl/lips-l.png');
+}
+.scene-item.lipsr#lipsr-darryl {
+  background-image: url('../img/darryl/lips-r.png');
+}
+/* ----------------- diamond-paws ------------------- */
+
+.scene-item.bg#bg-diamond-paws {
+  background-image: url('../img/diamond-paws/background.png');
+}
+.scene-item.beardbl#beardbl-diamond-paws {
+  background-image: url('../img/diamond-paws/beard-b-l.png');
+}
+.scene-item.beardbr#beardbr-diamond-paws {
+  background-image: url('../img/diamond-paws/beard-b-r.png');
+}
+.scene-item.beardtl#beardtl-diamond-paws {
+  background-image: url('../img/diamond-paws/beard-t-l.png');
+}
+.scene-item.beardtr#beardtr-diamond-paws {
+  background-image: url('../img/diamond-paws/beard-t-r.png');
+}
+.scene-item.earl#earl-diamond-paws {
+  background-image: url('../img/diamond-paws/ear-l.png');
+}
+.scene-item.earr#earr-diamond-paws {
+  background-image: url('../img/diamond-paws/ear-r.png');
+}
+.scene-item.eyel#eyel-diamond-paws {
+  background-image: url('../img/diamond-paws/eye-l.png');
+}
+.scene-item.eyer#eyer-diamond-paws {
+  background-image: url('../img/diamond-paws/eye-r.png');
+}
+.scene-item.hairl#hairl-diamond-paws {
+  background-image: url('../img/diamond-paws/hair-l.png');
+}
+.scene-item.hairr#hairr-diamond-paws {
+  background-image: url('../img/diamond-paws/hair-r.png');
+}
+.scene-item.lipsl#lipsl-diamond-paws {
+  background-image: url('../img/diamond-paws/lips-l.png');
+}
+.scene-item.lipsr#lipsr-diamond-paws {
+  background-image: url('../img/diamond-paws/lips-r.png');
+}
+
+/* ----------------- escrow ------------------- */
+
+.scene-item.bg#bg-escrow {
+  background-image: url('../img/escrow/background.png');
+}
+.scene-item.beardbl#beardbl-escrow {
+  background-image: url('../img/escrow/beard-b-l.png');
+}
+.scene-item.beardbr#beardbr-escrow {
+  background-image: url('../img/escrow/beard-b-r.png');
+}
+.scene-item.beardtl#beardtl-escrow {
+  background-image: url('../img/escrow/beard-t-l.png');
+}
+.scene-item.beardtr#beardtr-escrow {
+  background-image: url('../img/escrow/beard-t-r.png');
+}
+.scene-item.earl#earl-escrow {
+  background-image: url('../img/escrow/ear-l.png');
+}
+.scene-item.earr#earr-escrow {
+  background-image: url('../img/escrow/ear-r.png');
+}
+.scene-item.eyel#eyel-escrow {
+  background-image: url('../img/escrow/eye-l.png');
+}
+.scene-item.eyer#eyer-escrow {
+  background-image: url('../img/escrow/eye-r.png');
+}
+.scene-item.hairl#hairl-escrow {
+  background-image: url('../img/escrow/hair-l.png');
+}
+.scene-item.hairr#hairr-escrow {
+  background-image: url('../img/escrow/hair-r.png');
+}
+.scene-item.lipsl#lipsl-escrow {
+  background-image: url('../img/escrow/lips-l.png');
+}
+.scene-item.lipsr#lipsr-escrow {
+  background-image: url('../img/escrow/lips-r.png');
+}
+
+/* ----------------- fire-monster ------------------- */
+
+.scene-item.bg#bg-fire-monster {
+  background-image: url('../img/fire-monster/background.png');
+}
+.scene-item.beardbl#beardbl-fire-monster {
+  background-image: url('../img/fire-monster/beard-b-l.png');
+}
+.scene-item.beardbr#beardbr-fire-monster {
+  background-image: url('../img/fire-monster/beard-b-r.png');
+}
+.scene-item.beardtl#beardtl-fire-monster {
+  background-image: url('../img/fire-monster/beard-t-l.png');
+}
+.scene-item.beardtr#beardtr-fire-monster {
+  background-image: url('../img/fire-monster/beard-t-r.png');
+}
+.scene-item.earl#earl-fire-monster {
+  background-image: url('../img/fire-monster/ear-l.png');
+}
+.scene-item.earr#earr-fire-monster {
+  background-image: url('../img/fire-monster/ear-r.png');
+}
+.scene-item.eyel#eyel-fire-monster {
+  background-image: url('../img/fire-monster/eye-l.png');
+}
+.scene-item.eyer#eyer-fire-monster {
+  background-image: url('../img/fire-monster/eye-r.png');
+}
+.scene-item.hairl#hairl-fire-monster {
+  background-image: url('../img/fire-monster/hair-l.png');
+}
+.scene-item.hairr#hairr-fire-monster {
+  background-image: url('../img/fire-monster/hair-r.png');
+}
+.scene-item.lipsl#lipsl-fire-monster {
+  background-image: url('../img/fire-monster/lips-l.png');
+}
+.scene-item.lipsr#lipsr-fire-monster {
+  background-image: url('../img/fire-monster/lips-r.png');
+}
+
+/* ----------------- frankie ------------------- */
+
+.scene-item.bg#bg-frankie {
+  background-image: url('../img/frankie/background.png');
+}
+.scene-item.beardbl#beardbl-frankie {
+  background-image: url('../img/frankie/beard-b-l.png');
+}
+.scene-item.beardbr#beardbr-frankie {
+  background-image: url('../img/frankie/beard-b-r.png');
+}
+.scene-item.beardtl#beardtl-frankie {
+  background-image: url('../img/frankie/beard-t-l.png');
+}
+.scene-item.beardtr#beardtr-frankie {
+  background-image: url('../img/frankie/beard-t-r.png');
+}
+.scene-item.earl#earl-frankie {
+  background-image: url('../img/frankie/ear-l.png');
+}
+.scene-item.earr#earr-frankie {
+  background-image: url('../img/frankie/ear-r.png');
+}
+.scene-item.eyel#eyel-frankie {
+  background-image: url('../img/frankie/eye-l.png');
+}
+.scene-item.eyer#eyer-frankie {
+  background-image: url('../img/frankie/eye-r.png');
+}
+.scene-item.hairl#hairl-frankie {
+  background-image: url('../img/frankie/hair-l.png');
+}
+.scene-item.hairr#hairr-frankie {
+  background-image: url('../img/frankie/hair-r.png');
+}
+.scene-item.lipsl#lipsl-frankie {
+  background-image: url('../img/frankie/lips-l.png');
+}
+.scene-item.lipsr#lipsr-frankie {
+  background-image: url('../img/frankie/lips-r.png');
+}
+
+/* ----------------- gaba ------------------- */
+
+.scene-item.bg#bg-gaba {
+  background-image: url('../img/gaba/background.png');
+}
+.scene-item.beardbl#beardbl-gaba {
+  background-image: url('../img/gaba/beard-b-l.png');
+}
+.scene-item.beardbr#beardbr-gaba {
+  background-image: url('../img/gaba/beard-b-r.png');
+}
+.scene-item.beardtl#beardtl-gaba {
+  background-image: url('../img/gaba/beard-t-l.png');
+}
+.scene-item.beardtr#beardtr-gaba {
+  background-image: url('../img/gaba/beard-t-r.png');
+}
+.scene-item.earl#earl-gaba {
+  background-image: url('../img/gaba/ear-l.png');
+}
+.scene-item.earr#earr-gaba {
+  background-image: url('../img/gaba/ear-r.png');
+}
+.scene-item.eyel#eyel-gaba {
+  background-image: url('../img/gaba/eye-l.png');
+}
+.scene-item.eyer#eyer-gaba {
+  background-image: url('../img/gaba/eye-r.png');
+}
+.scene-item.hairl#hairl-gaba {
+  background-image: url('../img/gaba/hair-l.png');
+}
+.scene-item.hairr#hairr-gaba {
+  background-image: url('../img/gaba/hair-r.png');
+}
+.scene-item.lipsl#lipsl-gaba {
+  background-image: url('../img/gaba/lips-l.png');
+}
+.scene-item.lipsr#lipsr-gaba {
+  background-image: url('../img/gaba/lips-r.png');
+}
+
+/* ----------------- girl ------------------- */
+
+.scene-item.bg#bg-girl {
+  background-image: url('../img/girl/background.png');
+}
+.scene-item.beardbl#beardbl-girl {
+  background-image: url('../img/girl/beard-b-l.png');
+}
+.scene-item.beardbr#beardbr-girl {
+  background-image: url('../img/girl/beard-b-r.png');
+}
+.scene-item.beardtl#beardtl-girl {
+  background-image: url('../img/girl/beard-t-l.png');
+}
+.scene-item.beardtr#beardtr-girl {
+  background-image: url('../img/girl/beard-t-r.png');
+}
+.scene-item.earl#earl-girl {
+  background-image: url('../img/girl/ear-l.png');
+}
+.scene-item.earr#earr-girl {
+  background-image: url('../img/girl/ear-r.png');
+}
+.scene-item.eyel#eyel-girl {
+  background-image: url('../img/girl/eye-l.png');
+}
+.scene-item.eyer#eyer-girl {
+  background-image: url('../img/girl/eye-r.png');
+}
+.scene-item.hairl#hairl-girl {
+  background-image: url('../img/girl/hair-l.png');
+}
+.scene-item.hairr#hairr-girl {
+  background-image: url('../img/girl/hair-r.png');
+}
+.scene-item.lipsl#lipsl-girl {
+  background-image: url('../img/girl/lips-l.png');
+}
+.scene-item.lipsr#lipsr-girl {
+  background-image: url('../img/girl/lips-r.png');
+}
+
+/* ----------------- glenn ------------------- */
+
+.scene-item.bg#bg-glenn {
+  background-image: url('../img/glenn/background.png');
+}
+.scene-item.beardbl#beardbl-glenn {
+  background-image: url('../img/glenn/beard-b-l.png');
+}
+.scene-item.beardbr#beardbr-glenn {
+  background-image: url('../img/glenn/beard-b-r.png');
+}
+.scene-item.beardtl#beardtl-glenn {
+  background-image: url('../img/glenn/beard-t-l.png');
+}
+.scene-item.beardtr#beardtr-glenn {
+  background-image: url('../img/glenn/beard-t-r.png');
+}
+.scene-item.earl#earl-glenn {
+  background-image: url('../img/glenn/ear-l.png');
+}
+.scene-item.earr#earr-glenn {
+  background-image: url('../img/glenn/ear-r.png');
+}
+.scene-item.eyel#eyel-glenn {
+  background-image: url('../img/glenn/eye-l.png');
+}
+.scene-item.eyer#eyer-glenn {
+  background-image: url('../img/glenn/eye-r.png');
+}
+.scene-item.hairl#hairl-glenn {
+  background-image: url('../img/glenn/hair-l.png');
+}
+.scene-item.hairr#hairr-glenn {
+  background-image: url('../img/glenn/hair-r.png');
+}
+.scene-item.lipsl#lipsl-glenn {
+  background-image: url('../img/glenn/lips-l.png');
+}
+.scene-item.lipsr#lipsr-glenn {
+  background-image: url('../img/glenn/lips-r.png');
+}
+
+/* ----------------- goblin ------------------- */
+
+.scene-item.bg#bg-goblin {
+  background-image: url('../img/goblin/background.png');
+}
+.scene-item.beardbl#beardbl-goblin {
+  background-image: url('../img/goblin/beard-b-l.png');
+}
+.scene-item.beardbr#beardbr-goblin {
+  background-image: url('../img/goblin/beard-b-r.png');
+}
+.scene-item.beardtl#beardtl-goblin {
+  background-image: url('../img/goblin/beard-t-l.png');
+}
+.scene-item.beardtr#beardtr-goblin {
+  background-image: url('../img/goblin/beard-t-r.png');
+}
+.scene-item.earl#earl-goblin {
+  background-image: url('../img/goblin/ear-l.png');
+}
+.scene-item.earr#earr-goblin {
+  background-image: url('../img/goblin/ear-r.png');
+}
+.scene-item.eyel#eyel-goblin {
+  background-image: url('../img/goblin/eye-l.png');
+}
+.scene-item.eyer#eyer-goblin {
+  background-image: url('../img/goblin/eye-r.png');
+}
+.scene-item.hairl#hairl-goblin {
+  background-image: url('../img/goblin/hair-l.png');
+}
+.scene-item.hairr#hairr-goblin {
+  background-image: url('../img/goblin/hair-r.png');
+}
+.scene-item.lipsl#lipsl-goblin {
+  background-image: url('../img/goblin/lips-l.png');
+}
+.scene-item.lipsr#lipsr-goblin {
+  background-image: url('../img/goblin/lips-r.png');
+}
+/* ----------------- gold-tooth ------------------- */
+
+.scene-item.bg#bg-gold-tooth {
+  background-image: url('../img/gold-tooth/background.png');
+}
+.scene-item.beardbl#beardbl-gold-tooth {
+  background-image: url('../img/gold-tooth/beard-b-l.png');
+}
+.scene-item.beardbr#beardbr-gold-tooth {
+  background-image: url('../img/gold-tooth/beard-b-r.png');
+}
+.scene-item.beardtl#beardtl-gold-tooth {
+  background-image: url('../img/gold-tooth/beard-t-l.png');
+}
+.scene-item.beardtr#beardtr-gold-tooth {
+  background-image: url('../img/gold-tooth/beard-t-r.png');
+}
+.scene-item.earl#earl-gold-tooth {
+  background-image: url('../img/gold-tooth/ear-l.png');
+}
+.scene-item.earr#earr-gold-tooth {
+  background-image: url('../img/gold-tooth/ear-r.png');
+}
+.scene-item.eyel#eyel-gold-tooth {
+  background-image: url('../img/gold-tooth/eye-l.png');
+}
+.scene-item.eyer#eyer-gold-tooth {
+  background-image: url('../img/gold-tooth/eye-r.png');
+}
+.scene-item.hairl#hairl-gold-tooth {
+  background-image: url('../img/gold-tooth/hair-l.png');
+}
+.scene-item.hairr#hairr-gold-tooth {
+  background-image: url('../img/gold-tooth/hair-r.png');
+}
+.scene-item.lipsl#lipsl-gold-tooth {
+  background-image: url('../img/gold-tooth/lips-l.png');
+}
+.scene-item.lipsr#lipsr-gold-tooth {
+  background-image: url('../img/gold-tooth/lips-r.png');
+}
+/* ----------------- grishnak ------------------- */
+
+.scene-item.bg#bg-grishnak {
+  background-image: url('../img/grishnak/background.png');
+}
+.scene-item.beardbl#beardbl-grishnak {
+  background-image: url('../img/grishnak/beard-b-l.png');
+}
+.scene-item.beardbr#beardbr-grishnak {
+  background-image: url('../img/grishnak/beard-b-r.png');
+}
+.scene-item.beardtl#beardtl-grishnak {
+  background-image: url('../img/grishnak/beard-t-l.png');
+}
+.scene-item.beardtr#beardtr-grishnak {
+  background-image: url('../img/grishnak/beard-t-r.png');
+}
+.scene-item.earl#earl-grishnak {
+  background-image: url('../img/grishnak/ear-l.png');
+}
+.scene-item.earr#earr-grishnak {
+  background-image: url('../img/grishnak/ear-r.png');
+}
+.scene-item.eyel#eyel-grishnak {
+  background-image: url('../img/grishnak/eye-l.png');
+}
+.scene-item.eyer#eyer-grishnak {
+  background-image: url('../img/grishnak/eye-r.png');
+}
+.scene-item.hairl#hairl-grishnak {
+  background-image: url('../img/grishnak/hair-l.png');
+}
+.scene-item.hairr#hairr-grishnak {
+  background-image: url('../img/grishnak/hair-r.png');
+}
+.scene-item.lipsl#lipsl-grishnak {
+  background-image: url('../img/grishnak/lips-l.png');
+}
+.scene-item.lipsr#lipsr-grishnak {
+  background-image: url('../img/grishnak/lips-r.png');
+}
+
+/* ----------------- mancel-iron ------------------- */
+
+.scene-item.bg#bg-mancel-iron {
+  background-image: url('../img/mancel-iron/background.png');
+}
+.scene-item.beardbl#beardbl-mancel-iron {
+  background-image: url('../img/mancel-iron/beard-b-l.png');
+}
+.scene-item.beardbr#beardbr-mancel-iron {
+  background-image: url('../img/mancel-iron/beard-b-r.png');
+}
+.scene-item.beardtl#beardtl-mancel-iron {
+  background-image: url('../img/mancel-iron/beard-t-l.png');
+}
+.scene-item.beardtr#beardtr-mancel-iron {
+  background-image: url('../img/mancel-iron/beard-t-r.png');
+}
+.scene-item.earl#earl-mancel-iron {
+  background-image: url('../img/mancel-iron/ear-l.png');
+}
+.scene-item.earr#earr-mancel-iron {
+  background-image: url('../img/mancel-iron/ear-r.png');
+}
+.scene-item.eyel#eyel-mancel-iron {
+  background-image: url('../img/mancel-iron/eye-l.png');
+}
+.scene-item.eyer#eyer-mancel-iron {
+  background-image: url('../img/mancel-iron/eye-r.png');
+}
+.scene-item.hairl#hairl-mancel-iron {
+  background-image: url('../img/mancel-iron/hair-l.png');
+}
+.scene-item.hairr#hairr-mancel-iron {
+  background-image: url('../img/mancel-iron/hair-r.png');
+}
+.scene-item.lipsl#lipsl-mancel-iron {
+  background-image: url('../img/mancel-iron/lips-l.png');
+}
+.scene-item.lipsr#lipsr-mancel-iron {
+  background-image: url('../img/mancel-iron/lips-r.png');
+}
+
+/* ----------------- mancel-stone ------------------- */
+
+.scene-item.bg#bg-mancel-stone {
+  background-image: url('../img/mancel-stone/background.png');
+}
+.scene-item.beardbl#beardbl-mancel-stone {
+  background-image: url('../img/mancel-stone/beard-b-l.png');
+}
+.scene-item.beardbr#beardbr-mancel-stone {
+  background-image: url('../img/mancel-stone/beard-b-r.png');
+}
+.scene-item.beardtl#beardtl-mancel-stone {
+  background-image: url('../img/mancel-stone/beard-t-l.png');
+}
+.scene-item.beardtr#beardtr-mancel-stone {
+  background-image: url('../img/mancel-stone/beard-t-r.png');
+}
+.scene-item.earl#earl-mancel-stone {
+  background-image: url('../img/mancel-stone/ear-l.png');
+}
+.scene-item.earr#earr-mancel-stone {
+  background-image: url('../img/mancel-stone/ear-r.png');
+}
+.scene-item.eyel#eyel-mancel-stone {
+  background-image: url('../img/mancel-stone/eye-l.png');
+}
+.scene-item.eyer#eyer-mancel-stone {
+  background-image: url('../img/mancel-stone/eye-r.png');
+}
+.scene-item.hairl#hairl-mancel-stone {
+  background-image: url('../img/mancel-stone/hair-l.png');
+}
+.scene-item.hairr#hairr-mancel-stone {
+  background-image: url('../img/mancel-stone/hair-r.png');
+}
+.scene-item.lipsl#lipsl-mancel-stone {
+  background-image: url('../img/mancel-stone/lips-l.png');
+}
+.scene-item.lipsr#lipsr-mancel-stone {
+  background-image: url('../img/mancel-stone/lips-r.png');
+}
+
+/* ----------------- mariguana ------------------- */
+
+.scene-item.bg#bg-mariguana {
+  background-image: url('../img/mariguana/background.png');
+}
+.scene-item.beardbl#beardbl-mariguana {
+  background-image: url('../img/mariguana/beard-b-l.png');
+}
+.scene-item.beardbr#beardbr-mariguana {
+  background-image: url('../img/mariguana/beard-b-r.png');
+}
+.scene-item.beardtl#beardtl-mariguana {
+  background-image: url('../img/mariguana/beard-t-l.png');
+}
+.scene-item.beardtr#beardtr-mariguana {
+  background-image: url('../img/mariguana/beard-t-r.png');
+}
+.scene-item.earl#earl-mariguana {
+  background-image: url('../img/mariguana/ear-l.png');
+}
+.scene-item.earr#earr-mariguana {
+  background-image: url('../img/mariguana/ear-r.png');
+}
+.scene-item.eyel#eyel-mariguana {
+  background-image: url('../img/mariguana/eye-l.png');
+}
+.scene-item.eyer#eyer-mariguana {
+  background-image: url('../img/mariguana/eye-r.png');
+}
+.scene-item.hairl#hairl-mariguana {
+  background-image: url('../img/mariguana/hair-l.png');
+}
+.scene-item.hairr#hairr-mariguana {
+  background-image: url('../img/mariguana/hair-r.png');
+}
+.scene-item.lipsl#lipsl-mariguana {
+  background-image: url('../img/mariguana/lips-l.png');
+}
+.scene-item.lipsr#lipsr-mariguana {
+  background-image: url('../img/mariguana/lips-r.png');
+}
+
+/* ----------------- mime ------------------- */
+
+.scene-item.bg#bg-mime {
+  background-image: url('../img/mime/background.png');
+}
+.scene-item.beardbl#beardbl-mime {
+  background-image: url('../img/mime/beard-b-l.png');
+}
+.scene-item.beardbr#beardbr-mime {
+  background-image: url('../img/mime/beard-b-r.png');
+}
+.scene-item.beardtl#beardtl-mime {
+  background-image: url('../img/mime/beard-t-l.png');
+}
+.scene-item.beardtr#beardtr-mime {
+  background-image: url('../img/mime/beard-t-r.png');
+}
+.scene-item.earl#earl-mime {
+  background-image: url('../img/mime/ear-l.png');
+}
+.scene-item.earr#earr-mime {
+  background-image: url('../img/mime/ear-r.png');
+}
+.scene-item.eyel#eyel-mime {
+  background-image: url('../img/mime/eye-l.png');
+}
+.scene-item.eyer#eyer-mime {
+  background-image: url('../img/mime/eye-r.png');
+}
+.scene-item.hairl#hairl-mime {
+  background-image: url('../img/mime/hair-l.png');
+}
+.scene-item.hairr#hairr-mime {
+  background-image: url('../img/mime/hair-r.png');
+}
+.scene-item.lipsl#lipsl-mime {
+  background-image: url('../img/mime/lips-l.png');
+}
+.scene-item.lipsr#lipsr-mime {
+  background-image: url('../img/mime/lips-r.png');
+}
+/* ----------------- mushroom-man ------------------- */
+
+.scene-item.bg#bg-mushroom-man {
+  background-image: url('../img/mushroom-man/background.png');
+}
+.scene-item.beardbl#beardbl-mushroom-man {
+  background-image: url('../img/mushroom-man/beard-b-l.png');
+}
+.scene-item.beardbr#beardbr-mushroom-man {
+  background-image: url('../img/mushroom-man/beard-b-r.png');
+}
+.scene-item.beardtl#beardtl-mushroom-man {
+  background-image: url('../img/mushroom-man/beard-t-l.png');
+}
+.scene-item.beardtr#beardtr-mushroom-man {
+  background-image: url('../img/mushroom-man/beard-t-r.png');
+}
+.scene-item.earl#earl-mushroom-man {
+  background-image: url('../img/mushroom-man/ear-l.png');
+}
+.scene-item.earr#earr-mushroom-man {
+  background-image: url('../img/mushroom-man/ear-r.png');
+}
+.scene-item.eyel#eyel-mushroom-man {
+  background-image: url('../img/mushroom-man/eye-l.png');
+}
+.scene-item.eyer#eyer-mushroom-man {
+  background-image: url('../img/mushroom-man/eye-r.png');
+}
+.scene-item.hairl#hairl-mushroom-man {
+  background-image: url('../img/mushroom-man/hair-l.png');
+}
+.scene-item.hairr#hairr-mushroom-man {
+  background-image: url('../img/mushroom-man/hair-r.png');
+}
+.scene-item.lipsl#lipsl-mushroom-man {
+  background-image: url('../img/mushroom-man/lips-l.png');
+}
+.scene-item.lipsr#lipsr-mushroom-man {
+  background-image: url('../img/mushroom-man/lips-r.png');
+}
+
+/* ----------------- nature-witch ------------------- */
+
+.scene-item.bg#bg-nature-witch {
+  background-image: url('../img/nature-witch/background.png');
+}
+.scene-item.beardbl#beardbl-nature-witch {
+  background-image: url('../img/nature-witch/beard-b-l.png');
+}
+.scene-item.beardbr#beardbr-nature-witch {
+  background-image: url('../img/nature-witch/beard-b-r.png');
+}
+.scene-item.beardtl#beardtl-nature-witch {
+  background-image: url('../img/nature-witch/beard-t-l.png');
+}
+.scene-item.beardtr#beardtr-nature-witch {
+  background-image: url('../img/nature-witch/beard-t-r.png');
+}
+.scene-item.earl#earl-nature-witch {
+  background-image: url('../img/nature-witch/ear-l.png');
+}
+.scene-item.earr#earr-nature-witch {
+  background-image: url('../img/nature-witch/ear-r.png');
+}
+.scene-item.eyel#eyel-nature-witch {
+  background-image: url('../img/nature-witch/eye-l.png');
+}
+.scene-item.eyer#eyer-nature-witch {
+  background-image: url('../img/nature-witch/eye-r.png');
+}
+.scene-item.hairl#hairl-nature-witch {
+  background-image: url('../img/nature-witch/hair-l.png');
+}
+.scene-item.hairr#hairr-nature-witch {
+  background-image: url('../img/nature-witch/hair-r.png');
+}
+.scene-item.lipsl#lipsl-nature-witch {
+  background-image: url('../img/nature-witch/lips-l.png');
+}
+.scene-item.lipsr#lipsr-nature-witch {
+  background-image: url('../img/nature-witch/lips-r.png');
+}
+/* ----------------- pirate ------------------- */
+
+.scene-item.bg#bg-pirate {
+  background-image: url('../img/pirate/background.png');
+}
+.scene-item.beardbl#beardbl-pirate {
+  background-image: url('../img/pirate/beard-b-l.png');
+}
+.scene-item.beardbr#beardbr-pirate {
+  background-image: url('../img/pirate/beard-b-r.png');
+}
+.scene-item.beardtl#beardtl-pirate {
+  background-image: url('../img/pirate/beard-t-l.png');
+}
+.scene-item.beardtr#beardtr-pirate {
+  background-image: url('../img/pirate/beard-t-r.png');
+}
+.scene-item.earl#earl-pirate {
+  background-image: url('../img/pirate/ear-l.png');
+}
+.scene-item.earr#earr-pirate {
+  background-image: url('../img/pirate/ear-r.png');
+}
+.scene-item.eyel#eyel-pirate {
+  background-image: url('../img/pirate/eye-l.png');
+}
+.scene-item.eyer#eyer-pirate {
+  background-image: url('../img/pirate/eye-r.png');
+}
+.scene-item.hairl#hairl-pirate {
+  background-image: url('../img/pirate/hair-l.png');
+}
+.scene-item.hairr#hairr-pirate {
+  background-image: url('../img/pirate/hair-r.png');
+}
+.scene-item.lipsl#lipsl-pirate {
+  background-image: url('../img/pirate/lips-l.png');
+}
+.scene-item.lipsr#lipsr-pirate {
+  background-image: url('../img/pirate/lips-r.png');
+}
+/* ----------------- polymask ------------------- */
+
+.scene-item.bg#bg-polymask {
+  background-image: url('../img/polymask/background.png');
+}
+.scene-item.beardbl#beardbl-polymask {
+  background-image: url('../img/polymask/beard-b-l.png');
+}
+.scene-item.beardbr#beardbr-polymask {
+  background-image: url('../img/polymask/beard-b-r.png');
+}
+.scene-item.beardtl#beardtl-polymask {
+  background-image: url('../img/polymask/beard-t-l.png');
+}
+.scene-item.beardtr#beardtr-polymask {
+  background-image: url('../img/polymask/beard-t-r.png');
+}
+.scene-item.earl#earl-polymask {
+  background-image: url('../img/polymask/ear-l.png');
+}
+.scene-item.earr#earr-polymask {
+  background-image: url('../img/polymask/ear-r.png');
+}
+.scene-item.eyel#eyel-polymask {
+  background-image: url('../img/polymask/eye-l.png');
+}
+.scene-item.eyer#eyer-polymask {
+  background-image: url('../img/polymask/eye-r.png');
+}
+.scene-item.hairl#hairl-polymask {
+  background-image: url('../img/polymask/hair-l.png');
+}
+.scene-item.hairr#hairr-polymask {
+  background-image: url('../img/polymask/hair-r.png');
+}
+.scene-item.lipsl#lipsl-polymask {
+  background-image: url('../img/polymask/lips-l.png');
+}
+.scene-item.lipsr#lipsr-polymask {
+  background-image: url('../img/polymask/lips-r.png');
+}
+/* ----------------- ragnar ------------------- */
+
+.scene-item.bg#bg-ragnar {
+  background-image: url('../img/ragnar/background.png');
+}
+.scene-item.beardbl#beardbl-ragnar {
+  background-image: url('../img/ragnar/beard-b-l.png');
+}
+.scene-item.beardbr#beardbr-ragnar {
+  background-image: url('../img/ragnar/beard-b-r.png');
+}
+.scene-item.beardtl#beardtl-ragnar {
+  background-image: url('../img/ragnar/beard-t-l.png');
+}
+.scene-item.beardtr#beardtr-ragnar {
+  background-image: url('../img/ragnar/beard-t-r.png');
+}
+.scene-item.earl#earl-ragnar {
+  background-image: url('../img/ragnar/ear-l.png');
+}
+.scene-item.earr#earr-ragnar {
+  background-image: url('../img/ragnar/ear-r.png');
+}
+.scene-item.eyel#eyel-ragnar {
+  background-image: url('../img/ragnar/eye-l.png');
+}
+.scene-item.eyer#eyer-ragnar {
+  background-image: url('../img/ragnar/eye-r.png');
+}
+.scene-item.hairl#hairl-ragnar {
+  background-image: url('../img/ragnar/hair-l.png');
+}
+.scene-item.hairr#hairr-ragnar {
+  background-image: url('../img/ragnar/hair-r.png');
+}
+.scene-item.lipsl#lipsl-ragnar {
+  background-image: url('../img/ragnar/lips-l.png');
+}
+.scene-item.lipsr#lipsr-ragnar {
+  background-image: url('../img/ragnar/lips-r.png');
+}
+/* ----------------- robot ------------------- */
+
+.scene-item.bg#bg-robot {
+  background-image: url('../img/robot/background.png');
+}
+.scene-item.beardbl#beardbl-robot {
+  background-image: url('../img/robot/beard-b-l.png');
+}
+.scene-item.beardbr#beardbr-robot {
+  background-image: url('../img/robot/beard-b-r.png');
+}
+.scene-item.beardtl#beardtl-robot {
+  background-image: url('../img/robot/beard-t-l.png');
+}
+.scene-item.beardtr#beardtr-robot {
+  background-image: url('../img/robot/beard-t-r.png');
+}
+.scene-item.earl#earl-robot {
+  background-image: url('../img/robot/ear-l.png');
+}
+.scene-item.earr#earr-robot {
+  background-image: url('../img/robot/ear-r.png');
+}
+.scene-item.eyel#eyel-robot {
+  background-image: url('../img/robot/eye-l.png');
+}
+.scene-item.eyer#eyer-robot {
+  background-image: url('../img/robot/eye-r.png');
+}
+.scene-item.hairl#hairl-robot {
+  background-image: url('../img/robot/hair-l.png');
+}
+.scene-item.hairr#hairr-robot {
+  background-image: url('../img/robot/hair-r.png');
+}
+.scene-item.lipsl#lipsl-robot {
+  background-image: url('../img/robot/lips-l.png');
+}
+.scene-item.lipsr#lipsr-robot {
+  background-image: url('../img/robot/lips-r.png');
+}
+/* ----------------- shadow-punk ------------------- */
+
+.scene-item.bg#bg-shadow-punk {
+  background-image: url('../img/shadow-punk/background.png');
+}
+.scene-item.beardbl#beardbl-shadow-punk {
+  background-image: url('../img/shadow-punk/beard-b-l.png');
+}
+.scene-item.beardbr#beardbr-shadow-punk {
+  background-image: url('../img/shadow-punk/beard-b-r.png');
+}
+.scene-item.beardtl#beardtl-shadow-punk {
+  background-image: url('../img/shadow-punk/beard-t-l.png');
+}
+.scene-item.beardtr#beardtr-shadow-punk {
+  background-image: url('../img/shadow-punk/beard-t-r.png');
+}
+.scene-item.earl#earl-shadow-punk {
+  background-image: url('../img/shadow-punk/ear-l.png');
+}
+.scene-item.earr#earr-shadow-punk {
+  background-image: url('../img/shadow-punk/ear-r.png');
+}
+.scene-item.eyel#eyel-shadow-punk {
+  background-image: url('../img/shadow-punk/eye-l.png');
+}
+.scene-item.eyer#eyer-shadow-punk {
+  background-image: url('../img/shadow-punk/eye-r.png');
+}
+.scene-item.hairl#hairl-shadow-punk {
+  background-image: url('../img/shadow-punk/hair-l.png');
+}
+.scene-item.hairr#hairr-shadow-punk {
+  background-image: url('../img/shadow-punk/hair-r.png');
+}
+.scene-item.lipsl#lipsl-shadow-punk {
+  background-image: url('../img/shadow-punk/lips-l.png');
+}
+.scene-item.lipsr#lipsr-shadow-punk {
+  background-image: url('../img/shadow-punk/lips-r.png');
+}
+/* ----------------- snakeface ------------------- */
+
+.scene-item.bg#bg-snakeface {
+  background-image: url('../img/snakeface/background.png');
+}
+.scene-item.beardbl#beardbl-snakeface {
+  background-image: url('../img/snakeface/beard-b-l.png');
+}
+.scene-item.beardbr#beardbr-snakeface {
+  background-image: url('../img/snakeface/beard-b-r.png');
+}
+.scene-item.beardtl#beardtl-snakeface {
+  background-image: url('../img/snakeface/beard-t-l.png');
+}
+.scene-item.beardtr#beardtr-snakeface {
+  background-image: url('../img/snakeface/beard-t-r.png');
+}
+.scene-item.earl#earl-snakeface {
+  background-image: url('../img/snakeface/ear-l.png');
+}
+.scene-item.earr#earr-snakeface {
+  background-image: url('../img/snakeface/ear-r.png');
+}
+.scene-item.eyel#eyel-snakeface {
+  background-image: url('../img/snakeface/eye-l.png');
+}
+.scene-item.eyer#eyer-snakeface {
+  background-image: url('../img/snakeface/eye-r.png');
+}
+.scene-item.hairl#hairl-snakeface {
+  background-image: url('../img/snakeface/hair-l.png');
+}
+.scene-item.hairr#hairr-snakeface {
+  background-image: url('../img/snakeface/hair-r.png');
+}
+.scene-item.lipsl#lipsl-snakeface {
+  background-image: url('../img/snakeface/lips-l.png');
+}
+.scene-item.lipsr#lipsr-snakeface {
+  background-image: url('../img/snakeface/lips-r.png');
+}
+
+/* ----------------- trollman ------------------- */
+
+.scene-item.bg#bg-trollman {
+  background-image: url('../img/trollman/background.png');
+}
+.scene-item.beardbl#beardbl-trollman {
+  background-image: url('../img/trollman/beard-b-l.png');
+}
+.scene-item.beardbr#beardbr-trollman {
+  background-image: url('../img/trollman/beard-b-r.png');
+}
+.scene-item.beardtl#beardtl-trollman {
+  background-image: url('../img/trollman/beard-t-l.png');
+}
+.scene-item.beardtr#beardtr-trollman {
+  background-image: url('../img/trollman/beard-t-r.png');
+}
+.scene-item.earl#earl-trollman {
+  background-image: url('../img/trollman/ear-l.png');
+}
+.scene-item.earr#earr-trollman {
+  background-image: url('../img/trollman/ear-r.png');
+}
+.scene-item.eyel#eyel-trollman {
+  background-image: url('../img/trollman/eye-l.png');
+}
+.scene-item.eyer#eyer-trollman {
+  background-image: url('../img/trollman/eye-r.png');
+}
+.scene-item.hairl#hairl-trollman {
+  background-image: url('../img/trollman/hair-l.png');
+}
+.scene-item.hairr#hairr-trollman {
+  background-image: url('../img/trollman/hair-r.png');
+}
+.scene-item.lipsl#lipsl-trollman {
+  background-image: url('../img/trollman/lips-l.png');
+}
+.scene-item.lipsr#lipsr-trollman {
+  background-image: url('../img/trollman/lips-r.png');
+}
+/* ----------------- vitalik ------------------- */
+
+.scene-item.bg#bg-vitalik {
+  background-image: url('../img/vitalik/background.png');
+}
+.scene-item.beardbl#beardbl-vitalik {
+  background-image: url('../img/vitalik/beard-b-l.png');
+}
+.scene-item.beardbr#beardbr-vitalik {
+  background-image: url('../img/vitalik/beard-b-r.png');
+}
+.scene-item.beardtl#beardtl-vitalik {
+  background-image: url('../img/vitalik/beard-t-l.png');
+}
+.scene-item.beardtr#beardtr-vitalik {
+  background-image: url('../img/vitalik/beard-t-r.png');
+}
+.scene-item.earl#earl-vitalik {
+  background-image: url('../img/vitalik/ear-l.png');
+}
+.scene-item.earr#earr-vitalik {
+  background-image: url('../img/vitalik/ear-r.png');
+}
+.scene-item.eyel#eyel-vitalik {
+  background-image: url('../img/vitalik/eye-l.png');
+}
+.scene-item.eyer#eyer-vitalik {
+  background-image: url('../img/vitalik/eye-r.png');
+}
+.scene-item.hairl#hairl-vitalik {
+  background-image: url('../img/vitalik/hair-l.png');
+}
+.scene-item.hairr#hairr-vitalik {
+  background-image: url('../img/vitalik/hair-r.png');
+}
+.scene-item.lipsl#lipsl-vitalik {
+  background-image: url('../img/vitalik/lips-l.png');
+}
+.scene-item.lipsr#lipsr-vitalik {
+  background-image: url('../img/vitalik/lips-r.png');
+}
+/* ----------------- wicked-man ------------------- */
+
+.scene-item.bg#bg-wicked-man {
+  background-image: url('../img/wicked-man/background.png');
+}
+.scene-item.beardbl#beardbl-wicked-man {
+  background-image: url('../img/wicked-man/beard-b-l.png');
+}
+.scene-item.beardbr#beardbr-wicked-man {
+  background-image: url('../img/wicked-man/beard-b-r.png');
+}
+.scene-item.beardtl#beardtl-wicked-man {
+  background-image: url('../img/wicked-man/beard-t-l.png');
+}
+.scene-item.beardtr#beardtr-wicked-man {
+  background-image: url('../img/wicked-man/beard-t-r.png');
+}
+.scene-item.earl#earl-wicked-man {
+  background-image: url('../img/wicked-man/ear-l.png');
+}
+.scene-item.earr#earr-wicked-man {
+  background-image: url('../img/wicked-man/ear-r.png');
+}
+.scene-item.eyel#eyel-wicked-man {
+  background-image: url('../img/wicked-man/eye-l.png');
+}
+.scene-item.eyer#eyer-wicked-man {
+  background-image: url('../img/wicked-man/eye-r.png');
+}
+.scene-item.hairl#hairl-wicked-man {
+  background-image: url('../img/wicked-man/hair-l.png');
+}
+.scene-item.hairr#hairr-wicked-man {
+  background-image: url('../img/wicked-man/hair-r.png');
+}
+.scene-item.lipsl#lipsl-wicked-man {
+  background-image: url('../img/wicked-man/lips-l.png');
+}
+.scene-item.lipsr#lipsr-wicked-man {
+  background-image: url('../img/wicked-man/lips-r.png');
+}
+/* ----------------- zombie ------------------- */
+
+.scene-item.bg#bg-zombie {
+  background-image: url('../img/zombie/background.png');
+}
+.scene-item.beardbl#beardbl-zombie {
+  background-image: url('../img/zombie/beard-b-l.png');
+}
+.scene-item.beardbr#beardbr-zombie {
+  background-image: url('../img/zombie/beard-b-r.png');
+}
+.scene-item.beardtl#beardtl-zombie {
+  background-image: url('../img/zombie/beard-t-l.png');
+}
+.scene-item.beardtr#beardtr-zombie {
+  background-image: url('../img/zombie/beard-t-r.png');
+}
+.scene-item.earl#earl-zombie {
+  background-image: url('../img/zombie/ear-l.png');
+}
+.scene-item.earr#earr-zombie {
+  background-image: url('../img/zombie/ear-r.png');
+}
+.scene-item.eyel#eyel-zombie {
+  background-image: url('../img/zombie/eye-l.png');
+}
+.scene-item.eyer#eyer-zombie {
+  background-image: url('../img/zombie/eye-r.png');
+}
+.scene-item.hairl#hairl-zombie {
+  background-image: url('../img/zombie/hair-l.png');
+}
+.scene-item.hairr#hairr-zombie {
+  background-image: url('../img/zombie/hair-r.png');
+}
+.scene-item.lipsl#lipsl-zombie {
+  background-image: url('../img/zombie/lips-l.png');
+}
+.scene-item.lipsr#lipsr-zombie {
+  background-image: url('../img/zombie/lips-r.png');
+}
