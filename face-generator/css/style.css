@@ -1030,6 +1030,48 @@ img {
 .scene-item.lipsr#lipsr-mime {
   background-image: url('../img/mime/lips-r.png');
 }
+
+/* ----------------- moth ------------------- */
+
+.scene-item.bg#bg-moth {
+  background-image: url('../img/moth/background.png');
+}
+.scene-item.beardbl#beardbl-moth {
+  background-image: url('../img/moth/beard-b-l.png');
+}
+.scene-item.beardbr#beardbr-moth {
+  background-image: url('../img/moth/beard-b-r.png');
+}
+.scene-item.beardtl#beardtl-moth {
+  background-image: url('../img/moth/beard-t-l.png');
+}
+.scene-item.beardtr#beardtr-moth {
+  background-image: url('../img/moth/beard-t-r.png');
+}
+.scene-item.earl#earl-moth {
+  background-image: url('../img/moth/ear-l.png');
+}
+.scene-item.earr#earr-moth {
+  background-image: url('../img/moth/ear-r.png');
+}
+.scene-item.eyel#eyel-moth {
+  background-image: url('../img/moth/eye-l.png');
+}
+.scene-item.eyer#eyer-moth {
+  background-image: url('../img/moth/eye-r.png');
+}
+.scene-item.hairl#hairl-moth {
+  background-image: url('../img/moth/hair-l.png');
+}
+.scene-item.hairr#hairr-moth {
+  background-image: url('../img/moth/hair-r.png');
+}
+.scene-item.lipsl#lipsl-moth {
+  background-image: url('../img/moth/lips-l.png');
+}
+.scene-item.lipsr#lipsr-moth {
+  background-image: url('../img/moth/lips-r.png');
+}
 /* ----------------- mushroom-man ------------------- */
 
 .scene-item.bg#bg-mushroom-man {
