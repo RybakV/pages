@@ -476,6 +476,12 @@ img {
 .scene-item.lefthand#lefthand-beer-left {
   background-image: url('../img/lefthand/beer-left.png');
 }
+.scene-item.lefthand#lefthand-big-gun-left {
+  background-image: url('../img/lefthand/big-gun-left.png');
+}
+.scene-item.lefthand#lefthand-black-gun-left {
+  background-image: url('../img/lefthand/black-gun-left.png');
+}
 .scene-item.lefthand#lefthand-blue-degen-sword-left {
   background-image: url('../img/lefthand/blue-degen-sword-left.png');
 }
@@ -567,6 +573,12 @@ img {
 }
 .scene-item.righthand#righthand-beer-right {
   background-image: url('../img/righthand/beer-right.png');
+}
+.scene-item.righthand#righthand-big-gun-right {
+  background-image: url('../img/righthand/big-gun-right.png');
+}
+.scene-item.righthand#righthand-black-gun-right {
+  background-image: url('../img/righthand/black-gun-right.png');
 }
 .scene-item.righthand#righthand-blue-degen-sword-right {
   background-image: url('../img/righthand/blue-degen-sword-right.png');
