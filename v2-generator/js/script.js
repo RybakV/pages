@@ -37,3 +37,43 @@ $('.nav>div').mouseover(function(){
 $('.nav>div').mouseout(function(){
   $(this).children('.tooltip').remove();
 });
+
+
+/* ******* randomizer button ******* */
+
+function shuffle(array) {
+  var m = array.length, t, i;
+  // While there remain elements to shuffle…
+  while (m) {
+    // Pick a remaining element…
+    i = Math.floor(Math.random() * m--);
+    // And swap it with the current element.
+    t = array[m];
+    array[m] = array[i];
+    array[i] = t;
+  }
+  return array;
+}
+
+$( "#randomizer" ).click(function() {
+  var allTraitClasses = ['bg', 'body', 'eyewear', 'headwear', 'footwear', 'pants', 'lefthand', 'righthand', 'torso'];
+
+  for (i = 0; i < allTraitClasses.length; i++) {
+    //console.log('.nav ' + allTraitClasses[i]);
+    oneItemClass = allTraitClasses[i];
+    $('.nav .' + oneItemClass).removeAttr('equiped');
+
+    //chose random items
+    var $all = $('.nav .' + oneItemClass);
+    var iconItem  = $(shuffle($all).slice(0, 1));
+    $(iconItem).attr('equiped', 'equiped');
+    iconItemId = $(iconItem).attr('id').replace("icon-", "");
+
+    sceneItem = $('.scene-item.' + oneItemClass);
+    sceneItem.removeAttr('id');
+    sceneItem.attr('id', iconItemId );
+
+  }
+
+});
+/* ******* END randomizer button ******* */
