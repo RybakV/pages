@@ -154,7 +154,65 @@ img {
   text-shadow: none;
 }
 
-
+#randomizer {
+  padding: 10px 16px;
+  font-size: 20px;
+  position: absolute;
+  right: 50%;
+  bottom: 12px;
+  transform: translateX(50%);
+  z-index: 100;
+  vertical-align: middle;
+  background: #456;
+  border-radius: 30px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: .2s;
+}
+#randomizer:hover {
+  color: #99f;
+  background: #234;
+}
+.icono-sync {
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: 2px solid;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    margin: -5px 4px 0px 0;
+    transition: .2s;
+}
+#randomizer:hover .icono-sync {
+  transform: rotate(180deg);
+}
+.icono-sync:after,.icono-sync:before {
+    content: '';
+    pointer-events: none;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-width: 6px;
+    border-style: solid;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent
+}
+.icono-sync:before {
+    transform: rotate(-45deg);
+    right: -7px;
+    top: 0
+}
+.icono-sync:after {
+    transform: rotate(135deg);
+    left: -7px;
+    bottom: 0
+}
 /* ----------- images ------------ */
 /* .nav .bg {
   width: 40px !important;
