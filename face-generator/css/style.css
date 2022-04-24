@@ -1583,6 +1583,47 @@ img {
 .scene-item.lipsr#lipsr-wicked-man {
   background-image: url('../img/wicked-man/lips-r.png');
 }
+/* ----------------- xyz ------------------- */
+
+.scene-item.bg#bg-xyz {
+  background-image: url('../img/xyz/background.png');
+}
+.scene-item.beardbl#beardbl-xyz {
+  background-image: url('../img/xyz/beard-b-l.png');
+}
+.scene-item.beardbr#beardbr-xyz {
+  background-image: url('../img/xyz/beard-b-r.png');
+}
+.scene-item.beardtl#beardtl-xyz {
+  background-image: url('../img/xyz/beard-t-l.png');
+}
+.scene-item.beardtr#beardtr-xyz {
+  background-image: url('../img/xyz/beard-t-r.png');
+}
+.scene-item.earl#earl-xyz {
+  background-image: url('../img/xyz/ear-l.png');
+}
+.scene-item.earr#earr-xyz {
+  background-image: url('../img/xyz/ear-r.png');
+}
+.scene-item.eyel#eyel-xyz {
+  background-image: url('../img/xyz/eye-l.png');
+}
+.scene-item.eyer#eyer-xyz {
+  background-image: url('../img/xyz/eye-r.png');
+}
+.scene-item.hairl#hairl-xyz {
+  background-image: url('../img/xyz/hair-l.png');
+}
+.scene-item.hairr#hairr-xyz {
+  background-image: url('../img/xyz/hair-r.png');
+}
+.scene-item.lipsl#lipsl-xyz {
+  background-image: url('../img/xyz/lips-l.png');
+}
+.scene-item.lipsr#lipsr-xyz {
+  background-image: url('../img/xyz/lips-r.png');
+}
 /* ----------------- zombie ------------------- */
 
 .scene-item.bg#bg-zombie {
