@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Catch Game</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" type="image/x-icon" href="./favicon.ico">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!--div id="seconds-counter"></div-->
+<div id="scene">
+   <div id="player"></div>
+   <div id="start-overlay" class="overlay">
+      <div class="overlay-inner">
+         <div class="btn" id="btn-start">Start!</div>
+      </div>
+   </div>
+   <div id="lose-overlay" class="overlay">
+      <div class="overlay-inner">
+         <p>OMG did you just drop Tyler's present?</p>
+         <!--div class="btn" id="btn-restart">Try again</div-->
+      </div>
+   </div>
+   <div id="win-overlay" class="overlay">
+      <div class="overlay-inner">
+         <p>YEY! You got them all!<br/>
+         Happy Birthday Tyler!</p>
+         <p><img src="./cg-t-and-gifts.png" alt="win-image"/></p>
+         <!--div class="btn" id="btn-restart">Try again</div-->
+      </div>
+   </div>
+   <div id="item"></div>
+   <div id="points">
+      <p>Presents <span id="points-counter">0</span></p>
+   </div>
+</div>
+<div class="info">
+   <span class="arrow arrow-left"></span>
+   <span class="arrow arrow-right"></span>
+   <br/>
+   Use arrow keys to move left and right ;)<br/>
+   Refresh the page to reatart the game.
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
