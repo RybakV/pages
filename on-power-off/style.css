@@ -2,27 +2,32 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
-	}
+}
 body, html {
 	min-height: 100%;
 }
 body {
-	background: rgb(67,72,84);
-	background: linear-gradient(180deg, rgba(67,72,84,1) 0%, rgba(99,106,121,1) 100%);  
+	background: rgb(31, 36, 49);
+	background: linear-gradient(180deg, rgb(31, 36, 49) 0%, rgb(33, 40, 55) 100%);
 	font-size: 16px;
 	font-family: Arial, sans-serif;
 	color: #fff;
-	}
+}
 .container {
 	padding: 40px;
 	margin: 0 auto;
 	text-align: center;
 	display: flex;
 	flex-direction: column;
+}
+@media(max-width: 1000px){
+	.container {
+		padding: 20px;
 	}
+}
 h1 {
 	font-size: 24px;
-	}
+}
 #time {
 	font-size: 40px;
 	font-weight: bold;
@@ -34,59 +39,111 @@ h1 {
 	flex-direction: column;
 	color: #fff7;
 	background: rgb(91, 99, 117);
-	background: linear-gradient(180deg, rgb(91, 99, 117) 0%, rgb(113, 121, 138) 100%);
-	}
+	background: linear-gradient(180deg, rgb(155, 164, 185) 0%, rgb(113, 121, 138) 100%);
+}
 @media(max-width: 1000px){
 	#scedule {
-	flex-direction: row;
+		flex-direction: row;
+		margin: 60px 0 40px 54px;
+		width: calc(100% - 54px);
 	}
 }
 .row {
 	display: flex;
 	position: relative;
-	}
+	border-bottom: 2px solid #1f2431;
+}
+.row:first-child .cell::after {
+	content: '';
+	position: absolute;
+	display: block;
+	bottom: 100%;
+	right: -2px;
+	top: -8px;
+	border: inherit;
+}
+
 @media(max-width: 1000px){
 	.row {
-	flex-direction: column;
+		flex-direction: column;
+		width: calc(100% / 7);
+		border-bottom: none;
+		border-right: 2px solid #1f2431;
+	}
+	.row:first-child .cell::after {
+		bottom: 0;
+		right: auto;
+		top: -2px;
+		width: 8px;
+		left: -8px;
+		height: 100%;
 	}
 }
 .row.highlight {
-	background-color: #a4acbc;
-	}
+	background: linear-gradient(180deg, rgb(214, 213, 255) 0%, rgb(236, 147, 147) 100%);
+	box-shadow: inset 0 0 53px #ffbc1e;
+}
 .zone-off {
 	position: absolute;
-	background-color: #03153140;
+	background-color: #0315318a;
 	top: 0;
 	bottom: 0;
 	color: #fff;
-	}
+}
 @media(min-width: 1001px){
 	.zone-off {
-	height: 100% !important;
-	top: auto !important;
+		height: 100% !important;
+		top: auto !important;
 	}
 }
 @media(max-width: 1000px){
 	.zone-off {
-	width: 100% !important;
-	left: auto !important;
+		width: 100% !important;
+		left: auto !important;
 	}
 }
 .row.highlight .zone-off  {
-	background-color: #121722cf;
-	}
-.off-time {
-	display: none;
+	background-color: #161d2b;
+}
+.off-time, .on-time {
+	opacity: 0.5;
 	position: absolute;
+	z-index: 2;
 	left: 0;
-	padding: 10px 4px;
-	}
+	padding: 0px 4px;
+	background: #ddd;
+	border-radius: 3px;
+	color: #3b4960;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 12px;
+	font-weight: 600;
+	box-shadow: 2px 2px 4px #161d2b45;
+}
+.off-time.hidden, .on-time.hidden {
+	display: none !important;
+}
+.row.highlight .off-time, .row.highlight .on-time {
+	opacity: 1;
+}
+.off-time::after, .on-time::after  {
+	content:':00'
+}
 .on-time {
-	display: none;
-	position: absolute;
 	left: 100%;
-	padding: 10px 4px;
+}
+@media(max-width: 1000px) {
+	.off-time, .on-time {
+		position: absolute;
+		left: 50%;
+		top: 0;
+		transform: translate(-50%, -50%);
 	}
+	.on-time {
+		left: 50%;
+		top: 100%;
+	}
+}
 .head-cell {
 	position: absolute;
 	right: 100%;
@@ -100,45 +157,51 @@ h1 {
 	font-weight: bold;
 	color: #fffa;
 	font-size: 16px;
-	}
+}
 @media(max-width: 1000px){
 	.head-cell {
-	bottom: 100%;
-	top: auto;
-	right: auto;
+		bottom: 100%;
+		top: auto;
+		right: auto;
+		width: 100%;
 	}
 }
 .row.highlight .head-cell {
-	color: #12eecf;
+	color: #ffc466;
 	font-size: 20px;
-	}
+}
 .cell {
 	position: relative;
 	border-right: 2px solid #fff7;
 	width: 40px;
 	height: 32px;
-	}
+}
 @media(max-width: 1000px){
 	.cell {
-	border-right: none;
-	border-top: 2px solid #fff7;
-	padding: 0 !important;
+		border-right: none;
+		border-top: 2px solid #fff7;
+		padding: 0 !important;
+		width: 100%;
 	}
 }
 .cell:last-child {
 	border-right: none;
-	}
+}
 @media(max-width: 1000px){
 	.cell:last-child {
-	border-bottom: 2px solid #fff7;
+		border-bottom: 2px solid #fff7;
 	}
 }
 .row.highlight .cell {
 	--box-shadow: inset 0 -50px 50px -50px #fff5;
-	padding-top: 20px;
-	padding-bottom: 20px;
+	height: 52px;
 	color: #fff;
+}
+@media(max-width: 1000px){
+	.row.highlight .cell {
+		height: 32px;
 	}
+}
 .hour {
 	position: absolute;
 	bottom: 170%;
@@ -148,64 +211,78 @@ h1 {
 	display: block;
 	color: #fffa;
 	font-weight: bold;
-	}
+}
+
+/* fence design */
+/*.hour {
+	position: absolute;
+	bottom: 170%;
+	width: inherit;
+	display: block;
+	color: #fffa;
+	left: -50%;
+	margin-left: -2px;
+}
+.cell:nth-child(2n) .hour {
+	bottom: 120%;
+}*/
+/* END fence design */
 @media(max-width: 1000px){
 	.hour {
-	bottom: auto;
-	top: -11px;
-	transform: rotate(0deg);
-	left: auto;
-	right: 100%;
-	margin-right: 10px;
+		bottom: auto;
+		top: -11px;
+		transform: rotate(0deg);
+		left: auto;
+		right: 100%;
+		margin-right: 14px;
+		text-align: right;
 	}
-}	
+}
 .timeline {
 	position: absolute;
-	background: rgb(255,255,255);
-	background: repeating-linear-gradient( -55deg, #12eecfa3, #12eecfa3 10px, #03beddb0 10px, #03beddb0 20px );
-	}
+	z-index: 3;
+	background: rgba(73, 75, 98, 0.63);
+}
 @media(min-width: 1001px){
-.timeline {
-	height: 100% !important;
-	border-right: 2px solid #12eecf;
+	.timeline {
+		height: 100% !important;
 	}
-.timeline::before {
-	content:'';
-	display: block;
-	border-top: 12px solid #12eecf;
-	border-bottom: 12px solid #12eecf;
-	border-left: 8px solid transparent;
-	border-right: 8px solid transparent;
-	position: absolute;
-	top: 0;
-	bottom:0;
-	right: -9px;
+	.timeline::before {
+		content:'';
+		display: block;
+		border-top: 9px solid #fff;
+		border-bottom: 9px solid #fff;
+		border-left: 8px solid transparent;
+		border-right: 8px solid transparent;
+		position: absolute;
+		top: 0;
+		bottom:0;
+		right: -9px;
 	}
 }
 @media(max-width: 1000px){
-.timeline {
-	width: 100% !important;
-	border-bottom: 2px solid #12eecf;
+	.timeline {
+		width: 100% !important;
 	}
-.timeline::before {
-	content:'';
-	display: block;
-	border-left: 12px solid #12eecf;
-	border-right: 12px solid #12eecf;
-	border-top: 8px solid transparent;
-	border-bottom: 8px solid transparent;
-	position: absolute;
-	left: 0;
-	bottom: -9px;
-	right: 0;
+	.timeline::before {
+		content:'';
+		display: block;
+		border-left: 9px solid #fff;
+		border-right: 9px solid #fff;
+		border-top: 8px solid transparent;
+		border-bottom: 8px solid transparent;
+		position: absolute;
+		left: 0;
+		bottom: -9px;
+		right: 0;
 	}
 }
 #time span {
 	animation: seconds 1s steps(1) infinite;
-	}
+}
 @keyframes seconds {
 	0% {opacity: 0;}
 	50% {opacity: 1;}
-	}
+}
 
 
