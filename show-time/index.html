@@ -24,23 +24,13 @@
 <body>
 <div id="todaysDate"></div>
 <h1>Час</h1>
-<div id="time"></div>
-<div id="x"></div>
+<button type="button"
+onclick="document.getElementById('date_time_button').innerHTML = Date()">
+Click and see Date and Time.</button>
+
+<p id="date_time_button"></p>
 <script>
-	const timeBox = document.querySelector('#time');
 
-	
-
-	var today = new Date();
-	var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-	var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-	var dateTime = date+' '+time;
-
-	timeBox.innerHTML = dateTime;
-
-	var date = Date.now()
-	const x = document.querySelector('#time');
-	x.innerHTML = date;
 	
 </script>
 </body>
