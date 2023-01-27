@@ -79,5 +79,4 @@ function createCells(width, height) {
 
 function getDayName(day) {
 	return weekDayNames[day];
-
 }
