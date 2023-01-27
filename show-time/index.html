@@ -25,8 +25,11 @@
 <div id="todaysDate"></div>
 <h1>Час</h1>
 <div id="time"></div>
+<div id="x"></div>
 <script>
 	const timeBox = document.querySelector('#time');
+
+	
 
 	var today = new Date();
 	var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
@@ -34,6 +37,11 @@
 	var dateTime = date+' '+time;
 
 	timeBox.innerHTML = dateTime;
+
+	var date = Date.now()
+	const x = document.querySelector('#time');
+	x.innerHTML = date;
+	
 </script>
 </body>
 </html>
