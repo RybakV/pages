@@ -1,2 +1,0 @@
-# snake
-JS snake game
