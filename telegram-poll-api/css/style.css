@@ -6,21 +6,27 @@
 }
 body {
     font-family: Arial, sans-serif;
-    background-color: #1f2431;
-    color: #90a1b9;
+    background-color: #0d496f;
+    color: #ffbf6b;
     padding: 40px;
     font-size: 20px;
 }
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
+}
 #result {
-    background-color: #1b1b1b;
-    border: 2px solid #41454f;
+    background-color: #647176;
     border-radius: 4px;
     padding: 24px;
 }
 .btn {
-    border: 2px solid #dd8822;
-    background-color: #ff9f2f;
-    color: #fff;
+    border: 2px solid #647176;
+    background-color: #ffbf6b;
+    color: #0d496f;
     padding: 10px 20px;
     border-radius: 4px;
     font-size: 20px;
