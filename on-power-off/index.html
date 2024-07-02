@@ -135,23 +135,27 @@
 		bottom: 0;
 		color: #fff;
 	}
-    .zone-gray {
+    .zone-grey {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        color: #fff;
         background: repeating-linear-gradient(
                 45deg,
-                #1f2431,
-                #1f2431 10px,
+                #47546e,
+                #47546e 10px,
                 #ffbc1e00 10px,
                 #ffbc1e00 20px
         );
     }
 	@media(min-width: 1001px){
-		.zone-off {
+		.zone-off, .zone-grey  {
 			height: 100% !important;
 			top: auto !important;
 		}
 	}
 	@media(max-width: 1000px){
-		.zone-off {
+		.zone-off, .zone-grey  {
 			width: 100% !important;
 			left: auto !important;
 		}
@@ -159,7 +163,10 @@
 	.row.highlight .zone-off  {
 		background-color: #161d2b;
 	}
-	.off-time, .on-time {
+    .row.highlight .zone-grey {
+        background-color: #99755b;
+    }
+    .off-time, .on-time, .grey-time {
 		opacity: 0.5;
 		position: absolute;
 		z-index: 2;
@@ -171,30 +178,30 @@
 		top: 50%;
 		transform: translate(-50%, -50%);
 		font-size: 12px;
+        letter-spacing: -0.05em;
 		font-weight: 600;
 		box-shadow: 2px 2px 4px #161d2b45;
 	}
-	.off-time.hidden, .on-time.hidden {
+    .on-time, .grey-time {
+        left: 100%;
+    }
+	.off-time.hidden, .on-time.hidden, .grey-time.hidden {
 		display: none !important;
 	}
-	.row.highlight .off-time, .row.highlight .on-time {
+	.row.highlight .off-time, .row.highlight .on-time, .row.highlight .grey-time{
 		opacity: 1;
 	}
-	.off-time::after, .on-time::after  {
+	.off-time::after, .on-time::after, .grey-time::after  {
 		content:':00'
 	}
-	.on-time {
-		left: 100%;
-	}
 	@media(max-width: 1000px) {
-		.off-time, .on-time {
+		.off-time, .on-time, .grey-time {
 			position: absolute;
 			left: 50%;
 			top: 0;
 			transform: translate(-50%, -50%);
 		}
-		.on-time {
-			left: 50%;
+		.on-time, .grey-time {
 			top: 100%;
 		}
 	}
@@ -226,14 +233,14 @@
 	}
 	.cell {
 		position: relative;
-		border-right: 2px solid #fff7;
+		border-right: 2px solid #fff3;
 		width: 40px;
 		height: 32px;
 	}
 	@media(max-width: 1000px){
 		.cell {
 			border-right: none;
-			border-top: 2px solid #fff7;
+			border-top: 2px solid #fff3;
 			padding: 0 !important;
 			width: 100%;
 			height: calc(100% / 24);
@@ -244,7 +251,7 @@
 	}
 	@media(max-width: 1000px){
 		.cell:last-child {
-			border-bottom: 2px solid #fff7;
+			border-bottom: 2px solid #fff3;
 		}
 	}
 	.row.highlight .cell {
@@ -376,7 +383,7 @@ let offs2023 = [
 ];
 
 //2024
-let offs = [
+let offs2024 = [
     [1,[0,5],[7,14],[16,23]],
     [2,[1,8],[10,17],[19,24]],
     [3,[0,2],[4,11],[13,20],[22,24]],
@@ -384,6 +391,17 @@ let offs = [
     [5,[1,8],[10,17],[19,24]],
     [6,[0,2],[4,11],[13,20],[22,24]],
     [7,[0,3],[5,9],[11,15],[17,21],[23,24]],
+];
+
+//2024
+let offs = [
+    [1,[0,2,5],[7,11,14],[16,20,23]],
+    [2,[1,5,8],[10,14,17],[19,23,24]],
+    [3,[0,0,2],[4,8,11],[13,17,20],[22,24,24]],
+    [4,[0,2,5],[7,11,14],[16,20,23]],
+    [5,[1,5,8],[10,14,17],[19,23,24]],
+    [6,[0,0,2],[4,8,11],[13,17,20],[22,24,24]],
+    [7,[0,2,3],[5,8,9],[11,14,15],[17,20,21],[23,24,24]],
 ];
 
 //update table every 20 seconds
@@ -413,14 +431,22 @@ function createCells(width, height) {
 		//generate dark zones
 		let zonesHtml = '';
 		for (let i = 1; i < offs[row].length; i++) {
-			zonesHtml = `${zonesHtml}<div 
-    		class="zone-off" 
-    		style="width:${(offs[row][i][1]-offs[row][i][0])/24*100}%; 
-    			height:${(offs[row][i][1]-offs[row][i][0])/24*100}%; 
-    			left:${100/24*offs[row][i][0]}%; 
+			zonesHtml = `${zonesHtml}<div
+    		class="zone-off"
+    		style="width:${(offs[row][i][1]-offs[row][i][0])/24*100}%;
+    			height:${(offs[row][i][1]-offs[row][i][0])/24*100}%;
+    			left:${100/24*offs[row][i][0]}%;
     			top:${100/24*offs[row][i][0]}%">
     			<span class="off-time ${offs[row][i][0]==0?'hidden':''}">${offs[row][i][0]}</span>
     			<span class="on-time ${offs[row][i][1]==24?'hidden':''}">${offs[row][i][1]}</span>
+    		</div>
+            <div
+    		class="zone-grey"
+    		style="width:${(offs[row][i][2]-offs[row][i][1])/24*100}%;
+    			height:${(offs[row][i][2]-offs[row][i][1])/24*100}%;
+    			left:${100/24*offs[row][i][1]}%;
+    			top:${100/24*offs[row][i][1]}%">
+    			<span class="grey-time ${offs[row][i][2]==24?'hidden':''}">${offs[row][i][2]}</span>
     		</div>`;
 		}
 
