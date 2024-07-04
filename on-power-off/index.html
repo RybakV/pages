@@ -148,6 +148,7 @@
                 #ffbc1e00 20px
         );
     }
+
 	@media(min-width: 1001px){
 		.zone-off, .zone-grey  {
 			height: 100% !important;
@@ -165,6 +166,13 @@
 	}
     .row.highlight .zone-grey {
         background-color: #99755b;
+        background: repeating-linear-gradient(
+                45deg,
+                #1f2431,
+                #1f2431 10px,
+                #ffbc1e00 10px,
+                #ffbc1e00 20px
+        );
     }
     .off-time, .on-time, .grey-time {
 		opacity: 0.5;
@@ -172,12 +180,12 @@
 		z-index: 2;
 		left: 0;
 		padding: 0px 4px;
-		background: #ddd;
-		border-radius: 3px;
+		background: #fff;
+		border-radius: 6px;
 		color: #3b4960;
 		top: 50%;
 		transform: translate(-50%, -50%);
-		font-size: 12px;
+		font-size: 16px;
         letter-spacing: -0.05em;
 		font-weight: 600;
 		box-shadow: 2px 2px 4px #161d2b45;
@@ -192,7 +200,10 @@
 		opacity: 1;
 	}
 	.off-time::after, .on-time::after, .grey-time::after  {
-		content:':00'
+		content:':00';
+        font-size: 0.7em;
+        vertical-align: top;
+        font-weight: 600;
 	}
 	@media(max-width: 1000px) {
 		.off-time, .on-time, .grey-time {
