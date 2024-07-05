@@ -357,13 +357,56 @@
 		0% {opacity: 0;}
 		50% {opacity: 1;}
 	}
+    .current-group {
+        background-color: #3b4960;
+        padding: 0 4px;
+    }
+    .group-nav {
+        position: relative;
+        display: inline-block;
+    }
+    .group-nav:hover .group-nav-select {
+        display: block;
+    }
+    .group-nav-select {
+        display: none;
+        position: absolute;
+        z-index: 2;
+        background-color: #3b4960;
+        top: 100%;
+        left: 0;
+        list-style-type: none;
+    }
+    .group-nav-select li {
+        border-top: 2px solid #fff4;
+    }
+    .group-nav-select li a {
+        display: block;
+        padding: 8px 12px;
+        color: #fff;
+        text-decoration: none;
+        white-space: nowrap;
+        transition: .2s;
+    }
+    .group-nav-select li a:hover {
+        color: #ffbc1e;
+    }
 	</style>
 </head>
 <body onload="pageUpdate()">
 <div id="todaysDate"></div>
 <div class="container">
     <div class="header">
-		<h1>2 група електрохарчування</h1>
+        <h1>
+            <div class="group-nav">
+                <span class="current-group">2 група</span>
+                <ul class="group-nav-select">
+                    <li><a href="./group2.html">2 група</a></li>
+                    <li><a href="./index.html">5 група</a></li>
+                </ul>
+            </div>
+            <span>електрохарчування</span>
+        </h1>
     	<div id="time"></div>
 	</div>
     <div id="scedule"></div>
