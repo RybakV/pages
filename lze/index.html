@@ -2,7 +2,7 @@
 <html lang="en-US">
 <head>
     <meta charset="UTF-8">
-    <title>LEZ | Quests</title>
+    <title>LZE | Quests</title>
     <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
 </head>
 <body>
@@ -13,27 +13,48 @@
             <div class="quest-item" id="explosive-retrieval-icon"><img src="./images/explosive-retrieval.png" alt="Quest item"/></div>
             <div class="quest-item" id="hiidden-secrets-icon"><img src="./images/hiidden-secrets.png" alt="Quest item"/></div>
             <div class="quest-item" id="lucky-cap-icon"><img src="./images/lucky-cap.png" alt="Quest item"/></div>
-
+            <div class="quest-item" id="piggy-bank-icon"><img src="./images/piggy-bank.png" alt="Quest item"/></div>
+            <div class="quest-item" id="gold-bar-icon"><img src="./images/gold-bar.png" alt="Quest item"/></div>
+            <div class="quest-item" id="liquid-gold-icon"><img src="./images/liquid-gold.png" alt="Quest item"/></div>
+            <!--
+            <div class="visual-filter">
+                <div class="scanlines"></div>
+                <div class="glow"></div>
+                <div class="monitor"></div>
+            </div>
+            -->
         </div>
         <div class="controls" id="controls">
-            <div class="input-group">
-                <div class="checkbox-wrap"><input type="checkbox" id="lost-footage" name="lost-footage" class="checkbox"></div>
-                <label for="lost-footage">Lost Footage</label>
+            <div class="toggle-group" id="lost-footage">
+                <img src="./images/lost-footage.png" alt="Quest item"/>
+                <div>Lost Footage</div>
             </div>
-            <div class="input-group">
-                <div class="checkbox-wrap"><input type="checkbox" id="explosive-retrieval" name="explosive-retrieval" class="checkbox"></div>
-                <label for="explosive-retrieval">Explosive Retrieval</label>
+            <div class="toggle-group" id="explosive-retrieval">
+                <img src="./images/explosive-retrieval.png" alt="Quest item"/>
+                <div>Explosive Retrieval</div>
             </div>
-            <div class="input-group">
-                <div class="checkbox-wrap"><input type="checkbox" id="hiidden-secrets" name="hiidden-secrets" class="checkbox"></div>
-                <label for="hiidden-secrets">Hiidden Secrets</label>
+            <div class="toggle-group" id="hiidden-secrets">
+                <img src="./images/hiidden-secrets.png" alt="Quest item"/>
+                <div>Hiidden Secrets</div>
             </div>
-            <div class="input-group">
-                <div class="checkbox-wrap"><input type="checkbox" id="lucky-cap" name="lucky-cap" class="checkbox"></div>
-                <label for="lucky-cap">Lucky Cap</label>
+            <div class="toggle-group" id="lucky-cap">
+                <img src="./images/lucky-cap.png" alt="Quest item"/>
+                <div>Lucky Cap</div>
             </div>
-
+            <div class="toggle-group" id="piggy-bank">
+                <img src="./images/piggy-bank.png" alt="Quest item"/>
+                <div>Piggy Bank</div>
+            </div>
+            <div class="toggle-group" id="gold-bar">
+                <img src="./images/gold-bar.png" alt="Quest item"/>
+                <div>Gold Bar</div>
+            </div>
+            <div class="toggle-group" id="liquid-gold">
+                <img src="./images/liquid-gold.png" alt="Quest item"/>
+                <div>Liquid Gold</div>
+            </div>
         </div>
+
     </div>
 </body>
 <style>
@@ -50,6 +71,9 @@
     * {
         box-sizing: border-box;
         outline: none !important;
+    }
+    img {
+        max-width: 100%;
     }
     a {
         color: #3fffff;
@@ -68,10 +92,12 @@
         }
     }
     .map {
+        position: relative;
         width: 50%;
         aspect-ratio: 1/1;
         background-color: #000B11;
-        position: relative;
+        border-radius: 5.3vw;
+        overflow: hidden;
     }
     @media (max-width: 767px) {
         .map {
@@ -83,17 +109,22 @@
     }
     .quest-item {
         position: absolute;
+        z-index: 2;
         top: 2%;
         left: 2%;
         width: 40px;
         height: 40px;
-        transform: translate(-12px, -12px);
+        margin: -12px 0 0 -12px;
+        transform-origin: 50% 50%;
         opacity: 0;
         border-radius: 50%;
         transition: .2s;
     }
     .quest-item.active {
         opacity: 1;
+    }
+    .quest-item.active:hover {
+        transform: scale(2);
     }
     .quest-item::before {
         content:'';
@@ -105,7 +136,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        border: 2px dashed #3fffff;
+        border: 1px dashed #3fffff;
         animation: rotation 15s infinite linear;
     }
     @keyframes rotation {
@@ -134,46 +165,91 @@
         top: 21%;
         left: 76%;
     }
+    #piggy-bank-icon {
+        top: 19%;
+        left: 86%;
+    }
+    #gold-bar-icon {
+        top: 56.5%;
+        left: 50.5%;
+    }
+    div#liquid-gold-icon {
+        top: 32%;
+        left: 80%;
+    }
 
     /* CONTROLS */
     .controls {
         width: 50%;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
         gap: 8px;
-        justify-content: center;
-        align-items: flex-start;
+        justify-content: flex-start;
+        align-items: stretch;
+        align-content: flex-start;
     }
     @media (max-width: 767px) {
         .controls {
             width: 100%;
         }
     }
-    .input-group {
-        display: flex;
-        gap: 12px;
-        align-items: center;
+    .toggle-group * {
+        pointer-events: none;
+        width: 100px;
+        text-align: center;
+    }
+    .toggle-group {
+        transition: .2s;
         padding: 4px;
-        transition: .2s;
         cursor: pointer;
+        font-size: 18px;
     }
-    .input-group:hover {
-        background-color: #02373d;
+    .toggle-group:hover {
+        background-color: #001825;
     }
-    .checkbox-wrap {
+    .toggle-group.active {
         box-shadow: inset 0 0 0 2px #3fffff;
-        background-color: #000B11;
+        background-color: #000b11;
     }
-    .checkbox-wrap input {
-        opacity: 0;
+
+    .visual-filter, .scanlines, .glow, .monitor {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
     }
-    .checkbox-wrap input:checked {
-        opacity: 1!important;
-        transition: .2s;
+    .visual-filter {
+        border-color: #202020 #212930 #282c2a #26221a;
+        border-radius: 5.3vw;
+        border-style: solid;
+        border-width: 9px 7px 5px;
+        box-shadow: inset 0 0 3px 8px #1a1e1c;
+        overflow: hidden;
+        pointer-events: none;
     }
-    .input-group label{
-        text-transform: uppercase;
-        font-weight: 700;
+    .scanlines {
+        background: linear-gradient(180deg, hsla(0, 0%, 100%, 0), hsla(0, 0%, 100%, 0) 50%, rgba(0, 0, 0, .2) 70%, rgba(0, 0, 0, .6));
+        background-size: 100% .2rem;
+    }
+    .glow {
+        animation: crt-glow 8s infinite;
+        background: radial-gradient(circle at center, #1bd459 0, rgba(27, 212, 89, .88) 58%, rgba(21, 235, 92, .57) 80%, rgba(19, 94, 29, .27) 93%, rgba(10, 23, 12, 0) 100%);
+        opacity: .15;
+    }
+    .monitor {
+        box-shadow: inset 0 0 8vw #000, inset 0 0 3vw #000, 0 0 0 7vw #1a1e1c;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+    @keyframes crt-glow {
+        0% { opacity: 0.05; }
+        50% { opacity: 0.1; }
+        100% { opacity: 0.05; }
     }
 </style>
 <script>
@@ -181,14 +257,25 @@
     const map = document.querySelector('#map');
     const mapQuestItems = document.querySelector('.quest-item');
     controlsParent.addEventListener('click', updateMap);
+
     function updateMap(event){
         const target = event.target;
-        if (target.classList.contains('checkbox')){
+        if (target.classList.contains('toggle-group')){
             let targetName = target.getAttribute('id');
             let targetNodeId = '#'+targetName+'-icon'
             let targetNode = document.querySelector(targetNodeId);
             targetNode.classList.toggle('active');
+            target.classList.toggle('active');
         }
     }
+    // function updateMap(event){
+    //     const target = event.target;
+    //     if (target.classList.contains('checkbox')){
+    //         let targetName = target.getAttribute('id');
+    //         let targetNodeId = '#'+targetName+'-icon'
+    //         let targetNode = document.querySelector(targetNodeId);
+    //         targetNode.classList.toggle('active');
+    //     }
+    // }
 </script>
 </html>
