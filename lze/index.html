@@ -13,8 +13,13 @@
                 <div class="room well">Well</div>
                 <div class="room server-room">Server Room</div>
             </div>
+            <button onclick="mapClear()" id="map-clear">🗙 Clear Map</button>
         </div>
-        <div class="controls" id="controls"></div>
+        <div class="controls" id="controls">
+            <div class="searchbar">
+                <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Search Quest or Item..." title="Type in a name">
+            </div>
+        </div>
     </div>
 </body>
 <style>
@@ -27,6 +32,8 @@
         font-optical-sizing: auto;
         font-weight: 700;
         font-style: normal;
+        margin: 0;
+        padding: 20px;
     }
     * {
         box-sizing: border-box;
@@ -37,6 +44,9 @@
     }
     a {
         color: #3fffff;
+    }
+    p {
+        margin: 0;
     }
     input[type="checkbox"] {
         width: 32px;
@@ -115,36 +125,25 @@
         border-radius: 50%;
         opacity: 1;
     }
-/*
-    #lost-footage-icon {
-        top: 76%;
-        left: 31%;
+    #map-clear {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background: #000b11;
+        border: 2px solid #02373d;
+        color: #02373d;
+        font-size: 24px;
+        font-family: "Jura", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        cursor: pointer;
+        padding: 0 8px 4px;
+        transition: .2s;
     }
-    #explosive-retrieval-icon {
-        top: 79%;
-        left: 19%;
+    #map-clear:hover {
+        border: 2px solid #87B0B2;
+        color: #87B0B2;
     }
-    #hiidden-secrets-icon {
-        top: 52%;
-        left: 42%;
-    }
-    #lucky-cap-icon {
-        top: 21%;
-        left: 76%;
-    }
-    #piggy-bank-icon {
-        top: 19%;
-        left: 86%;
-    }
-    #gold-bar-icon {
-        top: 56.5%;
-        left: 50.5%;
-    }
-    #liquid-gold-icon {
-        top: 32%;
-        left: 80%;
-    }
-*/
     /* CONTROLS */
     .controls {
         width: 50%;
@@ -160,6 +159,27 @@
         .controls {
             width: 100%;
         }
+    }
+    .searchbar {
+        width: 100%;
+    }
+    .searchbar input {
+        padding: 8px 16px;
+        background: #000b11;
+        border: 2px solid #02373d;
+        transition: .2s;
+        width: 100%;
+        color: #87B0B2;
+        font-size: 24px;
+        font-family: "Jura", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+    }
+    .searchbar input:focus {
+        border: 2px solid #87B0B2;
+    }
+    .searchbar input::placeholder {
+        color: #02373d;
     }
     .toggle-group * {
         pointer-events: none;
@@ -186,6 +206,9 @@
     }
     .toggle-group[disabled].active {
         box-shadow: inset 0 0 0 2px #8b2f2f;
+    }
+    .toggle-group span {
+        display: none;
     }
     .thumbnail {
         width: 100%;
@@ -221,18 +244,25 @@
 <script>
     const questsData = {
         airQualityControl: {
+            alias: 'pack-of-cigarettes',
+            questName: '20 Pack of Cigarettes',
+            itemName: '20 Pack of Cigarettes',
+            x: 45,
+            y: 17,
+        },
+        airQualityControl: {
             alias: 'air-quality-control',
             questName: 'Air Quality Control',
             itemName: 'Atmospheric Analyzer',
-            x: 0,
-            y: 0,
+            x: 65,
+            y: 83,
         },
         blueHorizons: {
             alias: 'blue-horizons',
             questName: 'Blue Horizons',
             itemName: 'Secret Weapon Blueprint',
-            x: 0,
-            y: 0,
+            x: 71,
+            y: 41,
         },
         clearSignal: {
             alias: 'clear-signal',
@@ -244,7 +274,7 @@
         communicationHub: {
             alias: 'communication-hub',
             questName: 'Communication Hub',
-            itemName: '-',
+            itemName: 'Radio-Comm Station',
             x: 0,
             y: 0,
         },
@@ -252,15 +282,15 @@
             alias: 'confidential-retrieval',
             questName: 'Confidential Retrieval',
             itemName: 'Classified Documents',
-            x: 0,
-            y: 0,
+            x: 28,
+            y: 32,
         },
         doghowlTrophy: {
             alias: 'doghowl-trophy',
             questName: 'Doghowl Trophy',
             itemName: 'Howling Dog Statue',
-            x: 0,
-            y: 0,
+            x: 89,
+            y: 54,
         },
         explosiveBlueprint: {
             alias: 'explosive-blueprint',
@@ -287,8 +317,8 @@
             alias: 'glimmering-gem',
             questName: 'Glimmering Gem',
             itemName: 'Crystal',
-            x: 0,
-            y: 0,
+            x: 85,
+            y: 42,
         },
         goldenOpportunity: {
             alias: 'golden-opportunity',
@@ -357,8 +387,8 @@
             alias: 'personal-insights',
             questName: 'Personal Insights',
             itemName: 'Personal Log Device',
-            x: 0,
-            y: 0,
+            x: 70.5,
+            y: 40,
         },
         piggyBank: {
             alias: 'piggy-bank',
@@ -385,8 +415,8 @@
             alias: 'power-source',
             questName: 'Power Source',
             itemName: 'Solar Charger',
-            x: 0,
-            y: 0,
+            x: 31,
+            y: 51,
         },
         powerSource2: {
             alias: 'power-source2',
@@ -405,30 +435,30 @@
         probingTheUnknown: {
             alias: 'probing-the-unknown',
             questName: 'Probing the Unknown',
-            itemName: '-',
-            x: 0,
-            y: 0,
+            itemName: 'Alien Matter Probe',
+            x: 34,
+            y: 72,
         },
         radiationAnalysis: {
             alias: 'radiation-analysis',
             questName: 'Radiation Analysis',
             itemName: 'Radiation Analyzer',
-            x: 0,
-            y: 0,
+            x: 84,
+            y: 18,
         },
         safeKey: {
             alias: 'safe-key',
             questName: 'Safe Key',
             itemName: 'Safe Key',
-            x: 0,
-            y: 0,
+            x: 43,
+            y: 65,
         },
         secretsInRed: {
             alias: 'secrets-in-red',
             questName: 'Secrets in Red',
             itemName: 'Red Diary',
-            x: 0,
-            y: 0,
+            x: 46,
+            y: 41,
         },
         silentCommunication: {
             alias: 'silent-communication',
@@ -440,7 +470,6 @@
     }
     const controlsParent = document.querySelector('#controls');
     const map = document.querySelector('#map');
-    const mapQuestItems = document.querySelector('.quest-item');
     controlsParent.addEventListener('click', updateMap);
 
 
@@ -459,10 +488,15 @@
             thumbnailBox.setAttribute('style', `background-image: ${url}`);
             toggleGroup.append(thumbnailBox);
 
+            // ADD quest name
+            const questName = document.createElement('p');
+            questName.innerText = itemData.questName;
+            toggleGroup.append(questName);
+
             // ADD item name
-            const groupName = document.createElement('div');
-            groupName.innerText = itemData.questName;
-            toggleGroup.append(groupName);
+            const itemName = document.createElement('span');
+            itemName.innerText = itemData.itemName;
+            toggleGroup.append(itemName);
 
             //DISABLED items
             if (itemData.x === 0) {
@@ -490,10 +524,6 @@
     }
     genData();
 
-
-
-
-
     function updateMap(event){
         const target = event.target;
         if (target.classList.contains('toggle-group')){
@@ -504,14 +534,33 @@
             target.classList.toggle('active');
         }
     }
-    // function updateMap(event){
-    //     const target = event.target;
-    //     if (target.classList.contains('checkbox')){
-    //         let targetName = target.getAttribute('id');
-    //         let targetNodeId = '#'+targetName+'-icon'
-    //         let targetNode = document.querySelector(targetNodeId);
-    //         targetNode.classList.toggle('active');
-    //     }
-    // }
+
+    function searchFunction() {
+        let input, filter, ul, li, textP, textSpan, i, txtValue, txtValue2;
+        input = document.getElementById("searchInput");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("controls");
+        li = ul.getElementsByClassName("toggle-group");
+        for (i = 0; i < li.length; i++) {
+            textP = li[i].getElementsByTagName("p")[0];
+            textSpan = li[i].getElementsByTagName("span")[0];
+            txtValue = textP.textContent || textP.innerText;
+            txtValue2 = textSpan.textContent || textSpan.innerText;
+
+            if (txtValue.toUpperCase().indexOf(filter) > -1 || txtValue2.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
+        }
+    }
+
+    function mapClear() {
+        const activeItems = document.querySelectorAll(".active");
+        console.log('activeItems', activeItems);
+        for (let i = 0; i < activeItems.length; i++) {
+            activeItems[i].classList.remove("active");
+        }
+    }
 </script>
 </html>
