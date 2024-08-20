@@ -191,7 +191,7 @@
         padding: 3px 4px 4px 70px;
         cursor: pointer;
         font-size: 14px;
-        background-color: #22343d;
+        background-color: #112733;
         display: flex;
         position: relative;
         height: 62px;
@@ -204,9 +204,29 @@
     }
     .toggle-group:hover {
         background-color: #284d5f;
+        box-shadow: inset 0 0 0 1px #3fffff;
     }
     .toggle-group.active {
-        box-shadow: inset 0 0 0 2px #3fffff;
+        background-color: #284d5f;
+    }
+    .toggle-group.active::before, .toggle-group.active::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 16px;
+        pointer-events: none;
+        bottom: -1px;
+        top: -1px;
+        border-bottom: 3px solid #3fffff;
+        border-top: 3px solid #3fffff;
+    }
+    .toggle-group.active::before {
+        left: -1px;
+        border-left: 3px solid #3fffff;
+    }
+    .toggle-group.active::after {
+        right: -1px;
+        border-right: 3px solid #3fffff;
     }
     .toggle-group[disabled]{
         color: #8b2f2f;
@@ -216,8 +236,14 @@
     .toggle-group[disabled].active {
         box-shadow: inset 0 0 0 2px #8b2f2f;
     }
+    .toggle-group p {
+        font-size: 16px;
+        padding-bottom: 2px;
+        color: #6eb5b9;
+    }
     .toggle-group span {
         display: block;
+        color: #dbbd23;
     }
     .thumbnail {
         background-position: center;
@@ -228,6 +254,7 @@
         top: 0;
         height: 100%;
         aspect-ratio: 1;
+        /*border: 1px solid #87b0b252;*/
     }
     .room-names {
         width: 100%;
