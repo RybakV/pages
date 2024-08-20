@@ -12,6 +12,9 @@
             <div class="room-names">
                 <div class="room well">Well</div>
                 <div class="room server-room">Server Room</div>
+                <div class="sector sector-a">Sector A</div>
+                <div class="sector sector-b">Sector B</div>
+                <div class="sector sector-c">Sector C</div>
             </div>
             <button onclick="mapClear()" id="map-clear">🗙 Clear Map</button>
         </div>
@@ -194,7 +197,7 @@
         height: 62px;
         flex-direction: column;
         width: calc(33% - 3px);
-        max-width: 240px;
+        min-width: 240px;
         align-items: flex-start;
         text-align: left;
         justify-content: center;
@@ -238,8 +241,30 @@
         font-size: .6vw;
         width: 3%;
     }
+    .sector {
+        position: absolute;
+        font-size: 1.6vw;
+        text-transform: uppercase;
+    }
+    .sector-c {
+        right: 27%;
+        top: 8%;
+    }
+    .sector-a {
+        right: 11%;
+        bottom: 8%;
+    }
+    .sector-b {
+        left: 7%;
+        bottom: 32%;
+    }
     @media (max-width: 767px) {
-        font-size: 1.2vw;
+        .room {
+            font-size: 1.2vw;
+        }
+        .sector {
+            font-size: 3.2vw;
+        }
     }
     .well {
         top: 37.5%;
@@ -301,6 +326,13 @@
             x: 89,
             y: 54,
         },
+        echoesOfTheUnknown: {
+            alias: 'echoes-of-the-unknown',
+            questName: 'Echoes of the Unknown',
+            itemName: 'Analog Data Tape',
+            x: 58,
+            y: 61,
+        },
         explosiveBlueprint: {
             alias: 'explosive-blueprint',
             questName: 'Explosive Blueprint',
@@ -319,8 +351,8 @@
             alias: 'eyes-everywhere',
             questName: 'Eyes Everywhere',
             itemName: 'Surveillance Box',
-            x: 0,
-            y: 0,
+            x: 45,
+            y: 47,
         },
         glimmeringGem: {
             alias: 'glimmering-gem',
@@ -389,8 +421,8 @@
             alias: 'pattern-analysis',
             questName: 'Pattern Analysis',
             itemName: 'Key with Unique Patterns',
-            x: 0,
-            y: 0,
+            x: 62,
+            y: 14,
         },
         personalInsights: {
             alias: 'personal-insights',
@@ -410,8 +442,8 @@
             alias: 'planet-with-name',
             questName: 'Planet with Name',
             itemName: 'Glass Planet',
-            x: 0,
-            y: 0,
+            x: 30,
+            y: 29,
         },
         powerPlay: {
             alias: 'power-play',
@@ -475,6 +507,13 @@
             itemName: 'Comm-Link Headset',
             x: 45.5,
             y: 85,
+        },
+        temporalSchematics: {
+            alias: 'temporal-schematics',
+            questName: 'Temporal Schematics',
+            itemName: 'Time Machine Blueprints',
+            x: 38,
+            y: 38,
         },
     }
     const controlsParent = document.querySelector('#controls');
