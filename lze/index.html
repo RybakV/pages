@@ -322,271 +322,305 @@
     }
 </style>
 <script>
-    const questsData = {
 
-        airQualityControl: {
-            alias: 'air-quality-control',
-            questName: 'Air Quality Control',
-            itemName: 'Atmospheric Analyzer',
-            x: 65,
-            y: 83,
+    const questsData = [
+        {
+            "id": 1,
+            "questName": "Smoke and Mirrors",
+            "itemName": "20 Pack of Cigarettes",
+            "fileName": "smoke-and-mirrors.png",
+            "locX": 45,
+            "locY": 17
         },
-        blueHorizons: {
-            alias: 'blue-horizons',
-            questName: 'Blue Horizons',
-            itemName: 'Secret Weapon Blueprint',
-            x: 71,
-            y: 41,
+        {
+            "id": 2,
+            "questName": "Probing The Unknown",
+            "itemName": "Alien Matter Probe",
+            "fileName": "probing-the-unknown.png",
+            "locX": 34,
+            "locY": 72
         },
-        clearSignal: {
-            alias: 'clear-signal',
-            questName: 'Clear Signal',
-            itemName: 'Radio-Comm Device',
-            x: 0,
-            y: 0,
+        {
+            "id": 3,
+            "questName": "Air Quality Control",
+            "itemName": "Atmospheric Analyzer",
+            "fileName": "air-quality-control.png",
+            "locX": 65,
+            "locY": 83
         },
-        communicationHub: {
-            alias: 'communication-hub',
-            questName: 'Communication Hub',
-            itemName: 'Radio-Comm Station',
-            x: 0,
-            y: 0,
+        {
+            "id": 4,
+            "questName": "Explosive Retrieval",
+            "itemName": "Bomb",
+            "fileName": "explosive-retrieval.png",
+            "locX": 19,
+            "locY": 79
         },
-        confidentialRetrieval: {
-            alias: 'confidential-retrieval',
-            questName: 'Confidential Retrieval',
-            itemName: 'Classified Documents',
-            x: 28,
-            y: 32,
+        {
+            "id": 5,
+            "questName": "Liquid Gold",
+            "itemName": "Bottle of Expensive Alcohol",
+            "fileName": "liquid-gold.png",
+            "locX": 80,
+            "locY": 32
         },
-        doghowlTrophy: {
-            alias: 'doghowl-trophy',
-            questName: 'Doghowl Trophy',
-            itemName: 'Howling Dog Statue',
-            x: 89,
-            y: 54,
+        {
+            "id": 6,
+            "questName": "Power Play",
+            "itemName": "Broken Backup Power Controller Device",
+            "fileName": "power-play.png",
+            "locX": "",
+            "locY": ""
         },
-        echoesOfTheUnknown: {
-            alias: 'echoes-of-the-unknown',
-            questName: 'Echoes of the Unknown',
-            itemName: 'Analog Data Tape',
-            x: 58,
-            y: 61,
+        {
+            "id": 7,
+            "questName": "Communication Hub",
+            "itemName": "Radio-Comm Station",
+            "fileName": "communication-hub.png",
+            "locX": "",
+            "locY": ""
         },
-        explosiveBlueprint: {
-            alias: 'explosive-blueprint',
-            questName: 'Explosive Blueprint',
-            itemName: 'Granade Blueprint',
-            x: 67,
-            y: 36,
+        {
+            "id": 8,
+            "questName": "Confidential Retrieval",
+            "itemName": "Classified Documents",
+            "fileName": "confidential-retrieval.png",
+            "locX": 28,
+            "locY": 32
         },
-        explosiveRetrieval: {
-            alias: 'explosive-retrieval',
-            questName: 'Explosive Retrieval',
-            itemName: 'Bomb',
-            x: 19,
-            y: 79,
+        {
+            "id": 9,
+            "questName": "Silent Communication",
+            "itemName": "Comm-Link Headset",
+            "fileName": "silent-communication.png",
+            "locX": 45.5,
+            "locY": 85
         },
-        eyesEverywhere: {
-            alias: 'eyes-everywhere',
-            questName: 'Eyes Everywhere',
-            itemName: 'Surveillance Box',
-            x: 45,
-            y: 77,
+        {
+            "id": 10,
+            "questName": "Glimmering Gem",
+            "itemName": "Crystal",
+            "fileName": "glimmering-gem.png",
+            "locX": 85,
+            "locY": 42
         },
-        glimmeringGem: {
-            alias: 'glimmering-gem',
-            questName: 'Glimmering Gem',
-            itemName: 'Crystal',
-            x: 85,
-            y: 42,
+        {
+            "id": 11,
+            "questName": "Power Source",
+            "itemName": "Energy Cell",
+            "fileName": "power-source2.png",
+            "locX": 48,
+            "locY": 18
         },
-        goldenOpportunity: {
-            alias: 'golden-opportunity',
-            questName: 'Golden Opportunity',
-            itemName: 'Gold Bar',
-            x: 50.5,
-            y: 56.5,
+        {
+            "id": 12,
+            "questName": "Lost Footage",
+            "itemName": "Experiment Film Container",
+            "fileName": "lost-footage.png",
+            "locX": 31,
+            "locY": 76
         },
-        hiddenSecrets: {
-            alias: 'hidden-secrets',
-            questName: 'Hidden Secrets',
-            itemName: 'Server Drive',
-            x: 42,
-            y: 52,
+        {
+            "id": 13,
+            "questName": "Planet with Name",
+            "itemName": "Glass Planet",
+            "fileName": "planet-with-name.png",
+            "locX": 30,
+            "locY": 29
         },
-        identityBand: {
-            alias: 'identity-band',
-            questName: 'Identity Band',
-            itemName: 'Researcher\'s Wristband',
-            x: 22.5,
-            y: 50.5,
+        {
+            "id": 14,
+            "questName": "Golden Opportunity",
+            "itemName": "Gold Bar",
+            "fileName": "golden-opportunity.png",
+            "locX": 50.5,
+            "locY": 56.5
         },
-        liquidGold: {
-            alias: 'liquid-gold',
-            questName: 'Liquid Gold',
-            itemName: 'Bottle of Expensive Alcohol',
-            x: 80,
-            y: 32,
+        {
+            "id": 15,
+            "questName": "Explosive Blueprint",
+            "itemName": "Granade Blueprint",
+            "fileName": "explosive-blueprint.png",
+            "locX": 60,
+            "locY": 36
         },
-        lockerKey: {
-            alias: 'locker-key',
-            questName: 'Locker Key',
-            itemName: 'Locker Key',
-            x: 0,
-            y: 0,
+        {
+            "id": 16,
+            "questName": "Doghowl Trophy",
+            "itemName": "Howling Dog Statue",
+            "fileName": "doghowl-trophy.png",
+            "locX": 89,
+            "locY": 54
         },
-        lostFootage: {
-            alias: 'lost-footage',
-            questName: 'Lost Footage',
-            itemName: 'Experiment Film Container',
-            x: 31,
-            y: 76,
+        {
+            "id": 17,
+            "questName": "Pattern Analysis",
+            "itemName": "Key with Unique Patterns",
+            "fileName": "pattern-analysis.png",
+            "locX": 62,
+            "locY": 14
         },
-        luckyCap: {
-            alias: 'lucky-cap',
-            questName: 'Lucky Cap',
-            itemName: 'Orange Hat',
-            x: 76,
-            y: 21,
+        {
+            "id": 18,
+            "questName": "Locker Key",
+            "itemName": "Locker Key",
+            "fileName": "locker-key.png",
+            "locX": "",
+            "locY": ""
         },
-        nightVision: {
-            alias: 'night-vision',
-            questName: 'Night Vision',
-            itemName: 'Thermal Imaging Goggles',
-            x: 60,
-            y: 59,
+        {
+            "id": 19,
+            "questName": "Prestigious Award",
+            "itemName": "Next Fest #2 Award",
+            "fileName": "prestigious-award.png",
+            "locX": 58.5,
+            "locY": 65
         },
-        patternAnalysis: {
-            alias: 'pattern-analysis',
-            questName: 'Pattern Analysis',
-            itemName: 'Key with Unique Patterns',
-            x: 62,
-            y: 14,
+        {
+            "id": 20,
+            "questName": "Lucky Cap",
+            "itemName": "Orange Hat",
+            "fileName": "lucky-cap.png",
+            "locX": 76,
+            "locY": 21
         },
-        personalInsights: {
-            alias: 'personal-insights',
-            questName: 'Personal Insights',
-            itemName: 'Personal Log Device',
-            x: 70.5,
-            y: 40,
+        {
+            "id": 21,
+            "questName": "Personal Insights",
+            "itemName": "Personal Log Device",
+            "fileName": "personal-insights.png",
+            "locX": 70.5,
+            "locY": 40
         },
-        piggyBank: {
-            alias: 'piggy-bank',
-            questName: 'Hidden Data',
-            itemName: 'Piggy Bank',
-            x: 86,
-            y: 19,
+        {
+            "id": 22,
+            "questName": "Hidden Data",
+            "itemName": "Piggy Bank",
+            "fileName": "hidden-data.png",
+            "locX": 86,
+            "locY": 19
         },
-        planetWithName: {
-            alias: 'planet-with-name',
-            questName: 'Planet with Name',
-            itemName: 'Glass Planet',
-            x: 30,
-            y: 29,
+        {
+            "id": 23,
+            "questName": "Radiation Analysis",
+            "itemName": "Radiation Analyzer",
+            "fileName": "radiation-analysis.png",
+            "locX": 84,
+            "locY": 18
         },
-        powerPlay: {
-            alias: 'power-play',
-            questName: 'Power Play',
-            itemName: 'Broken Backup Power Controller Device',
-            x: 0,
-            y: 0,
+        {
+            "id": 24,
+            "questName": "Clear Signal",
+            "itemName": "Radio-Comm Device",
+            "fileName": "clear-signal.png",
+            "locX": "",
+            "locY": ""
         },
-        powerSource: {
-            alias: 'power-source',
-            questName: 'Power Source',
-            itemName: 'Solar Charger',
-            x: 31,
-            y: 51,
+        {
+            "id": 25,
+            "questName": "Secrets In Red",
+            "itemName": "Red Diary",
+            "fileName": "secrets-in-red.png",
+            "locX": 46,
+            "locY": 41
         },
-        powerSource2: {
-            alias: 'power-source2',
-            questName: 'Power Source',
-            itemName: 'Energy Cell',
-            x: 48,
-            y: 18,
+        {
+            "id": 26,
+            "questName": "Identity Band",
+            "itemName": "Researcher's Wristband",
+            "fileName": "identity-band.png",
+            "locX": 23,
+            "locY": 51
         },
-        prestigiousAward: {
-            alias: 'prestigious-award',
-            questName: 'Prestigious Award',
-            itemName: 'Next Fest #2 Award',
-            x: 58.5,
-            y: 65,
+        {
+            "id": 27,
+            "questName": "Safe Key",
+            "itemName": "Safe Key",
+            "fileName": "safe-key.png",
+            "locX": 43,
+            "locY": 65
         },
-        probingTheUnknown: {
-            alias: 'probing-the-unknown',
-            questName: 'Probing the Unknown',
-            itemName: 'Alien Matter Probe',
-            x: 34,
-            y: 72,
+        {
+            "id": 28,
+            "questName": "Newer Horizons",
+            "itemName": "Secret Weapon Blueprint",
+            "fileName": "newer-horizons.png",
+            "locX": 71,
+            "locY": 41
         },
-        radiationAnalysis: {
-            alias: 'radiation-analysis',
-            questName: 'Radiation Analysis',
-            itemName: 'Radiation Analyzer',
-            x: 84,
-            y: 18,
+        {
+            "id": 29,
+            "questName": "Hidden Secrets",
+            "itemName": "Server Drive",
+            "fileName": "hidden-secrets.png",
+            "locX": 42,
+            "locY": 52
         },
-        safeKey: {
-            alias: 'safe-key',
-            questName: 'Safe Key',
-            itemName: 'Safe Key',
-            x: 43,
-            y: 65,
+        {
+            "id": 30,
+            "questName": "Power Source",
+            "itemName": "Solar Charger",
+            "fileName": "power-source.png",
+            "locX": 31,
+            "locY": 51
         },
-        secretDocuments: {
-            alias: 'secret-documents',
-            questName: 'Secret Documents',
-            itemName: 'Classified Documents',
-            x: 0,
-            y: 0,
+        {
+            "id": 31,
+            "questName": "Eyes Everywhere",
+            "itemName": "Surveillance Box",
+            "fileName": "eyes-everywhere.png",
+            "locX": 45,
+            "locY": 77
         },
-        secretsInRed: {
-            alias: 'secrets-in-red',
-            questName: 'Secrets in Red',
-            itemName: 'Red Diary',
-            x: 46,
-            y: 41,
+        {
+            "id": 32,
+            "questName": "Night Vision",
+            "itemName": "Thermal Imaging Goggles",
+            "fileName": "night-vision.png",
+            "locX": 60,
+            "locY": 59
         },
-        smokeAndMirrors: {
-            alias: 'smoke-and-mirrors',
-            questName: 'Smoke and Mirrors',
-            itemName: '20 Pack of Cigarettes',
-            x: 45,
-            y: 17,
+        {
+            "id": 33,
+            "questName": "Echoes of the Unknown",
+            "itemName": "Analog Data Tape",
+            "fileName": "echoes-of-the-unknown.png",
+            "locX": 58,
+            "locY": 61
         },
-        silentCommunication: {
-            alias: 'silent-communication',
-            questName: 'Silent Communication',
-            itemName: 'Comm-Link Headset',
-            x: 45.5,
-            y: 85,
+        {
+            "id": 34,
+            "questName": "Temporal Schematics",
+            "itemName": "Time Machine Blueprints",
+            "fileName": "temporal-schematics.png",
+            "locX": 38,
+            "locY": 38
         },
-        temporalSchematics: {
-            alias: 'temporal-schematics',
-            questName: 'Temporal Schematics',
-            itemName: 'Time Machine Blueprints',
-            x: 38,
-            y: 38,
-        },
-    }
+        {
+            "id": 35,
+            "questName": "Secret Documents",
+            "itemName": "Classified Documents",
+            "fileName": "secret-documents.png",
+            "locX": "",
+            "locY": ""
+        }
+    ];
     const controlsParent = document.querySelector('#controls');
     const map = document.querySelector('#map');
     controlsParent.addEventListener('click', updateMap);
 
-
     /* GENERATE CONTROL ITEMS AND MAP MARKERS */
     function genData(){
         /* Controls */
-        Object.entries(questsData).forEach(([key, itemData]) => {
+        for (const itemData of questsData) {
             const toggleGroup = document.createElement('div');
             toggleGroup.classList.add('toggle-group');
-            toggleGroup.setAttribute('id', `${itemData.alias}`);
+            toggleGroup.setAttribute('id', `id-${itemData.id}`);
 
             // ADD item thumbnail
             const thumbnailBox = document.createElement('div');
             thumbnailBox.classList.add('thumbnail');
-            const url = `url('./images/${itemData.alias}.png')`;
+            const url = `url('./images/${itemData.fileName}')`;
             thumbnailBox.setAttribute('style', `background-image: ${url}`);
             toggleGroup.append(thumbnailBox);
 
@@ -601,27 +635,26 @@
             toggleGroup.append(itemName);
 
             //DISABLED items
-            if (itemData.x === 0) {
+            if (itemData.locX === '') {
                 toggleGroup.setAttribute('disabled','');
             }
 
             controlsParent.append(toggleGroup);
-        });
+        }
         /* Map Markers */
-        Object.entries(questsData).forEach(([key, itemData]) => {
+        for (const itemData of questsData) {
             const mapMarker = document.createElement('div');
             mapMarker.classList.add('quest-item');
-            mapMarker.setAttribute('id', `${itemData.alias}-icon`);
-            const url = `url('./images/${itemData.alias}.png')`;
-            // mapMarker.setAttribute('style', `background-image: ${url}`);
+            mapMarker.setAttribute('id', `id-${itemData.id}-icon`);
+            const url = `url('./images/${itemData.fileName}')`;
             mapMarker.style.cssText = `
                   background-image: ${url};
-                  left: ${itemData.x}%;
-                  top: ${itemData.y}%;
+                  left: ${itemData.locX}%;
+                  top: ${itemData.locY}%;
                 `;
 
             map.append(mapMarker);
-        });
+        }
 
     }
     genData();
