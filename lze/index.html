@@ -25,6 +25,8 @@
                 <div class="sector sector-c">Sector C</div>
             </div>
             <button onclick="mapClear()" id="map-clear">🗙 Clear Map</button>
+            <button onclick="toggleCalculator()" id="exit-calculator">Exit Code</button>
+            <div id="calculator" class="hidden"></div>
         </div>
         <div class="controls" id="controls">
             <div class="searchbar">
@@ -319,6 +321,147 @@
     .server-room {
         top: 52%;
         left: 41.6%;
+    }
+/* CALCULATOR STYLES */
+    #exit-calculator {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: #000b11;
+        border: 2px solid #02373d;
+        color: #02373d;
+        font-size: 24px;
+        font-family: "Jura", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        cursor: pointer;
+        padding: 0 8px 4px;
+        transition: .2s;
+    }
+    #exit-calculator:hover {
+        border: 2px solid #87B0B2;
+        color: #87B0B2;
+    }
+    #calculator.hidden {
+        display: none;
+    }
+    #calculator {
+        position: absolute;
+        bottom: 50px;
+        left: 0;
+        z-index: 9;
+        display: grid;
+        gap: 4px;
+        grid-template-columns: repeat(5, 1fr);
+        width: 356px;
+        margin: 0 auto;
+        background-color: #574d0e;
+        padding: 16px 48px 16px 16px;
+        border-radius: 40px;
+        border: 12px solid #897c2a;
+        box-shadow: inset 0 -12px 0 #3d2d1a, 0 -24px 0 #292d14;
+    }
+    #calculator.activated {
+        box-shadow: inset 0 -12px 0 #42bd25, 0 -24px 0 #292d14;
+    }
+    #calculator::before {
+        content: '';
+        display: block;
+        position: absolute;
+        border-radius: 50%;
+        box-shadow: 0 0 15px #e90601;
+        right: 10px;
+        top: 10px;
+        width: 20px;
+        height: 20px;
+        background-color: #e90601;
+        transition: .2s;
+        pointer-events: none;
+        z-index: 3;
+        opacity: .5;
+        filter: blur(2px);
+    }
+    #calculator.activated::before {
+        background-color: #00e004;
+        box-shadow: 0 0 15px #00e004;
+        width: 80px;
+        height: 80px;
+        right: -20px;
+        top: -20px;
+        opacity: 1;
+        filter: blur(20px);
+    }
+    .toggler-group {
+        height: 80px;
+        background-color: #111516;
+        position: relative;
+        border: 1px solid #111516;
+        cursor: pointer;
+        display: flex;
+        color: #515151;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 32px;
+        transition: .2s;
+        border-radius: 8px;
+    }
+    .toggler-group::before {
+        content:attr(data-number-parent);
+        pointer-events: none;
+    }
+    .toggler-group.active {
+        border: 1px solid #3ab614;
+        box-shadow: inset 0 0 6px #16800d;
+    }
+    .toggler-group.active::before {
+        color: #00e004;
+        text-shadow: 0 0 6px #293;
+    }
+    .toggler-group-children {
+        grid-template-columns: repeat(10, 1fr);
+        position: absolute;
+        z-index: 4;
+        gap: 1px;
+        padding: 2px;
+        bottom: 100%;
+        left: -4px;
+        display: none;
+        background-color: #222c2f;
+        box-shadow: 0 0 20px #000;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    .toggler-group.opened .toggler-group-children {
+        display: grid;
+    }
+    .toggler-group-child {
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+        text-align: center;
+        background-color: #111516;
+        color: #748183;
+        border: 1px solid #2d311a;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: .2s;
+        font-weight: bold;
+        font-size: 16px;
+        border-radius: 4px;
+    }
+    .toggler-group-child:hover {
+        background-color: #567;
+    }
+    .toggler-group-child:nth-child(1) {
+        border-top-left-radius: 8px;
+    }
+    .toggler-group-child:nth-child(10) {
+        border-top-right-radius: 8px;
+    }
+    .toggler-group-child:nth-child(91) {
+        border-bottom-left-radius: 8px;
     }
 </style>
 <script>
@@ -696,6 +839,115 @@
         for (let i = 0; i < activeItems.length; i++) {
             activeItems[i].classList.remove("active");
         }
+    }
+
+    /* EXIT CALCULATOR */
+
+    let togglersCount = 10;
+    let togglerMaxNumber = 100;
+    let combinationSum = 100;
+    let calculator = document.querySelector("#calculator");
+
+    function toggleCalculator() {
+        calculator.classList.toggle('hidden');
+    }
+
+    for (let i = 1; i < (togglersCount+1); i++) {
+        let toggleGroup = document.createElement('div');
+        toggleGroup.classList.add('toggler-group');
+        toggleGroup.setAttribute('data-number-parent', 0);
+        toggleGroup.setAttribute('id', "group"+i);
+
+        let toggleGroupChildren = document.createElement('div');
+        toggleGroupChildren.classList.add('toggler-group-children');
+
+
+        for (let n = 1; n < (togglerMaxNumber); n++) {
+            const toggleGroupChild = document.createElement('div');
+            toggleGroupChild.classList.add('toggler-group-child');
+            toggleGroupChild.setAttribute('data-number', n);
+            toggleGroupChild.setAttribute('data-parent-id', i);
+            toggleGroupChild.innerText = n;
+            toggleGroupChildren.append(toggleGroupChild);
+        }
+        toggleGroup.append(toggleGroupChildren);
+        calculator.append(toggleGroup);
+    }
+
+    calculator.addEventListener("click", calculatorChanges);
+
+    function calculatorChanges(event){
+        const target = event.target;
+        if (target.classList.contains('toggler-group')){
+            if (!target.classList.contains('opened')){
+                closeAllGroups();
+            }
+            target.classList.toggle('opened');
+
+        }
+        if (target.classList.contains('toggler-group-child')){
+            let parentId = target.getAttribute('data-parent-id');
+            const parent = document.querySelector("#group"+parentId);
+            parent.setAttribute('data-number-parent',target.getAttribute('data-number'));
+            parent.classList.toggle('opened');
+
+            calculateCombination();
+        }
+    }
+
+    function calculateCombination(){
+        deactivateAllGroups();
+        calculator.classList.remove('activated');
+        let dataNumbers = [];
+        let itemsArray = document.querySelectorAll(".toggler-group");
+        itemsArray.forEach((element) => {
+            let newNumber = parseInt(element.getAttribute('data-number-parent'));
+            dataNumbers.push(newNumber);
+        })
+
+        function powerset(arr) {
+            var ps = [[]];
+            for (var i=0; i < arr.length; i++) {
+                for (var j = 0, len = ps.length; j < len; j++) {
+                    ps.push(ps[j].concat(arr[i]));
+                }
+            }
+            return ps;
+        }
+        function sum(arr) {
+            var total = 0;
+            for (var i = 0; i < arr.length; i++)
+                total += arr[i];
+            return total
+        }
+        function findSum(numbers, targetSum) {
+            var numberSets = powerset(numbers);
+            for (var i=0; i < numberSets.length; i++) {
+                var numberSet = numberSets[i];
+                if (sum(numberSet) == targetSum)
+                    return numberSet;
+            }
+        }
+        let greenNumbers = findSum(dataNumbers, combinationSum);
+        if (greenNumbers) {
+            calculator.classList.add('activated');
+            greenNumbers.forEach((element) => {
+                let greenItem = document.querySelector('[data-number-parent="'+element+'"]');
+                greenItem.classList.add("active");
+            })
+        }
+    }
+    function closeAllGroups(){
+        let allGroups = document.querySelectorAll(".toggler-group");
+        allGroups.forEach((element) => {
+            element.classList.remove('opened');
+        })
+    }
+    function deactivateAllGroups(){
+        let allGroups = document.querySelectorAll(".toggler-group");
+        allGroups.forEach((element) => {
+            element.classList.remove('active');
+        })
     }
 </script>
 </html>
